@@ -70,15 +70,28 @@
     }
 
     /* Hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
     h1 {
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
+      letter-spacing: -0.4px;
       line-height: 1.2;
     }
     .tagline {
-      font-size: 17px;
+      font-size: 16px;
       color: var(--muted);
       margin-bottom: 32px;
       line-height: 1.55;
@@ -228,7 +241,10 @@
       dafaspace
     </div>
 
-    <h1>Daniel Fainberg</h1>
+    <div class="hero">
+      <img class="avatar" src="photo.jpg" alt="Daniel Fainberg">
+      <h1>Daniel Fainberg</h1>
+    </div>
     <p class="tagline">Indie developer and visual artist building small, focused apps for the things I love - cinema, music, everyday life experiences.</p>
 
     <div class="bio">
