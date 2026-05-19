@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daniel Fainberg, indie developer and visual artist. Building small, focused apps under dafaspace.">
+  <meta property="og:title" content="dafaspace - Daniel Fainberg">
+  <meta property="og:description" content="Small, focused apps by one indie developer. Currently: Cinemail.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dafaspace.com">
+  <meta name="theme-color" content="#0d0d1a">
+  <title>dafaspace - Daniel Fainberg</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d1a;
+      --text: #e8e8ee;
+      --muted: #8a8a96;
+      --accent: #f5c518;
+      --border: rgba(255,255,255,0.08);
+      --card: rgba(255,255,255,0.025);
+      --card-hover: rgba(255,255,255,0.045);
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 80px 24px 60px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 620px;
+    }
+
+    /* Header */
+    .logo {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--text);
+      margin-bottom: 64px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    /* Hero */
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .tagline {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      line-height: 1.55;
+    }
+
+    /* About paragraphs */
+    .bio p {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+    .bio p:last-child { margin-bottom: 0; }
+    .bio a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.15s ease;
+    }
+    .bio a:hover { border-color: var(--accent); }
+
+    /* Section */
+    section { margin-top: 56px; }
+    h2 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* Project card */
+    .project {
+      display: block;
+      padding: 20px 22px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.2s ease, transform 0.2s ease;
+      margin-bottom: 14px;
+    }
+    .project:hover {
+      background: var(--card-hover);
+      transform: translateY(-1px);
+    }
+    .project-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .project-logo {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .project-logo span { color: var(--accent); }
+    .project-status {
+      font-size: 11px;
+      color: var(--muted);
+      padding: 3px 9px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-weight: 500;
+    }
+    .project-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .project-note {
+      font-size: 13px;
+      color: var(--text);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      line-height: 1.5;
+    }
+
+    /* Connect / Support links */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      transition: background 0.15s ease;
+      border-bottom: 1px solid var(--border);
+    }
+    .links a:last-child { border-bottom: none; }
+    .links a:hover { background: var(--card-hover); }
+    .links .label { display: flex; align-items: center; gap: 12px; }
+    .links .label-icon {
+      width: 18px; height: 18px;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      color: var(--muted);
+    }
+    .links .arrow {
+      color: var(--muted);
+      font-size: 14px;
+      transition: transform 0.15s ease, color 0.15s ease;
+    }
+    .links a:hover .arrow { transform: translateX(2px); color: var(--text); }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+    footer a:hover { color: var(--text); border-color: var(--text); }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      body { padding: 48px 20px 40px; }
+      .logo { margin-bottom: 44px; }
+      h1 { font-size: 28px; }
+      .tagline { font-size: 16px; }
+      section { margin-top: 44px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <div class="logo">
+      <span class="logo-dot"></span>
+      dafaspace
+    </div>
+
+    <h1>Daniel Fainberg</h1>
+    <p class="tagline">Indie developer and visual artist building small, focused apps for the things I love - cinema, music, everyday life experiences.</p>
+
+    <div class="bio">
+      <p>I come from a visual background - photography, videography, video art for theatre productions. I've spent years curiously observing how images, sound and rhythm carry human experience, emotion and feeling.</p>
+      <p>Currently studying <strong>MA Professional Media Composition</strong> at Arts University Bournemouth, where I'm learning to write music for film.</p>
+      <p>Under <strong>dafaspace</strong> I make apps that I'd want to use myself, and I really do use them every day. I'm genuinely happy when I see my apps make someone's life a little easier or more joyful. I believe in people and in meaningful human connection - so nothing makes me happier than when like-minded people find each other and that small miracle of real interaction happens.</p>
+    </div>
+
+    <section>
+      <h2>Projects</h2>
+
+      <a class="project" href="https://cinemail.app" target="_blank" rel="noopener">
+        <div class="project-head">
+          <div class="project-logo"><span>CINE</span>MAIL</div>
+          <div class="project-status">Live</div>
+        </div>
+        <div class="project-desc">Your personal cinema companion. Track films, get AI picks, share lists with friends. Available on web, iOS & Android coming soon.</div>
+        <div class="project-note">🧡 Early supporters get lifetime Pro free when Cinemail goes paid in the stores.</div>
+      </a>
+    </section>
+
+    <section>
+      <h2>Support &amp; Connect</h2>
+      <div class="links">
+        <a href="https://ko-fi.com/dafaspace" target="_blank" rel="noopener">
+          <span class="label">
+            <span class="label-icon">☕</span>
+            Support on Ko-fi
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" onclick="copyUSDT(event)" id="usdt-link">
+          <span class="label">
+            <span class="label-icon">◈</span>
+            <span id="usdt-label">USDT (TRC20)</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="mailto:hello@dafaspace.com">
+          <span class="label">
+            <span class="label-icon">✉</span>
+            hello@dafaspace.com
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year">2026</span> dafaspace. Made with 🧡 for the human experience.
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const USDT_ADDRESS = "TJ5kerJVe92YZDpqoyEKPqix2MWMmsr5bk";
+
+    function copyUSDT(e) {
+      e.preventDefault();
+      navigator.clipboard.writeText(USDT_ADDRESS).then(() => {
+        const lbl = document.getElementById('usdt-label');
+        const orig = lbl.textContent;
+        lbl.textContent = "Copied ✓ " + USDT_ADDRESS.slice(0, 6) + "…" + USDT_ADDRESS.slice(-4);
+        setTimeout(() => { lbl.textContent = orig; }, 2500);
+      }).catch(() => {
+        prompt("Copy USDT (TRC20) address:", USDT_ADDRESS);
+      });
+    }
+  </script>
+</body>
+</html>
