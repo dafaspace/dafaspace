@@ -197,18 +197,24 @@
       margin-left: auto;
       margin-right: auto;
     }
-    /* A pair that only makes sense together, side by side. */
+    /* Frames that only make sense together, in one row. */
     .project-shots {
       display: flex;
       gap: 10px;
       justify-content: center;
+      align-items: flex-start;
       margin-bottom: 16px;
     }
     .project-shots .project-shot {
       margin-bottom: 0;
-      max-width: calc(50% - 5px);
-      max-height: 420px;
+      flex: 1 1 0;
+      min-width: 0;
+      max-height: 460px;
+      object-fit: contain;
     }
+    /* Stacked frames, for wide captures that would be unreadable side by side. */
+    .project-shots--stack { flex-direction: column; }
+    .project-shots--stack .project-shot { max-height: none; width: 100%; }
     .section-note {
       font-size: 13px;
       color: var(--muted);
@@ -299,7 +305,11 @@
       <h2>Projects</h2>
 
       <a class="project" href="https://cinemail.app" target="_blank" rel="noopener">
-        <img class="project-shot project-shot--tall" src="shots/cinemail.jpg" alt="A film page in Cinemail showing the poster, rating, synopsis, director, cinematographer and composers, with links to the soundtrack on Spotify, Apple Music and YouTube Music" loading="lazy" width="608" height="1200">
+        <div class="project-shots">
+          <img class="project-shot" src="shots/cinemail1.jpg" alt="Searching Cinemail for Hildur: people results led by the composer Hildur Gudnadottir, followed by matching films and series" loading="lazy" width="1080" height="1835">
+          <img class="project-shot" src="shots/cinemail.jpg" alt="A film page in Cinemail showing the poster, rating, synopsis, director, cinematographer and composers, with links to the soundtrack on Spotify, Apple Music and YouTube Music" loading="lazy" width="608" height="1200">
+          <img class="project-shot" src="shots/cinemail2.jpg" alt="A Cinemail viewing profile: films watched and still to watch, total watch time, and a ranking of the user's most-seen composers" loading="lazy" width="765" height="1200">
+        </div>
         <div class="project-head">
           <div class="project-logo"><span>CINE</span>MAIL</div>
           <div class="project-status">Live</div>
@@ -365,9 +375,14 @@
       </div>
 
       <div class="project project--static">
-        <a href="shots/localdeck.png" target="_blank" rel="noopener" title="Open full size">
-          <img class="project-shot" src="shots/localdeck.png" alt="LocalDeck: a local model loaded with memory use shown, preset modes for sound archive, sound design, music, reasoning and research, and panels for Sounds and Shelf" loading="lazy" width="1200" height="1050">
-        </a>
+        <div class="project-shots project-shots--stack">
+          <a href="shots/localdeck2.jpg" target="_blank" rel="noopener" title="Open full size">
+            <img class="project-shot" src="shots/localdeck2.jpg" alt="Searching a sound effects library in LocalDeck by describing the sound: the phrase broken glass, close returns matching files from 7,953 indexed, grouped by category" loading="lazy" width="1200" height="827">
+          </a>
+          <a href="shots/localdeck.png" target="_blank" rel="noopener" title="Open full size">
+            <img class="project-shot" src="shots/localdeck.png" alt="LocalDeck: a local model loaded with memory use shown, and preset modes for sound archive, sound design, music, reasoning and research" loading="lazy" width="1200" height="1050">
+          </a>
+        </div>
         <div class="project-head">
           <div class="project-logo"><span>LOCAL</span>DECK</div>
           <div class="project-status">In development</div>
@@ -384,6 +399,9 @@
       </div>
 
       <div class="project project--static">
+        <a href="shots/archivist.png" target="_blank" rel="noopener" title="Open full size">
+          <img class="project-shot" src="shots/archivist.png" alt="Archivist in a terminal: a list of catalogued drives with file counts and sizes, and a per-drive report splitting the contents into what to keep and what is rebuildable" loading="lazy" width="1200" height="643">
+        </a>
         <div class="project-head">
           <div class="project-logo"><span>ARCHIV</span>IST</div>
           <div class="project-status">Private tool</div>
