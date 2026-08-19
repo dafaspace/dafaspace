@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Daniel Fainberg, indie developer and visual artist. Building small, focused apps under dafaspace.">
   <meta property="og:title" content="dafaspace - Daniel Fainberg">
-  <meta property="og:description" content="Small, focused apps by one indie developer. Currently: Cinemail.">
+  <meta property="og:description" content="Small, focused apps by one indie developer. Cinema, music theory, astrology, and tools for musicians.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dafaspace.com">
   <meta name="theme-color" content="#0d0d1a">
@@ -173,6 +173,15 @@
       border-top: 1px solid var(--border);
       line-height: 1.5;
     }
+    /* Non-clickable card, for work with nothing public to link to yet */
+    .project--static { cursor: default; }
+    .project--static:hover { background: var(--card); transform: none; }
+    .section-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin: -8px 0 18px;
+      line-height: 1.55;
+    }
 
     /* Connect / Support links */
     .links {
@@ -261,9 +270,78 @@
           <div class="project-logo"><span>CINE</span>MAIL</div>
           <div class="project-status">Live</div>
         </div>
-        <div class="project-desc">Your personal cinema companion. Track films, get AI picks, share lists with friends. Available on web, iOS & Android coming soon.</div>
+        <div class="project-desc">Your personal cinema companion. Track films, get AI picks, share lists with friends. Eight languages, public film pages, IMDb import. Web now, iOS & Android coming soon.</div>
         <div class="project-note">🧡 Early supporters get lifetime Pro free when Cinemail goes paid in the stores.</div>
       </a>
+
+      <a class="project" href="https://dafaspace.github.io/fifths/" target="_blank" rel="noopener">
+        <div class="project-head">
+          <div class="project-logo"><span>CIRCLE</span> OF FIFTHS</div>
+          <div class="project-status">Beta</div>
+        </div>
+        <div class="project-desc">An interactive circle of fifths. Explore keys, modes and chords, hear how they relate, and test yourself with a quiz. Free, no account, works offline.</div>
+      </a>
+
+      <a class="project" href="https://dafaspace.github.io/hum/" target="_blank" rel="noopener">
+        <div class="project-head">
+          <div class="project-logo"><span>HUM</span></div>
+          <div class="project-status">Beta</div>
+        </div>
+        <div class="project-desc">Sing or hum an idea and keep it. A personal creative archive for musicians, built on its own pitch detection engine that runs in the browser.</div>
+      </a>
+
+      <a class="project" href="https://dafaspace.github.io/astrotrip/" target="_blank" rel="noopener">
+        <div class="project-head">
+          <div class="project-logo"><span>ASTRO</span>TRIP</div>
+          <div class="project-status">Beta</div>
+        </div>
+        <div class="project-desc">Precise astrological charts that run entirely on your device. No server, no account, nothing leaving your phone. Readings written to be read, not assembled on the spot.</div>
+      </a>
+
+      <div class="project project--static">
+        <div class="project-head">
+          <div class="project-logo"><span>CITRUS</span> TIMER</div>
+          <div class="project-status">Not in stores yet</div>
+        </div>
+        <div class="project-desc">A Pomodoro timer shaped like an orange, living in the macOS menu bar. The fruit assembles while you focus. Finished and in daily use, waiting on release.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>In development</h2>
+      <p class="section-note">Working tools rather than products. Listed so you can see what I actually spend my days on.</p>
+
+      <div class="project project--static">
+        <div class="project-head">
+          <div class="project-logo"><span>SCORE</span>WEAVER</div>
+          <div class="project-status">In development</div>
+        </div>
+        <div class="project-desc">A local pipeline for scoring narrated video. It analyses the voiceover, tags the story by emotion, finds where the music should turn, and proposes cues that fit the scene. Python, running entirely on my own machine.</div>
+      </div>
+
+      <div class="project project--static">
+        <div class="project-head">
+          <div class="project-logo"><span>LOCAL</span>DECK</div>
+          <div class="project-status">In development</div>
+        </div>
+        <div class="project-desc">A control panel for local AI models on a Mac, plus semantic search and automatic tagging across a sound effects library. Python and FastAPI, nothing sent to the cloud.</div>
+      </div>
+
+      <div class="project project--static">
+        <div class="project-head">
+          <div class="project-logo"><span>MY</span> DAY</div>
+          <div class="project-status">Private tool</div>
+        </div>
+        <div class="project-desc">News worth reading from sources I rate myself, a day plan that fills the free hours, and the tasks, habits and goals underneath. TypeScript, local-first.</div>
+      </div>
+
+      <div class="project project--static">
+        <div class="project-head">
+          <div class="project-logo"><span>ARCHIV</span>IST</div>
+          <div class="project-status">Private tool</div>
+        </div>
+        <div class="project-desc">A catalogue for a shelf of archive drives, plugged in one at a time, so I can find what is on a disk without mounting it.</div>
+      </div>
     </section>
 
     <section>
