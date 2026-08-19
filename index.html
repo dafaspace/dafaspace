@@ -176,6 +176,18 @@
     /* Non-clickable card, for work with nothing public to link to yet */
     .project--static { cursor: default; }
     .project--static:hover { background: var(--card); transform: none; }
+
+    /* Screenshot. Shown whole at its own ratio - cropping to a uniform box
+       cut off the parts of an interface that say what the app does. */
+    .project-shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+      background: rgba(0,0,0,0.25);
+    }
     .section-note {
       font-size: 13px;
       color: var(--muted);
@@ -275,6 +287,7 @@
       </a>
 
       <a class="project" href="https://dafaspace.github.io/fifths/" target="_blank" rel="noopener">
+        <img class="project-shot" src="shots/fifths.png" alt="The Another Circle Of Fifths interface: a coloured circle of keys with the scale and diatonic chords for C major beside it" loading="lazy" width="1000" height="750">
         <div class="project-head">
           <div class="project-logo"><span>CIRCLE</span> OF FIFTHS</div>
           <div class="project-status">Beta</div>
