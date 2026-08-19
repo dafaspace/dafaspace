@@ -126,7 +126,10 @@
 
     /* Project card */
     .project {
-      display: block;
+      /* Flex column so the name can be read before the picture, without
+         reordering the markup. */
+      display: flex;
+      flex-direction: column;
       padding: 20px 22px;
       background: var(--card);
       border: 1px solid var(--border);
@@ -177,26 +180,32 @@
     .project--static { cursor: default; }
     .project--static:hover { background: var(--card); transform: none; }
 
-    /* Screenshot. Shown whole at its own ratio - cropping to a uniform box
-       cut off the parts of an interface that say what the app does. */
+    /* Reading order inside a card: name first, then the picture, then the
+       words. Set here rather than in the markup so the source stays plain. */
+    .project-head  { order: 1; }
+    .project-shot,
+    .project-shots,
+    .project > a   { order: 2; }
+    .project-desc  { order: 3; }
+    .project-note  { order: 4; }
+
+    /* Screenshot. Height-capped so a card stays scannable: nine full-height
+       captures made the page a very long scroll. Shown whole, never cropped -
+       cropping cut off the parts of an interface that say what the app does. */
     .project-shot {
       display: block;
-      width: 100%;
+      width: auto;
+      max-width: 100%;
+      max-height: 300px;
       height: auto;
       border-radius: 10px;
       border: 1px solid var(--border);
-      margin-bottom: 16px;
+      margin: 0 auto 16px;
       background: rgba(0,0,0,0.25);
+      object-fit: contain;
     }
-    /* Phone-shaped captures. At full width a tall shot swallows the page,
-       so they run at their own scale, centred. */
-    .project-shot--tall {
-      width: auto;
-      max-width: 260px;
-      max-height: 460px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .project > a { text-decoration: none; }
+
     /* Frames that only make sense together, in one row. */
     .project-shots {
       display: flex;
@@ -206,15 +215,12 @@
       margin-bottom: 16px;
     }
     .project-shots .project-shot {
-      margin-bottom: 0;
-      flex: 1 1 0;
+      margin: 0;
       min-width: 0;
-      max-height: 460px;
-      object-fit: contain;
+      max-height: 300px;
     }
     /* Stacked frames, for wide captures that would be unreadable side by side. */
-    .project-shots--stack { flex-direction: column; }
-    .project-shots--stack .project-shot { max-height: none; width: 100%; }
+    .project-shots--stack { flex-direction: column; align-items: center; }
     .section-note {
       font-size: 13px;
       color: var(--muted);
@@ -319,7 +325,7 @@
       </a>
 
       <a class="project" href="https://dafaspace.github.io/fifths/" target="_blank" rel="noopener">
-        <img class="project-shot project-shot--tall" src="shots/fifths.png" alt="The Another Circle Of Fifths interface in modal view: a coloured wheel of keys, the seven modes of G, and the scale, diatonic chords and secondary dominants for G Ionian" loading="lazy" width="538" height="981">
+        <img class="project-shot" src="shots/fifths.png" alt="The Another Circle Of Fifths interface in modal view: a coloured wheel of keys, the seven modes of G, and the scale, diatonic chords and secondary dominants for G Ionian" loading="lazy" width="538" height="981">
         <div class="project-head">
           <div class="project-logo"><span>CIRCLE</span> OF FIFTHS</div>
           <div class="project-status">Beta</div>
