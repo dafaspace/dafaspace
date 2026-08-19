@@ -188,6 +188,27 @@
       margin-bottom: 16px;
       background: rgba(0,0,0,0.25);
     }
+    /* Phone-shaped captures. At full width a tall shot swallows the page,
+       so they run at their own scale, centred. */
+    .project-shot--tall {
+      width: auto;
+      max-width: 260px;
+      max-height: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* A pair that only makes sense together, side by side. */
+    .project-shots {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .project-shots .project-shot {
+      margin-bottom: 0;
+      max-width: calc(50% - 5px);
+      max-height: 420px;
+    }
     .section-note {
       font-size: 13px;
       color: var(--muted);
@@ -278,6 +299,7 @@
       <h2>Projects</h2>
 
       <a class="project" href="https://cinemail.app" target="_blank" rel="noopener">
+        <img class="project-shot project-shot--tall" src="shots/cinemail.jpg" alt="A film page in Cinemail showing the poster, rating, synopsis, director, cinematographer and composers, with links to the soundtrack on Spotify, Apple Music and YouTube Music" loading="lazy" width="608" height="1200">
         <div class="project-head">
           <div class="project-logo"><span>CINE</span>MAIL</div>
           <div class="project-status">Live</div>
@@ -287,7 +309,7 @@
       </a>
 
       <a class="project" href="https://dafaspace.github.io/fifths/" target="_blank" rel="noopener">
-        <img class="project-shot" src="shots/fifths.png" alt="The Another Circle Of Fifths interface: a coloured circle of keys with the scale and diatonic chords for C major beside it" loading="lazy" width="1000" height="750">
+        <img class="project-shot project-shot--tall" src="shots/fifths.png" alt="The Another Circle Of Fifths interface in modal view: a coloured wheel of keys, the seven modes of G, and the scale, diatonic chords and secondary dominants for G Ionian" loading="lazy" width="538" height="981">
         <div class="project-head">
           <div class="project-logo"><span>CIRCLE</span> OF FIFTHS</div>
           <div class="project-status">Beta</div>
@@ -295,7 +317,20 @@
         <div class="project-desc">An interactive circle of fifths. Explore keys, modes and chords, hear how they relate, and test yourself with a quiz. Free, no account, works offline.</div>
       </a>
 
+      <div class="project project--static">
+        <div class="project-shots">
+          <img class="project-shot" src="shots/citrus-focus.jpg" alt="Citrus Timer in Focus mode: an orange slice filling clockwise, 27 minutes 45 seconds remaining" loading="lazy" width="597" height="900">
+          <img class="project-shot" src="shots/citrus-break.jpg" alt="Citrus Timer on a short break: the fruit has turned into a green lime, 4 minutes 37 seconds remaining" loading="lazy" width="597" height="900">
+        </div>
+        <div class="project-head">
+          <div class="project-logo"><span>CITRUS</span> TIMER</div>
+          <div class="project-status">Not in stores yet</div>
+        </div>
+        <div class="project-desc">A Pomodoro timer shaped like an orange, living in the macOS menu bar. The fruit assembles while you focus. Finished and in daily use, waiting on release.</div>
+      </div>
+
       <a class="project" href="https://dafaspace.github.io/hum/" target="_blank" rel="noopener">
+        <img class="project-shot" src="shots/hum.jpg" alt="The Hum library: captured musical ideas as cards, each tagged audio, text, idea or dream, with detected tempo and key such as 74 bpm in E major, grouped into projects" loading="lazy" width="1400" height="900">
         <div class="project-head">
           <div class="project-logo"><span>HUM</span></div>
           <div class="project-status">Beta</div>
@@ -304,6 +339,7 @@
       </a>
 
       <a class="project" href="https://dafaspace.github.io/astrotrip/" target="_blank" rel="noopener">
+        <img class="project-shot" src="shots/astrotrip.png" alt="A natal chart cast in AstroTrip using the Placidus house system, showing the zodiac ring, house cusps, planetary positions and aspect lines" loading="lazy" width="900" height="1010">
         <div class="project-head">
           <div class="project-logo"><span>ASTRO</span>TRIP</div>
           <div class="project-status">Beta</div>
@@ -311,13 +347,6 @@
         <div class="project-desc">Precise astrological charts that run entirely on your device. No server, no account, nothing leaving your phone. Readings written to be read, not assembled on the spot.</div>
       </a>
 
-      <div class="project project--static">
-        <div class="project-head">
-          <div class="project-logo"><span>CITRUS</span> TIMER</div>
-          <div class="project-status">Not in stores yet</div>
-        </div>
-        <div class="project-desc">A Pomodoro timer shaped like an orange, living in the macOS menu bar. The fruit assembles while you focus. Finished and in daily use, waiting on release.</div>
-      </div>
     </section>
 
     <section>
@@ -325,6 +354,9 @@
       <p class="section-note">Working tools rather than products. Listed so you can see what I actually spend my days on.</p>
 
       <div class="project project--static">
+        <a href="shots/scoreweaver.png" target="_blank" rel="noopener" title="Open full size">
+          <img class="project-shot" src="shots/scoreweaver.png" alt="The ScoreWeaver library: 1,950 analysed tracks in a table with detected mood, alternative mood readings with confidence percentages, key, Camelot code, BPM and length" loading="lazy" width="1200" height="850">
+        </a>
         <div class="project-head">
           <div class="project-logo"><span>SCORE</span>WEAVER</div>
           <div class="project-status">In development</div>
@@ -333,6 +365,9 @@
       </div>
 
       <div class="project project--static">
+        <a href="shots/localdeck.png" target="_blank" rel="noopener" title="Open full size">
+          <img class="project-shot" src="shots/localdeck.png" alt="LocalDeck: a local model loaded with memory use shown, preset modes for sound archive, sound design, music, reasoning and research, and panels for Sounds and Shelf" loading="lazy" width="1200" height="1050">
+        </a>
         <div class="project-head">
           <div class="project-logo"><span>LOCAL</span>DECK</div>
           <div class="project-status">In development</div>
