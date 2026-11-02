@@ -267,7 +267,10 @@ const fillAt = (t, t0) => clamp((t - t0 - (T.sweep + T.fly) * T.lead) / T.settle
   const hpx = opts.height || 31, dpr = devicePixelRatio || 1, m = hpx;
   const cv = document.createElement('canvas');
   const wpx = widths[widths.length - 1] * hpx / H + 2 * m, hp = hpx + 2 * m;
-  cv.style.cssText = `display:block;width:${wpx}px;height:${hp}px;margin:${-m}px;cursor:pointer;position:relative`;
+  // no tap highlight on phones (Dafa, 2 Nov: a rectangle flashed around the logo on tap), no text
+  // selection or double-tap zoom on it
+  cv.style.cssText = `display:block;width:${wpx}px;height:${hp}px;margin:${-m}px;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent;outline:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:manipulation`;
+  host.style.webkitTapHighlightColor = 'transparent';
   cv.width = Math.ceil(wpx * dpr); cv.height = Math.ceil(hp * dpr); cv._s = hpx / H; cv._m = m;
   cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', 'dafaspace');
   host.replaceChildren(cv);
