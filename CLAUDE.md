@@ -85,6 +85,12 @@ leave the rest unstaged and untouched.
 - The switcher is Underpicture's language pill (a native select), hidden while English is the only
   language. `/` offers the reader's language once, in that language, and never redirects.
 
+## Card order (Dafa, 3 Nov 2026)
+
+- A frozen project's card moves to the bottom of the Projects section, with the status "Frozen".
+- The same day, ask Dafa whether to hide it from the site altogether. Do not hide it without his
+  answer.
+
 ## Look
 
 - The accent is `#D96512`. App names on cards all use `var(--text)`.
