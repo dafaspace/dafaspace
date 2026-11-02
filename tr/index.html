@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" data-t-attr="content:meta.description" content="Daniel Fainberg, bağımsız geliştirici ve görsel sanatçı. dafaspace adıyla küçük, odaklı uygulamalar.">
+  <meta property="og:title" data-t-attr="content:meta.title" content="dafaspace - Daniel Fainberg">
+  <meta property="og:description" data-t-attr="content:meta.ogDescription" content="Tek bir bağımsız geliştiriciden küçük, odaklı uygulamalar. Sinema, müzik teorisi, astroloji ve müzisyenler için araçlar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dafaspace.com/tr/">
+  <meta name="theme-color" content="#0d0d1a">
+  <title data-t="meta.title">dafaspace - Daniel Fainberg</title>
+  <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d1a;
+      --text: #e8e8ee;
+      --muted: #8a8a96;
+      --accent: #D96512;
+      --border: rgba(255,255,255,0.08);
+      --card: rgba(255,255,255,0.025);
+      --card-hover: rgba(255,255,255,0.045);
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 56px 24px 60px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 620px;
+    }
+
+    /* Header */
+    .logo {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--text);
+      margin-bottom: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+
+    /* Header row: the logo, and the language pill when the site has more than one language.
+       The pill is Underpicture's (app/index.html, .lang-slot / select.lang), lifted whole:
+       a native select, so a phone opens its own picker, with the chevron drawn here because
+       the browser's own arrow cannot be placed. */
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 40px; }
+    .top .logo { margin-bottom: 0; }
+    .lang-slot { position: relative; display: inline-flex; }
+    .lang-slot[hidden] { display: none; }
+    .lang-slot::after { content: ""; position: absolute; inset-inline-end: 12px; top: 50%; width: 12px; height: 12px;
+      transform: translateY(-50%); pointer-events: none; background: var(--muted);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+              mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+    select.lang { font: inherit; font-size: 13px; color: var(--muted); background: transparent; border: 1px solid var(--border);
+      border-radius: 999px; padding-block: .5em; padding-inline: .9em 2.2em; min-height: 44px; max-width: 12em; cursor: pointer;
+      -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; }
+    select.lang:hover { color: var(--text); }
+    select.lang option { color: #0d0d1a; }
+
+    /* The language offer, on "/" only: a quiet line in the reader's own language, never a redirect */
+    .lang-offer { display: flex; align-items: center; gap: 12px; margin: -20px 0 28px;
+      font-size: 14px; color: var(--muted); line-height: 1.4; }
+    .lang-offer-text { flex: 0 1 auto; min-width: 0; }
+    .lang-offer[hidden] { display: none; }
+    .lang-offer button {
+      display: inline-flex; align-items: center; justify-content: center;
+      font: inherit; line-height: 1; min-height: 44px; padding: 0 .6em;
+      background: none; border: 0; color: var(--text); cursor: pointer;
+      -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent;
+      text-box: trim-both cap alphabetic;
+    }
+    .lang-offer .lang-offer-go { flex: none; border-bottom: 1px solid var(--border); min-height: 0; padding: 4px 0; }
+    .lang-offer .lang-offer-close { flex: none; color: var(--muted); min-width: 44px; margin-inline-start: auto; }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
+    }
+    .tagline {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      line-height: 1.55;
+    }
+
+    /* About paragraphs */
+    .bio p {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.65;
+    }
+    .bio p:last-child { margin-bottom: 0; }
+    .bio a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.15s ease;
+    }
+    .bio a:hover { border-color: var(--accent); }
+    /* The rest of the bio folds away, so the first projects fit on a phone screen */
+    .bio details { margin-top: 4px; }
+    .bio summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 44px;
+      font-size: 14px;
+      color: var(--muted);
+      cursor: pointer;
+      list-style: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .bio summary::-webkit-details-marker { display: none; }
+    .bio summary:hover { color: var(--text); }
+    .bio summary svg { transition: transform 0.2s ease; }
+    .bio details[open] summary svg { transform: rotate(180deg); }
+    .bio details[open] summary { margin-bottom: 8px; }
+    .bio summary .less, .bio details[open] summary .more { display: none; }
+    .bio details[open] summary .less { display: inline; }
+
+    /* Section */
+    section { margin-top: 44px; }
+    h2 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* Project card */
+    .project {
+      /* Flex column so the name can be read before the picture, without
+         reordering the markup. */
+      display: flex;
+      flex-direction: column;
+      padding: 20px 22px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.2s ease, transform 0.2s ease;
+      margin-bottom: 14px;
+    }
+    .project:hover {
+      background: var(--card-hover);
+      transform: translateY(-1px);
+    }
+    .project-head {
+      display: flex;
+      flex-wrap: wrap;                  /* a translated badge can be twice as long as the English */
+      align-items: center;
+      gap: 8px 12px;
+      margin-bottom: 10px;
+    }
+    .project-logo {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .project-logo, .project-logo span { color: var(--text); }
+    .project-status {
+      white-space: nowrap;
+      font-size: 11px;
+      color: var(--muted);
+      padding: 3px 9px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-weight: 500;
+    }
+    .project-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .project-note {
+      font-size: 13px;
+      color: var(--text);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      line-height: 1.5;
+    }
+    /* Non-clickable card, for work with nothing public to link to yet */
+    .project--static { cursor: default; }
+    .project--static:hover { background: var(--card); transform: none; }
+
+    /* Reading order inside a card: name first, then the picture, then the
+       words. Set here rather than in the markup so the source stays plain. */
+    .project-head  { order: 1; }
+    .project-shot,
+    .project-shots,
+    .project > a   { order: 2; }
+    .project-desc  { order: 3; }
+    .project-note  { order: 4; }
+
+    /* Screenshot. Height-capped so a card stays scannable: nine full-height
+       captures made the page a very long scroll. Shown whole, never cropped -
+       cropping cut off the parts of an interface that say what the app does. */
+    .project-shot {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: 300px;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin: 0 auto 16px;
+      background: rgba(0,0,0,0.25);
+      object-fit: contain;
+    }
+    .project > a { text-decoration: none; }
+
+    /* Frames that only make sense together, in one row. */
+    .project-shots {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .project-shots .project-shot {
+      margin: 0;
+      min-width: 0;
+      max-height: 300px;
+    }
+    /* Stacked frames, for wide captures that would be unreadable side by side. */
+    .project-shots--stack { flex-direction: column; align-items: center; }
+    .section-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin: -8px 0 18px;
+      line-height: 1.55;
+    }
+
+    /* Freshness badge. Hidden by default; the weekly script turns on only the
+       projects that actually moved, by writing selectors into the block below.
+       Deliberately NOT a "last updated" date: a finished, stable app would then
+       look abandoned, while an absent badge claims nothing at all. */
+    .fresh {
+      display: none;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      padding: 3px 9px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    /* Connect / Support links */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      transition: background 0.15s ease;
+      border-bottom: 1px solid var(--border);
+    }
+    .links a:last-child { border-bottom: none; }
+    .links a:hover { background: var(--card-hover); }
+    .links .label { display: flex; align-items: center; gap: 12px; }
+    .links .label-icon {
+      width: 18px; height: 18px;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      color: var(--muted);
+    }
+    .links .arrow {
+      color: var(--muted);
+      font-size: 14px;
+      transition: transform 0.15s ease, color 0.15s ease;
+    }
+    .links a:hover .arrow { transform: translateX(2px); color: var(--text); }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+    footer a:hover { color: var(--text); border-color: var(--text); }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      body { padding: 48px 20px 40px; }
+      .top { margin-bottom: 44px; }
+      .tagline { font-size: 16px; }
+      section { margin-top: 44px; }
+    }
+  </style>
+
+  <!-- Generated from index.html by tools/i18n.mjs. Edit index.html and i18n/tr.json, not this file. -->
+  <!-- I18N:START - written by tools/i18n.mjs build. Do not hand-edit inside. -->
+  <link rel="canonical" href="https://dafaspace.com/tr/">
+  <link rel="alternate" hreflang="en" href="https://dafaspace.com/">
+  <link rel="alternate" hreflang="ru" href="https://dafaspace.com/ru/">
+  <link rel="alternate" hreflang="uk" href="https://dafaspace.com/uk/">
+  <link rel="alternate" hreflang="ka" href="https://dafaspace.com/ka/">
+  <link rel="alternate" hreflang="es" href="https://dafaspace.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://dafaspace.com/pt-BR/">
+  <link rel="alternate" hreflang="fr" href="https://dafaspace.com/fr/">
+  <link rel="alternate" hreflang="de" href="https://dafaspace.com/de/">
+  <link rel="alternate" hreflang="it" href="https://dafaspace.com/it/">
+  <link rel="alternate" hreflang="tr" href="https://dafaspace.com/tr/">
+  <link rel="alternate" hreflang="ja" href="https://dafaspace.com/ja/">
+  <link rel="alternate" hreflang="he" href="https://dafaspace.com/he/">
+  <link rel="alternate" hreflang="x-default" href="https://dafaspace.com/">
+  <script>window.SITE_LANGS = [{"code":"en","name":"English","dir":"ltr","path":"/"},{"code":"ru","name":"Русский","dir":"ltr","path":"/ru/","offer":{"text":"Открыть эту страницу на русском?","yes":"Открыть","close":"Закрыть"}},{"code":"uk","name":"Українська","dir":"ltr","path":"/uk/","offer":{"text":"Відкрити цю сторінку українською?","yes":"Відкрити","close":"Закрити"}},{"code":"ka","name":"ქართული","dir":"ltr","path":"/ka/","offer":{"text":"გავხსნა ეს გვერდი ქართულად?","yes":"გახსნა","close":"დახურვა"}},{"code":"es","name":"Español","dir":"ltr","path":"/es/","offer":{"text":"¿Abrir esta página en español?","yes":"Abrir","close":"Cerrar"}},{"code":"pt-BR","name":"Português (Brasil)","dir":"ltr","path":"/pt-BR/","offer":{"text":"Abrir esta página em português?","yes":"Abrir","close":"Fechar"}},{"code":"fr","name":"Français","dir":"ltr","path":"/fr/","offer":{"text":"Ouvrir cette page en français ?","yes":"Ouvrir","close":"Fermer"}},{"code":"de","name":"Deutsch","dir":"ltr","path":"/de/","offer":{"text":"Diese Seite auf Deutsch öffnen?","yes":"Öffnen","close":"Schließen"}},{"code":"it","name":"Italiano","dir":"ltr","path":"/it/","offer":{"text":"Aprire questa pagina in italiano?","yes":"Apri","close":"Chiudi"}},{"code":"tr","name":"Türkçe","dir":"ltr","path":"/tr/","offer":{"text":"Bu sayfa Türkçe açılsın mı?","yes":"Aç","close":"Kapat"}},{"code":"ja","name":"日本語","dir":"ltr","path":"/ja/","offer":{"text":"このページを日本語で開きますか？","yes":"開く","close":"閉じる"}},{"code":"he","name":"עברית","dir":"rtl","path":"/he/","offer":{"text":"לפתוח את הדף הזה בעברית?","yes":"פתיחה","close":"סגירה"}}]</script>
+  <!-- I18N:END -->
+
+  <!-- FRESH:START - written weekly by _portfolio/site-weekly.mjs. Do not hand-edit
+       inside; edit the badge style above, or the script, instead. -->
+  <style id="fresh-rules">
+#p-cinemail .fresh,
+#p-underpicture .fresh,
+#p-astrotrip .fresh,
+#p-scoreweaver .fresh,
+#p-myday .fresh { display: inline-flex }
+  </style>
+  <!-- FRESH:END -->
+</head>
+<body>
+  <main>
+
+    <div class="top">
+      <div class="logo"><span id="logo" aria-label="dafaspace"></span></div>
+      <span class="lang-slot" hidden data-label="Dil" data-t-attr="data-label:lang.label"></span>
+    </div>
+    <div class="lang-offer" hidden>
+      <span class="lang-offer-text" data-t="offer.text">Bu sayfa Türkçe açılsın mı?</span>
+      <button type="button" class="lang-offer-go" data-t="offer.yes">Aç</button>
+      <button type="button" class="lang-offer-close" aria-label="Kapat" data-t-attr="aria-label:offer.close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+
+    <div class="hero">
+      <img class="avatar" src="photo.jpg" alt="Daniel Fainberg">
+      <h1>Daniel Fainberg</h1>
+    </div>
+    <p class="tagline" data-t="tagline">Sevdiğim şeyler için küçük, odaklı uygulamalar yapıyorum: sinema, müzik, gündelik hayat.</p>
+
+    <div class="bio">
+      <details>
+        <summary><span class="more" data-t="bio.more">Hakkımda daha fazlası</span><span class="less" data-t="bio.less">Daha az</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <p data-t="bio.background">Görsel bir geçmişten geliyorum: fotoğraf, video çekimi, tiyatro yapımları için video sanatı. Yıllardır görüntünün, sesin ve ritmin insan deneyimini, duyguyu ve hissi nasıl taşıdığını merakla gözlemliyorum.</p>
+      <p data-t="bio.youtube">Beş yıldır, 27 milyon aboneye ulaşan bir YouTube kanalının ses tasarımcısı ve müzik editörüyüm.</p>
+      <p data-t="bio.study">Şu anda Arts University Bournemouth'ta <strong>MA Professional Media Composition</strong> okuyorum ve film için müzik yazmayı öğreniyorum.</p>
+      <p data-t="bio.dafaspace"><strong>dafaspace</strong> adıyla kendimin de kullanmak isteyeceği uygulamalar yapıyorum ve gerçekten her gün kullanıyorum. Uygulamalarımın birinin hayatını biraz kolaylaştırdığını ya da neşelendirdiğini görmek beni içtenlikle mutlu ediyor. İnsanlara ve anlamlı insan bağına inanıyorum; bu yüzden beni hiçbir şey, benzer ruhlu insanların birbirini bulması ve gerçek bir etkileşimin o küçük mucizesinin gerçekleşmesi kadar mutlu etmiyor.</p>
+      <p data-t="bio.contact">Uygulamalarla ilgili sorular ya da birlikte çalışmak için bir fikir mi var? <a href="mailto:hello@dafaspace.com">hello@dafaspace.com</a> adresine yazın. Her mesajı okuyorum.</p>
+      </details>
+    </div>
+
+    <section>
+      <h2 data-t="sec.projects">Projeler</h2>
+
+      <a id="p-cinemail" class="project" href="https://cinemail.app" target="_blank" rel="noopener">
+        <div class="project-shots">
+          <img class="project-shot" data-t-attr="alt:cinemail.shot1" src="shots/cinemail1.jpg" alt="Cinemail'de Hildur araması: kişiler arasında en üstte besteci Hildur Gudnadottir, ardından eşleşen filmler ve diziler" loading="lazy" width="1080" height="1835">
+          <img class="project-shot" data-t-attr="alt:cinemail.shot2" src="shots/cinemail.jpg" alt="Cinemail'de bir film sayfası: afiş, puan, özet, yönetmen, görüntü yönetmeni ve besteciler, film müziğine Spotify, Apple Music ve YouTube Music bağlantılarıyla" loading="lazy" width="608" height="1200">
+          <img class="project-shot" data-t-attr="alt:cinemail.shot3" src="shots/cinemail2.jpg" alt="Cinemail'de bir izleme profili: izlenen ve izlenecek filmler, toplam izleme süresi ve kullanıcının en çok dinlediği bestecilerin sıralaması" loading="lazy" width="765" height="1200">
+        </div>
+        <div class="project-head">
+          <div class="project-logo"><span>CINE</span>MAIL</div>
+          <div class="project-status" data-t="status.live">Yayında</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="cinemail.desc">Kişisel sinema yol arkadaşınız. Filmlerinizi takip edin, birkaç kelimeden öneriler alın, listeleri arkadaşlarınızla paylaşın. Sekiz dil, herkese açık film sayfaları, IMDb'den içe aktarma. Şimdi web'de; iPhone uygulaması kapalı testte.</div>
+      </a>
+
+      <a id="p-underpicture" class="project" href="https://underpicture.com" target="_blank" rel="noopener">
+        <img class="project-shot" data-t-attr="alt:underpicture.shot1" src="shots/underpicture.jpg" alt="Underpicture başlangıç ekranı: müşteri için bağlantı oluşturmak üzere bir video ile iki veya daha fazla müzik parçasını aynı anda bırakın" loading="lazy" width="1040" height="800">
+        <div class="project-head">
+          <div class="project-logo"><span>UNDER</span>PICTURE</div>
+          <div class="project-status" data-t="status.beta">Beta</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="underpicture.desc">Müşterinize tek bir bağlantı gönderin. Görüntünün altındaki her müzik seçeneğini dinler, video oynarken parçalar arasında geçiş yapar ve her birini Soğuk, Ilık ya da Sıcak olarak puanlar. Seçim gelen kutunuza düşer. Kurgucular, besteciler ve video çekenler için; her telefonda, on bir dilde çalışır.</div>
+        <div class="project-note" data-t="underpicture.note">Kapalı beta: bağlantı oluşturmak için hello@underpicture.com adresinden test kodu isteyin.</div>
+      </a>
+
+      <a id="p-tunemail" class="project" href="https://tunemail.app" target="_blank" rel="noopener">
+        <img class="project-shot" data-t-attr="alt:tunemail.shot1" src="shots/tunemail.jpg" alt="Telefonda Tunemail: yapıştırılan bir Spotify bağlantısı Radiohead, Creep olarak tanınmış, aynı şarkıyı Spotify, Apple Music, Deezer ve Tidal'da açan düğmelerle." loading="lazy" width="780" height="1688">
+        <div class="project-head">
+          <div class="project-logo"><span>TUNE</span>MAIL</div>
+          <div class="project-status" data-t="status.beta">Beta</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="tunemail.desc">Herkese şarkı gönderin: şarkıyı karşı tarafın kullandığı uygulamada açan tek bir bağlantı. Şimdi web'de herkese açık beta olarak; iPhone uygulaması geliştiriliyor.</div>
+        <div class="project-note" data-t="tunemail.note">Hesap açmadan deneyin: Just browse'u seçin, Search'ü açın ve bir şarkı bağlantısı yapıştırın.</div>
+      </a>
+
+      <a id="p-fifths" class="project" href="https://dafaspace.github.io/fifths/" target="_blank" rel="noopener">
+        <img class="project-shot" data-t-attr="alt:fifths.shot1" src="shots/fifths.png" alt="Another Circle Of Fifths arayüzü mod görünümünde: renkli bir ton çarkı, G'nin yedi modu ve G İyonyen için dizi, diyatonik akorlar ve ikincil dominantlar" loading="lazy" width="538" height="981">
+        <div class="project-head">
+          <div class="project-logo"><span>CIRCLE</span> OF FIFTHS</div>
+          <div class="project-status" data-t="status.live">Yayında</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="fifths.desc">Etkileşimli bir beşli çemberi. Tonları, modları ve akorları keşfedin, birbirleriyle nasıl ilişkili olduklarını dinleyin ve bir testle kendinizi sınayın. Ücretsiz, hesap gerektirmez, çevrimdışı çalışır.</div>
+      </a>
+
+      <div id="p-citrus" class="project project--static">
+        <div class="project-shots">
+          <img class="project-shot" data-t-attr="alt:citrus.shot1" src="shots/citrus-focus.jpg" alt="Focus modunda Citrus Timer: saat yönünde dolan bir portakal dilimi, 27 dakika 45 saniye kaldı" loading="lazy" width="597" height="900">
+          <img class="project-shot" data-t-attr="alt:citrus.shot2" src="shots/citrus-break.jpg" alt="Kısa molada Citrus Timer: meyve yeşil bir misket limonuna dönüşmüş, 4 dakika 37 saniye kaldı" loading="lazy" width="597" height="900">
+        </div>
+        <div class="project-head">
+          <div class="project-logo"><span>CITRUS</span> TIMER</div>
+          <div class="project-status" data-t="status.notReleased">Henüz yayınlanmadı</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="citrus.desc">Mac için portakal şeklinde bir Pomodoro zamanlayıcısı: bir pencere ya da masaüstünde küçük bir widget. Siz odaklanırken meyve bir araya gelir. Her gün kullanıyorum; sıradaki adım imzalı bir indirme.</div>
+      </div>
+
+      <a id="p-hum" class="project" href="https://dafaspace.github.io/hum/" target="_blank" rel="noopener">
+        <img class="project-shot" data-t-attr="alt:hum.shot1" src="shots/hum.jpg" alt="Hum kitaplığı: kart olarak kaydedilmiş müzikal fikirler, her biri ses, metin, fikir ya da rüya olarak etiketli, 74 bpm Mi majör gibi algılanan tempo ve tonla, projelere göre gruplanmış" loading="lazy" width="1400" height="900">
+        <div class="project-head">
+          <div class="project-logo"><span>HUM</span></div>
+          <div class="project-status" data-t="status.frozen">Donduruldu</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="hum.desc">Bir fikri söyleyin ya da mırıldanın ve saklayın. Mırıldanılan bir melodiyi düzenlenebilir MIDI'ye dönüştüren, perde algılaması doğrudan tarayıcıda çalışan, müzisyenler için kişisel bir yaratıcı arşiv.</div>
+      </a>
+
+      <a id="p-astrotrip" class="project" href="https://dafaspace.github.io/astrotrip/" target="_blank" rel="noopener">
+        <img class="project-shot" data-t-attr="alt:astrotrip.shot1" src="shots/astrotrip.png" alt="Astrovarium'da Placidus ev sistemiyle çıkarılmış bir doğum haritası: zodyak halkası, ev başlangıçları, gezegen konumları ve açı çizgileri" loading="lazy" width="900" height="1010">
+        <div class="project-head">
+          <div class="project-logo"><span>ASTRO</span>VARIUM</div>
+          <div class="project-status" data-t="status.beta">Beta</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="astrotrip.desc">Konumları NASA JPL Horizons ile doğrulanmış hassas astroloji haritaları. Web'de doğum haritası ve onunla ilgili her şey ücretsiz; transitler, progresyonlar, direksiyonlar, dönüşler, sinastri ve üçlü haritalar bir erişim anahtarıyla bir haftalığına açılır. Tamamen cihazınızda çalışır: sunucu yok, hesap yok, telefonunuzdan hiçbir şey çıkmaz. Android sürümü kapalı testte; iPhone sürümü hazırlanıyor.</div>
+      </a>
+
+    </section>
+
+    <section>
+      <h2 data-t="sec.dev">Geliştirme aşamasında</h2>
+      <p class="section-note" data-t="sec.devNote">Üründen çok çalışma araçları. Günlerimi gerçekte neyle geçirdiğimi görebilmeniz için listeledim.</p>
+
+      <div id="p-scoreweaver" class="project project--static">
+        <a href="shots/scoreweaver.png" target="_blank" rel="noopener" title="Tam boyutta aç" data-t-attr="title:common.openFull">
+          <img class="project-shot" data-t-attr="alt:scoreweaver.shot1" src="shots/scoreweaver.png" alt="ScoreWeaver kitaplığı: algılanan ruh hali, güven yüzdeli alternatif ruh hali okumaları, ton, Camelot kodu, BPM ve süreyle bir tabloda analiz edilmiş 1.950 parça" loading="lazy" width="1200" height="850">
+        </a>
+        <div class="project-head">
+          <div class="project-logo"><span>SCORE</span>WEAVER</div>
+          <div class="project-status" data-t="status.private">Kişisel araç</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="scoreweaver.desc">Anlatımlı videolardaki müzik işim için yerel bir iş akışı. Bugün senaryoyu ve seslendirmeyi doğrulanmış altyazılara dönüştürüyor; müziği hikâyenin duygusuna göre eşleştirmek hâlâ araştırma aşamasında. Python, tamamen kendi bilgisayarımda çalışıyor.</div>
+      </div>
+
+      <div id="p-localdeck" class="project project--static">
+        <div class="project-shots project-shots--stack">
+          <a href="shots/localdeck2.jpg" target="_blank" rel="noopener" title="Tam boyutta aç" data-t-attr="title:common.openFull">
+            <img class="project-shot" data-t-attr="alt:localdeck.shot1" src="shots/localdeck2.jpg" alt="LocalDeck'te sesi tarif ederek bir ses efekti kitaplığında arama: broken glass, close ifadesi, dizine eklenmiş 7.953 dosya arasından eşleşenleri kategoriye göre gruplanmış olarak getiriyor" loading="lazy" width="1200" height="827">
+          </a>
+          <a href="shots/localdeck.png" target="_blank" rel="noopener" title="Tam boyutta aç" data-t-attr="title:common.openFull">
+            <img class="project-shot" data-t-attr="alt:localdeck.shot2" src="shots/localdeck.png" alt="LocalDeck: bellek kullanımı gösterilen yüklü bir yerel model ve ses arşivi, ses tasarımı, müzik, akıl yürütme ve araştırma için hazır modlar" loading="lazy" width="1200" height="1050">
+          </a>
+        </div>
+        <div class="project-head">
+          <div class="project-logo"><span>LOCAL</span>DECK</div>
+          <div class="project-status" data-t="status.private">Kişisel araç</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="localdeck.desc">Bir ses efekti kitaplığı için anlamsal arama ve otomatik etiketleme: şimdiye kadar 4.500'den fazla dosya etiketlendi, sesin kendisine dokunulmadı. Ayrıca Mac'te yerel yapay zekâ modelleri için bir kontrol paneli. Python ve FastAPI, buluta hiçbir şey gönderilmez.</div>
+      </div>
+
+      <div id="p-myday" class="project project--static">
+        <div class="project-head">
+          <div class="project-logo"><span>MY</span> DAY</div>
+          <div class="project-status" data-t="status.private">Kişisel araç</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="myday.desc">Çalışma saatlerim gerçekte nereye gidiyor: proje başına, bitmiş videonun dakikası başına saat, haftalık bir norma karşı; bunları Citrus Timer kendisi dolduruyor. Ayrıca bir haber okuyucu ve günlük plan. TypeScript, veriler yerelde.</div>
+      </div>
+
+      <div id="p-archivist" class="project project--static">
+        <a href="shots/archivist.png" target="_blank" rel="noopener" title="Tam boyutta aç" data-t-attr="title:common.openFull">
+          <img class="project-shot" data-t-attr="alt:archivist.shot1" src="shots/archivist.png" alt="Terminalde Archivist: dosya sayıları ve boyutlarıyla kataloglanmış disklerin listesi ve içeriği saklanacaklar ile yeniden oluşturulabilecekler olarak ayıran disk başına bir rapor" loading="lazy" width="1200" height="643">
+        </a>
+        <div class="project-head">
+          <div class="project-logo"><span>ARCHIV</span>IST</div>
+          <div class="project-status" data-t="status.private">Kişisel araç</div>
+          <div class="fresh" data-t="badge.fresh">Bu hafta güncellendi</div>
+        </div>
+        <div class="project-desc" data-t="archivist.desc">Teker teker takılan arşiv disklerinden oluşan bir raf için katalog; böylece bir diskte ne olduğunu onu bağlamadan bulabiliyorum.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-t="sec.support">Destek ve iletişim</h2>
+      <div class="links">
+        <a href="https://ko-fi.com/dafaspace" target="_blank" rel="noopener">
+          <span class="label">
+            <span class="label-icon">☕</span>
+            <span data-t="support.kofi">Ko-fi'de destekle</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" onclick="copyUSDT(event)" id="usdt-link" data-copied="Kopyalandı" data-prompt="USDT (TRC20) adresini kopyalayın:" data-t-attr="data-copied:support.copied,data-prompt:support.copyPrompt">
+          <span class="label">
+            <span class="label-icon">◈</span>
+            <span id="usdt-label">USDT (TRC20)</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="mailto:hello@dafaspace.com">
+          <span class="label">
+            <span class="label-icon">✉</span>
+            hello@dafaspace.com
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year">2026</span> dafaspace. <span data-t="footer.made">İnsan deneyimi için 🧡 ile yapıldı.</span>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const USDT_ADDRESS = "TJ5kerJVe92YZDpqoyEKPqix2MWMmsr5bk";
+
+    function copyUSDT(e) {
+      e.preventDefault();
+      const link = e.currentTarget;
+      navigator.clipboard.writeText(USDT_ADDRESS).then(() => {
+        const lbl = document.getElementById('usdt-label');
+        const orig = lbl.textContent;
+        lbl.textContent = link.dataset.copied + " ✓ " + USDT_ADDRESS.slice(0, 6) + "…" + USDT_ADDRESS.slice(-4);
+        setTimeout(() => { lbl.textContent = orig; }, 2500);
+      }).catch(() => {
+        prompt(link.dataset.prompt, USDT_ADDRESS);
+      });
+    }
+  </script>
+  <script>
+    // Languages (see CLAUDE.md, Languages). SITE_LANGS is written by tools/i18n.mjs into the
+    // I18N block above: every language that has a page, with its name, path and offer words.
+    (function () {
+      const L = window.SITE_LANGS || [], here = document.documentElement.lang;
+      if (L.length < 2) return;
+      const slot = document.querySelector('.lang-slot');
+      const sel = document.createElement('select');
+      sel.className = 'lang';
+      sel.setAttribute('aria-label', slot.dataset.label);
+      sel.innerHTML = L.map(l => `<option value="${l.code}" lang="${l.code}" dir="${l.dir}">${l.name}</option>`).join('');
+      sel.value = here;
+      sel.addEventListener('change', () => {
+        try { localStorage.setItem('dafaspace:lang', sel.value); } catch {}
+        location.href = L.find(l => l.code === sel.value).path;
+      });
+      slot.appendChild(sel);
+      slot.hidden = false;
+
+      // "/" is always English. A reader whose language we have gets one quiet offer, in that
+      // language; a choice made in the pill, English included, is remembered and respected.
+      if (here !== 'en') return;
+      let saved = null, dismissed = null;
+      try { saved = localStorage.getItem('dafaspace:lang'); dismissed = localStorage.getItem('dafaspace:offer-dismissed'); } catch {}
+      if (saved === 'en') return;
+      const find = code => L.find(l => l.code === code);
+      let pick = saved && find(saved);
+      if (!pick) for (const raw of navigator.languages || [navigator.language || 'en']) {
+        const l = raw.toLowerCase();
+        pick = find(l.startsWith('pt') ? 'pt-BR' : l.startsWith('iw') ? 'he' : l.slice(0, 2));
+        if (pick) break;
+      }
+      if (!pick || pick.code === 'en' || dismissed === pick.code || !pick.offer) return;
+      const bar = document.querySelector('.lang-offer');
+      bar.lang = pick.code; bar.dir = pick.dir;
+      bar.querySelector('.lang-offer-text').textContent = pick.offer.text;
+      bar.querySelector('.lang-offer-go').textContent = pick.offer.yes;
+      bar.querySelector('.lang-offer-close').setAttribute('aria-label', pick.offer.close);
+      bar.querySelector('.lang-offer-go').addEventListener('click', () => {
+        try { localStorage.setItem('dafaspace:lang', pick.code); } catch {}
+        location.href = pick.path;
+      });
+      bar.querySelector('.lang-offer-close').addEventListener('click', () => {
+        try { localStorage.setItem('dafaspace:offer-dismissed', pick.code); } catch {}
+        bar.hidden = true;
+      });
+      bar.hidden = false;
+    })();
+  </script>
+  <script src="logo-anim.js"></script>
+  <script>dafaspaceLogo(document.getElementById('logo'), { height: 31, word: 'logo-word.svg' })</script>
+</body>
+</html>

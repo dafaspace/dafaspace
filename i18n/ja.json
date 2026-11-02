@@ -1,0 +1,230 @@
+{
+  "meta.description": {
+    "text": "Daniel Fainberg、インディー開発者でビジュアルアーティスト。dafaspace の名前で、小さく目的のはっきりしたアプリを作っています。",
+    "from": "89f89e80b0"
+  },
+  "meta.title": {
+    "text": "dafaspace - Daniel Fainberg",
+    "from": "32a492a149"
+  },
+  "meta.ogDescription": {
+    "text": "ひとりのインディー開発者による、小さく目的のはっきりしたアプリ。映画、音楽理論、占星術、そして音楽家のためのツール。",
+    "from": "767da0aad1"
+  },
+  "lang.label": {
+    "text": "言語",
+    "from": "89b86ab0e6"
+  },
+  "offer.text": {
+    "text": "このページを日本語で開きますか？",
+    "from": "4cf287dc9a"
+  },
+  "offer.yes": {
+    "text": "開く",
+    "from": "cf9b77061f"
+  },
+  "offer.close": {
+    "text": "閉じる",
+    "from": "bbfa773e5a"
+  },
+  "tagline": {
+    "text": "好きなもののために、小さく目的のはっきりしたアプリを作っています。映画、音楽、そして日々の暮らし。",
+    "from": "228e6236e7"
+  },
+  "bio.more": {
+    "text": "もっと詳しく",
+    "from": "2a8a76d547"
+  },
+  "bio.less": {
+    "text": "閉じる",
+    "from": "526cb7425a"
+  },
+  "bio.background": {
+    "text": "もともとはビジュアルの世界の出身です。写真、映像撮影、舞台作品のための映像アート。何年ものあいだ、映像と音とリズムが人の経験や感情、心の動きをどう運ぶのかを、好奇心をもって見つめてきました。",
+    "from": "537acf7157"
+  },
+  "bio.youtube": {
+    "text": "5年前から、登録者数2,700万人に成長した YouTube チャンネルのサウンドデザイナー兼音楽エディターをしています。",
+    "from": "7bd26d6ebf"
+  },
+  "bio.study": {
+    "text": "現在は Arts University Bournemouth の <strong>MA Professional Media Composition</strong> で、映画のための作曲を学んでいます。",
+    "from": "38d491a5ce"
+  },
+  "bio.dafaspace": {
+    "text": "<strong>dafaspace</strong> の名前で、自分自身が使いたいと思うアプリを作り、実際に毎日使っています。自分のアプリが誰かの暮らしを少し楽に、少し楽しくしているのを見ると、心からうれしくなります。人と、意味のある人とのつながりを信じています。だから、気の合う人同士が出会い、本当の交流という小さな奇跡が起きることほど、うれしいことはありません。",
+    "from": "e3966ef00b"
+  },
+  "bio.contact": {
+    "text": "アプリについての質問や、一緒に仕事をするアイデアがあれば、<a href=\"mailto:hello@dafaspace.com\">hello@dafaspace.com</a> までご連絡ください。すべてのメッセージに目を通しています。",
+    "from": "82d8f099b1"
+  },
+  "sec.projects": {
+    "text": "プロジェクト",
+    "from": "53e890d5f0"
+  },
+  "cinemail.shot1": {
+    "text": "Cinemail で Hildur を検索：人物の結果の先頭に作曲家 Hildur Gudnadottir、続いて該当する映画やシリーズ",
+    "from": "f485fa0a00"
+  },
+  "cinemail.shot2": {
+    "text": "Cinemail の映画ページ：ポスター、評価、あらすじ、監督、撮影監督、作曲家と、Spotify、Apple Music、YouTube Music のサウンドトラックへのリンク",
+    "from": "998eb6bf17"
+  },
+  "cinemail.shot3": {
+    "text": "Cinemail の視聴プロフィール：観た映画とこれから観る映画、合計視聴時間、そしてユーザーが最もよく聴いた作曲家のランキング",
+    "from": "8a57e09dbf"
+  },
+  "status.live": {
+    "text": "公開中",
+    "from": "65c821a596"
+  },
+  "badge.fresh": {
+    "text": "今週更新",
+    "from": "353b094569"
+  },
+  "cinemail.desc": {
+    "text": "あなた専用の映画の相棒。観た映画を記録し、いくつかの言葉からおすすめを受け取り、友だちとリストを共有。8言語、公開の映画ページ、IMDb からのインポート。ウェブ版は公開中、iPhone アプリはクローズドテスト中です。",
+    "from": "5eb6875682"
+  },
+  "underpicture.shot1": {
+    "text": "Underpicture のスタート画面：動画1本と音楽トラック2曲以上をまとめてドロップして、クライアント用のリンクを作成",
+    "from": "966e2d2b77"
+  },
+  "status.beta": {
+    "text": "ベータ",
+    "from": "f03b60f7e5"
+  },
+  "underpicture.desc": {
+    "text": "クライアントに送るのはリンク1つ。映像に合わせてすべての音楽候補を聴き、動画を再生したままトラックを切り替え、それぞれをコールド、ウォーム、ホットで評価できます。選ばれた曲はあなたの受信箱に届きます。編集者、作曲家、映像クリエイターのために。どのスマートフォンでも、11の言語で使えます。",
+    "from": "fbdd8090ed"
+  },
+  "underpicture.note": {
+    "text": "クローズドベータ：リンクを作るには、hello@underpicture.com にテスターコードをお問い合わせください。",
+    "from": "e386d760dd"
+  },
+  "tunemail.shot1": {
+    "text": "スマートフォンの Tunemail：貼り付けた Spotify のリンクが Radiohead の Creep として認識され、同じ曲を Spotify、Apple Music、Deezer、Tidal で開くボタンが並ぶ。",
+    "from": "d2b2e7144d"
+  },
+  "tunemail.desc": {
+    "text": "誰にでも曲を送れます。相手が使っているアプリで開くリンクが1つだけ。ウェブ版はパブリックベータとして公開中、iPhone アプリは開発中です。",
+    "from": "dae5e8a959"
+  },
+  "tunemail.note": {
+    "text": "アカウントなしで試せます。Just browse を選び、Search を開いて、曲のリンクを貼り付けてください。",
+    "from": "f67a8c6eef"
+  },
+  "fifths.shot1": {
+    "text": "Another Circle Of Fifths のモード表示：色分けされた調の輪、G の7つのモード、そして G イオニアンの音階、ダイアトニックコード、セカンダリードミナント",
+    "from": "1b5094cee5"
+  },
+  "fifths.desc": {
+    "text": "インタラクティブな五度圏。調、モード、コードを探り、それらの関係を耳で確かめ、クイズで力試しができます。無料、アカウント不要、オフラインでも動きます。",
+    "from": "76a9d306f5"
+  },
+  "citrus.shot1": {
+    "text": "Focus モードの Citrus Timer：オレンジの一切れが時計回りに満ちていき、残り27分45秒",
+    "from": "59e327127f"
+  },
+  "citrus.shot2": {
+    "text": "短い休憩中の Citrus Timer：果物が緑のライムに変わり、残り4分37秒",
+    "from": "0fd5790264"
+  },
+  "status.notReleased": {
+    "text": "未リリース",
+    "from": "932738d341"
+  },
+  "citrus.desc": {
+    "text": "オレンジの形をした Mac 用のポモドーロタイマー。ウィンドウでも、デスクトップの小さなウィジェットでも使えます。集中しているあいだに果物ができあがっていきます。毎日使っていて、次のステップは署名付きのダウンロード版です。",
+    "from": "f0369f1903"
+  },
+  "hum.shot1": {
+    "text": "Hum のライブラリ：記録した音楽のアイデアがカードとして並び、それぞれにオーディオ、テキスト、アイデア、夢のタグと、74 bpm、ホ長調のように検出されたテンポと調があり、プロジェクトごとにまとめられている",
+    "from": "e6a3deeac0"
+  },
+  "status.frozen": {
+    "text": "休止中",
+    "from": "939f868537"
+  },
+  "hum.desc": {
+    "text": "アイデアを歌うか口ずさんで、そのまま残せます。口ずさんだメロディを編集できる MIDI に変える、音楽家のための個人的なクリエイティブアーカイブ。音高の検出はブラウザ内で動きます。",
+    "from": "20a2a2ecdb"
+  },
+  "astrotrip.shot1": {
+    "text": "Astrovarium でプラシーダス・ハウスシステムを使って作成したネイタルチャート：黄道帯の輪、ハウスのカスプ、惑星の位置、アスペクトの線",
+    "from": "81a7c2a07d"
+  },
+  "astrotrip.desc": {
+    "text": "NASA JPL Horizons と照合した位置にもとづく、精密な占星術チャート。ウェブ版ではネイタルチャートとそれに関するすべてが無料。トランジット、プログレッション、ディレクション、リターン、シナストリー、三重円は、アクセスキーで1週間開放されます。すべてがあなたのデバイス上で動きます。サーバーなし、アカウントなし、スマートフォンの外には何も出ません。Android 版はクローズドテスト中、iPhone 版は準備中です。",
+    "from": "58d0f76f1c"
+  },
+  "sec.dev": {
+    "text": "開発中",
+    "from": "f6146d719b"
+  },
+  "sec.devNote": {
+    "text": "製品というより仕事の道具です。私が実際に毎日何に時間を使っているかが見えるように載せています。",
+    "from": "85666b217e"
+  },
+  "common.openFull": {
+    "text": "フルサイズで開く",
+    "from": "ff0512de3d"
+  },
+  "scoreweaver.shot1": {
+    "text": "ScoreWeaver のライブラリ：分析済みの1,950曲が、検出されたムード、信頼度付きの別のムード候補、調、Camelot コード、BPM、長さとともに表に並ぶ",
+    "from": "c422398c7e"
+  },
+  "status.private": {
+    "text": "個人用ツール",
+    "from": "774549a511"
+  },
+  "scoreweaver.desc": {
+    "text": "ナレーション付き動画の音楽制作のためのローカルなパイプライン。現在は台本とナレーション音声から、確認済みの字幕を作ります。物語の感情に音楽を合わせる機能は、まだ研究段階です。Python で、すべて自分のマシン上で動いています。",
+    "from": "3169d94deb"
+  },
+  "localdeck.shot1": {
+    "text": "LocalDeck で音を言葉で説明して効果音ライブラリを検索：broken glass, close というフレーズで、索引済みの7,953ファイルから一致するものがカテゴリ別に表示される",
+    "from": "38b5276588"
+  },
+  "localdeck.shot2": {
+    "text": "LocalDeck：メモリ使用量が表示された読み込み済みのローカルモデルと、サウンドアーカイブ、サウンドデザイン、音楽、推論、リサーチ用のプリセットモード",
+    "from": "52812e9bdb"
+  },
+  "localdeck.desc": {
+    "text": "効果音ライブラリのための意味検索と自動タグ付け。これまでに4,500以上のファイルにタグを付け、音声そのものには手を加えていません。さらに Mac 上のローカル AI モデルのためのコントロールパネル。Python と FastAPI で、クラウドには何も送りません。",
+    "from": "c874e6b83d"
+  },
+  "myday.desc": {
+    "text": "自分の作業時間が実際にどこへ消えているか。完成した動画1分あたりの時間を、プロジェクトごとに、週の目安と比べて表示します。数字は Citrus Timer が自動で記入します。ニュースリーダーと1日の予定表もあります。TypeScript で、データはローカルに保存されます。",
+    "from": "a9316483b8"
+  },
+  "archivist.shot1": {
+    "text": "ターミナルで動く Archivist：ファイル数と容量つきのカタログ済みドライブ一覧と、中身を残すべきものと作り直せるものに分けるドライブごとのレポート",
+    "from": "8797eba624"
+  },
+  "archivist.desc": {
+    "text": "1台ずつつなぐアーカイブ用ドライブの棚のためのカタログ。ディスクをマウントしなくても、何が入っているかを探せます。",
+    "from": "73615f53e5"
+  },
+  "sec.support": {
+    "text": "サポートと連絡先",
+    "from": "d4c0522d0d"
+  },
+  "support.kofi": {
+    "text": "Ko-fi で支援する",
+    "from": "eeb0398b30"
+  },
+  "support.copied": {
+    "text": "コピーしました",
+    "from": "8e3df45a49"
+  },
+  "support.copyPrompt": {
+    "text": "USDT (TRC20) のアドレスをコピーしてください：",
+    "from": "64380717a6"
+  },
+  "footer.made": {
+    "text": "人の経験のために、🧡 を込めて。",
+    "from": "d097826c8f"
+  }
+}

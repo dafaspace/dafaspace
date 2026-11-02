@@ -1,0 +1,230 @@
+{
+  "meta.description": {
+    "text": "Daniel Fainberg, développeur indépendant et artiste visuel. De petites apps ciblées sous le nom dafaspace.",
+    "from": "89f89e80b0"
+  },
+  "meta.title": {
+    "text": "dafaspace - Daniel Fainberg",
+    "from": "32a492a149"
+  },
+  "meta.ogDescription": {
+    "text": "De petites apps ciblées, par un développeur indépendant. Cinéma, théorie musicale, astrologie et outils pour musiciens.",
+    "from": "767da0aad1"
+  },
+  "lang.label": {
+    "text": "Langue",
+    "from": "89b86ab0e6"
+  },
+  "offer.text": {
+    "text": "Ouvrir cette page en français ?",
+    "from": "4cf287dc9a"
+  },
+  "offer.yes": {
+    "text": "Ouvrir",
+    "from": "cf9b77061f"
+  },
+  "offer.close": {
+    "text": "Fermer",
+    "from": "bbfa773e5a"
+  },
+  "tagline": {
+    "text": "Je crée de petites apps ciblées pour ce que j'aime : le cinéma, la musique, la vie de tous les jours.",
+    "from": "228e6236e7"
+  },
+  "bio.more": {
+    "text": "En savoir plus sur moi",
+    "from": "2a8a76d547"
+  },
+  "bio.less": {
+    "text": "Moins",
+    "from": "526cb7425a"
+  },
+  "bio.background": {
+    "text": "Je viens de l'image : photographie, vidéo, art vidéo pour le théâtre. Depuis des années, j'observe avec curiosité comment l'image, le son et le rythme portent l'expérience humaine, l'émotion et le sentiment.",
+    "from": "537acf7157"
+  },
+  "bio.youtube": {
+    "text": "Depuis cinq ans, je suis sound designer et monteur musical d'une chaîne YouTube qui compte aujourd'hui 27 millions d'abonnés.",
+    "from": "7bd26d6ebf"
+  },
+  "bio.study": {
+    "text": "J'étudie actuellement en <strong>MA Professional Media Composition</strong> à l'Arts University Bournemouth, où j'apprends à écrire de la musique pour le cinéma.",
+    "from": "38d491a5ce"
+  },
+  "bio.dafaspace": {
+    "text": "Sous le nom <strong>dafaspace</strong>, je fais des apps que j'aimerais utiliser moi-même, et je m'en sers vraiment chaque jour. Je suis sincèrement heureux quand je vois mes apps rendre la vie de quelqu'un un peu plus simple ou plus joyeuse. Je crois aux gens et aux vrais liens humains, alors rien ne me rend plus heureux que de voir des personnes qui se ressemblent se trouver et ce petit miracle d'une vraie rencontre se produire.",
+    "from": "e3966ef00b"
+  },
+  "bio.contact": {
+    "text": "Une question sur les apps, ou une idée pour travailler ensemble ? Écrivez à <a href=\"mailto:hello@dafaspace.com\">hello@dafaspace.com</a>. Je lis chaque message.",
+    "from": "82d8f099b1"
+  },
+  "sec.projects": {
+    "text": "Projets",
+    "from": "53e890d5f0"
+  },
+  "cinemail.shot1": {
+    "text": "Recherche de Hildur dans Cinemail : parmi les personnes, la compositrice Hildur Gudnadottir en tête, suivie des films et séries correspondants",
+    "from": "f485fa0a00"
+  },
+  "cinemail.shot2": {
+    "text": "La fiche d'un film dans Cinemail avec l'affiche, la note, le synopsis, le réalisateur, le directeur de la photographie et les compositeurs, et des liens vers la bande originale sur Spotify, Apple Music et YouTube Music",
+    "from": "998eb6bf17"
+  },
+  "cinemail.shot3": {
+    "text": "Un profil de visionnage dans Cinemail : films vus et à voir, temps de visionnage total et classement des compositeurs que l'utilisateur a le plus entendus",
+    "from": "8a57e09dbf"
+  },
+  "status.live": {
+    "text": "Disponible",
+    "from": "65c821a596"
+  },
+  "badge.fresh": {
+    "text": "Mis à jour cette semaine",
+    "from": "353b094569"
+  },
+  "cinemail.desc": {
+    "text": "Votre compagnon de cinéma personnel. Suivez vos films, recevez des suggestions à partir de quelques mots, partagez des listes avec vos amis. Huit langues, pages publiques de films, import depuis IMDb. Déjà sur le web ; l'app iPhone est en test privé.",
+    "from": "5eb6875682"
+  },
+  "underpicture.shot1": {
+    "text": "L'écran d'accueil d'Underpicture : déposez d'un coup une vidéo et deux pistes musicales ou plus pour créer un lien pour le client",
+    "from": "966e2d2b77"
+  },
+  "status.beta": {
+    "text": "Bêta",
+    "from": "f03b60f7e5"
+  },
+  "underpicture.desc": {
+    "text": "Envoyez un seul lien à votre client. Il écoute chaque option musicale sous l'image, change de piste pendant que la vidéo continue, et note chacune Froid, Tiède ou Chaud. Son choix arrive dans votre boîte mail. Pour les monteurs, les compositeurs et les vidéastes ; fonctionne sur n'importe quel téléphone, en onze langues.",
+    "from": "fbdd8090ed"
+  },
+  "underpicture.note": {
+    "text": "Bêta fermée : pour créer des liens, demandez un code testeur à hello@underpicture.com.",
+    "from": "e386d760dd"
+  },
+  "tunemail.shot1": {
+    "text": "Tunemail sur un téléphone : un lien Spotify collé est reconnu comme Radiohead, Creep, avec des boutons pour ouvrir le même morceau dans Spotify, Apple Music, Deezer et Tidal.",
+    "from": "d2b2e7144d"
+  },
+  "tunemail.desc": {
+    "text": "Envoyez un morceau à n'importe qui : un seul lien qui l'ouvre dans l'app que la personne utilise. Déjà sur le web en bêta publique ; l'app iPhone est en développement.",
+    "from": "dae5e8a959"
+  },
+  "tunemail.note": {
+    "text": "Essayez sans compte : choisissez Just browse, ouvrez Search, puis collez le lien d'un morceau.",
+    "from": "f67a8c6eef"
+  },
+  "fifths.shot1": {
+    "text": "L'interface d'Another Circle Of Fifths en vue modale : une roue colorée des tonalités, les sept modes de G, ainsi que la gamme, les accords diatoniques et les dominantes secondaires de G ionien",
+    "from": "1b5094cee5"
+  },
+  "fifths.desc": {
+    "text": "Un cycle des quintes interactif. Explorez tonalités, modes et accords, écoutez comment ils se répondent, et testez-vous avec un quiz. Gratuit, sans compte, fonctionne hors ligne.",
+    "from": "76a9d306f5"
+  },
+  "citrus.shot1": {
+    "text": "Citrus Timer en mode Focus : une tranche d'orange qui se remplit dans le sens des aiguilles d'une montre, encore 27 minutes et 45 secondes",
+    "from": "59e327127f"
+  },
+  "citrus.shot2": {
+    "text": "Citrus Timer pendant une courte pause : le fruit est devenu un citron vert, encore 4 minutes et 37 secondes",
+    "from": "0fd5790264"
+  },
+  "status.notReleased": {
+    "text": "Pas encore sorti",
+    "from": "932738d341"
+  },
+  "citrus.desc": {
+    "text": "Un minuteur Pomodoro pour Mac en forme d'orange : une fenêtre, ou un petit widget sur le bureau. Le fruit se reconstitue pendant que vous vous concentrez. Je m'en sers chaque jour ; la prochaine étape est un téléchargement signé.",
+    "from": "f0369f1903"
+  },
+  "hum.shot1": {
+    "text": "La bibliothèque de Hum : des idées musicales enregistrées sous forme de cartes, chacune marquée audio, texte, idée ou rêve, avec le tempo et la tonalité détectés, par exemple 74 bpm en mi majeur, regroupées par projets",
+    "from": "e6a3deeac0"
+  },
+  "status.frozen": {
+    "text": "En pause",
+    "from": "939f868537"
+  },
+  "hum.desc": {
+    "text": "Chantez ou fredonnez une idée et gardez-la. Une archive créative personnelle pour musiciens qui transforme une mélodie fredonnée en MIDI modifiable, avec la détection de hauteur qui tourne dans le navigateur.",
+    "from": "20a2a2ecdb"
+  },
+  "astrotrip.shot1": {
+    "text": "Un thème natal dans Astrovarium avec le système de maisons Placidus : la roue du zodiaque, les cuspides des maisons, les positions des planètes et les lignes d'aspects",
+    "from": "81a7c2a07d"
+  },
+  "astrotrip.desc": {
+    "text": "Des thèmes astrologiques précis, avec des positions vérifiées par rapport à NASA JPL Horizons. Sur le web, le thème natal et tout ce qui s'y rapporte est gratuit ; transits, progressions, directions, révolutions, synastrie et triples roues s'ouvrent pour une semaine avec une clé d'accès. Tout tourne sur votre appareil : pas de serveur, pas de compte, rien ne quitte votre téléphone. La version Android est en test privé ; la version iPhone est en préparation.",
+    "from": "58d0f76f1c"
+  },
+  "sec.dev": {
+    "text": "En développement",
+    "from": "f6146d719b"
+  },
+  "sec.devNote": {
+    "text": "Des outils de travail plutôt que des produits. Je les montre pour que vous voyiez à quoi je passe vraiment mes journées.",
+    "from": "85666b217e"
+  },
+  "common.openFull": {
+    "text": "Ouvrir en taille réelle",
+    "from": "ff0512de3d"
+  },
+  "scoreweaver.shot1": {
+    "text": "La bibliothèque de ScoreWeaver : 1 950 morceaux analysés dans un tableau, avec l'humeur détectée, des lectures alternatives avec leur pourcentage de confiance, la tonalité, le code Camelot, le BPM et la durée",
+    "from": "c422398c7e"
+  },
+  "status.private": {
+    "text": "Outil personnel",
+    "from": "774549a511"
+  },
+  "scoreweaver.desc": {
+    "text": "Une chaîne locale pour mon travail de musique sur des vidéos narrées. Aujourd'hui, elle transforme le script et la voix off en sous-titres vérifiés ; accorder la musique à l'émotion de l'histoire est encore à l'étude. Python, entièrement sur ma propre machine.",
+    "from": "3169d94deb"
+  },
+  "localdeck.shot1": {
+    "text": "Recherche dans une bibliothèque de bruitages avec LocalDeck en décrivant le son : la phrase broken glass, close renvoie les fichiers correspondants parmi 7 953 indexés, regroupés par catégorie",
+    "from": "38b5276588"
+  },
+  "localdeck.shot2": {
+    "text": "LocalDeck : un modèle local chargé avec la mémoire utilisée affichée, et des modes prédéfinis pour l'archive sonore, le sound design, la musique, le raisonnement et la recherche",
+    "from": "52812e9bdb"
+  },
+  "localdeck.desc": {
+    "text": "Recherche sémantique et étiquetage automatique pour une bibliothèque de bruitages : plus de 4 500 fichiers étiquetés à ce jour, sans toucher à l'audio. Et un panneau de contrôle pour les modèles d'IA locaux sur Mac. Python et FastAPI, rien n'est envoyé dans le cloud.",
+    "from": "c874e6b83d"
+  },
+  "myday.desc": {
+    "text": "Où passent vraiment mes heures de travail : heures par minute de vidéo finie, par projet, face à une norme hebdomadaire, remplies toutes seules par Citrus Timer. Aussi un lecteur d'actualités et un plan de la journée. TypeScript, les données restent en local.",
+    "from": "a9316483b8"
+  },
+  "archivist.shot1": {
+    "text": "Archivist dans un terminal : une liste de disques catalogués avec le nombre de fichiers et la taille, et un rapport par disque qui sépare le contenu entre ce qu'il faut garder et ce qui peut être reconstitué",
+    "from": "8797eba624"
+  },
+  "archivist.desc": {
+    "text": "Un catalogue pour une étagère de disques d'archives, branchés un par un, pour savoir ce qu'il y a sur un disque sans le monter.",
+    "from": "73615f53e5"
+  },
+  "sec.support": {
+    "text": "Soutien et contact",
+    "from": "d4c0522d0d"
+  },
+  "support.kofi": {
+    "text": "Soutenir sur Ko-fi",
+    "from": "eeb0398b30"
+  },
+  "support.copied": {
+    "text": "Copié",
+    "from": "8e3df45a49"
+  },
+  "support.copyPrompt": {
+    "text": "Copiez l'adresse USDT (TRC20) :",
+    "from": "64380717a6"
+  },
+  "footer.made": {
+    "text": "Fait avec 🧡 pour l'expérience humaine.",
+    "from": "d097826c8f"
+  }
+}

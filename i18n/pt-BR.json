@@ -1,0 +1,230 @@
+{
+  "meta.description": {
+    "text": "Daniel Fainberg, desenvolvedor independente e artista visual. Apps pequenos e focados sob o nome dafaspace.",
+    "from": "89f89e80b0"
+  },
+  "meta.title": {
+    "text": "dafaspace - Daniel Fainberg",
+    "from": "32a492a149"
+  },
+  "meta.ogDescription": {
+    "text": "Apps pequenos e focados de um desenvolvedor independente. Cinema, teoria musical, astrologia e ferramentas para músicos.",
+    "from": "767da0aad1"
+  },
+  "lang.label": {
+    "text": "Idioma",
+    "from": "89b86ab0e6"
+  },
+  "offer.text": {
+    "text": "Abrir esta página em português?",
+    "from": "4cf287dc9a"
+  },
+  "offer.yes": {
+    "text": "Abrir",
+    "from": "cf9b77061f"
+  },
+  "offer.close": {
+    "text": "Fechar",
+    "from": "bbfa773e5a"
+  },
+  "tagline": {
+    "text": "Crio apps pequenos e focados para as coisas que amo: cinema, música e o dia a dia.",
+    "from": "228e6236e7"
+  },
+  "bio.more": {
+    "text": "Mais sobre mim",
+    "from": "2a8a76d547"
+  },
+  "bio.less": {
+    "text": "Menos",
+    "from": "526cb7425a"
+  },
+  "bio.background": {
+    "text": "Venho do universo visual: fotografia, videografia, videoarte para produções teatrais. Passei anos observando com curiosidade como imagem, som e ritmo carregam a experiência humana, a emoção e o sentimento.",
+    "from": "537acf7157"
+  },
+  "bio.youtube": {
+    "text": "Há cinco anos sou designer de som e editor musical de um canal do YouTube que chegou a 27 milhões de inscritos.",
+    "from": "7bd26d6ebf"
+  },
+  "bio.study": {
+    "text": "Atualmente curso o <strong>MA Professional Media Composition</strong> na Arts University Bournemouth, onde aprendo a compor música para cinema.",
+    "from": "38d491a5ce"
+  },
+  "bio.dafaspace": {
+    "text": "Sob o nome <strong>dafaspace</strong> faço apps que eu mesmo gostaria de usar, e de fato uso todos os dias. Fico sinceramente feliz quando vejo meus apps deixarem a vida de alguém um pouco mais fácil ou mais alegre. Acredito nas pessoas e na conexão humana de verdade, por isso nada me deixa mais feliz do que ver pessoas com afinidade se encontrarem e acontecer esse pequeno milagre da interação real.",
+    "from": "e3966ef00b"
+  },
+  "bio.contact": {
+    "text": "Dúvidas sobre os apps ou uma ideia para trabalharmos juntos? Escreva para <a href=\"mailto:hello@dafaspace.com\">hello@dafaspace.com</a>. Leio todas as mensagens.",
+    "from": "82d8f099b1"
+  },
+  "sec.projects": {
+    "text": "Projetos",
+    "from": "53e890d5f0"
+  },
+  "cinemail.shot1": {
+    "text": "Busca por Hildur no Cinemail: nos resultados de pessoas aparece primeiro a compositora Hildur Gudnadottir, seguida de filmes e séries correspondentes",
+    "from": "f485fa0a00"
+  },
+  "cinemail.shot2": {
+    "text": "Página de um filme no Cinemail com pôster, nota, sinopse, diretor, diretor de fotografia e compositores, com links para a trilha sonora no Spotify, Apple Music e YouTube Music",
+    "from": "998eb6bf17"
+  },
+  "cinemail.shot3": {
+    "text": "Um perfil de visualização no Cinemail: filmes assistidos e ainda por assistir, tempo total assistido e um ranking dos compositores mais ouvidos pelo usuário",
+    "from": "8a57e09dbf"
+  },
+  "status.live": {
+    "text": "Disponível",
+    "from": "65c821a596"
+  },
+  "badge.fresh": {
+    "text": "Atualizado esta semana",
+    "from": "353b094569"
+  },
+  "cinemail.desc": {
+    "text": "Seu companheiro pessoal de cinema. Registre filmes, receba sugestões a partir de poucas palavras, compartilhe listas com amigos. Oito idiomas, páginas públicas de filmes, importação do IMDb. Já na web; o app para iPhone está em teste fechado.",
+    "from": "5eb6875682"
+  },
+  "underpicture.shot1": {
+    "text": "A tela inicial do Underpicture: solte de uma vez um vídeo e duas ou mais faixas de música para criar um link para o cliente",
+    "from": "966e2d2b77"
+  },
+  "status.beta": {
+    "text": "Beta",
+    "from": "f03b60f7e5"
+  },
+  "underpicture.desc": {
+    "text": "Envie um único link ao seu cliente. Ele ouve cada opção de música sob a imagem, troca de faixa enquanto o vídeo continua tocando e avalia cada uma como Fria, Morna ou Quente. A escolha chega à sua caixa de entrada. Para editores, compositores e videomakers; funciona em qualquer celular, em onze idiomas.",
+    "from": "fbdd8090ed"
+  },
+  "underpicture.note": {
+    "text": "Beta fechado: para criar links, peça um código de tester em hello@underpicture.com.",
+    "from": "e386d760dd"
+  },
+  "tunemail.shot1": {
+    "text": "Tunemail no celular: um link do Spotify colado é reconhecido como Radiohead, Creep, com botões para abrir a mesma música no Spotify, Apple Music, Deezer e Tidal.",
+    "from": "d2b2e7144d"
+  },
+  "tunemail.desc": {
+    "text": "Envie uma música para qualquer pessoa: um link que a abre no app que ela usa. Já na web como beta público; o app para iPhone está em desenvolvimento.",
+    "from": "dae5e8a959"
+  },
+  "tunemail.note": {
+    "text": "Experimente sem conta: escolha Just browse, abra Search e cole o link de uma música.",
+    "from": "f67a8c6eef"
+  },
+  "fifths.shot1": {
+    "text": "A interface do Another Circle Of Fifths na visão modal: uma roda colorida de tonalidades, os sete modos de G e a escala, os acordes diatônicos e as dominantes secundárias de G jônio",
+    "from": "1b5094cee5"
+  },
+  "fifths.desc": {
+    "text": "Um círculo das quintas interativo. Explore tonalidades, modos e acordes, ouça como eles se relacionam e teste seus conhecimentos com um quiz. Grátis, sem conta, funciona offline.",
+    "from": "76a9d306f5"
+  },
+  "citrus.shot1": {
+    "text": "Citrus Timer no modo Focus: uma fatia de laranja se enchendo no sentido horário, faltam 27 minutos e 45 segundos",
+    "from": "59e327127f"
+  },
+  "citrus.shot2": {
+    "text": "Citrus Timer numa pausa curta: a fruta virou um limão verde, faltam 4 minutos e 37 segundos",
+    "from": "0fd5790264"
+  },
+  "status.notReleased": {
+    "text": "Ainda não lançado",
+    "from": "932738d341"
+  },
+  "citrus.desc": {
+    "text": "Um timer Pomodoro para Mac em forma de laranja: uma janela ou um pequeno widget na área de trabalho. A fruta se monta enquanto você se concentra. Uso todos os dias; o próximo passo é um download assinado.",
+    "from": "f0369f1903"
+  },
+  "hum.shot1": {
+    "text": "A biblioteca do Hum: ideias musicais capturadas como cartões, cada uma marcada como áudio, texto, ideia ou sonho, com andamento e tonalidade detectados, como 74 bpm em mi maior, agrupadas em projetos",
+    "from": "e6a3deeac0"
+  },
+  "status.frozen": {
+    "text": "Pausado",
+    "from": "939f868537"
+  },
+  "hum.desc": {
+    "text": "Cante ou cantarole uma ideia e guarde. Um arquivo criativo pessoal para músicos que transforma uma melodia cantarolada em MIDI editável, com a detecção de altura funcionando no navegador.",
+    "from": "20a2a2ecdb"
+  },
+  "astrotrip.shot1": {
+    "text": "Um mapa natal no Astrovarium com o sistema de casas Placidus, mostrando o anel zodiacal, as cúspides das casas, as posições planetárias e as linhas de aspectos",
+    "from": "81a7c2a07d"
+  },
+  "astrotrip.desc": {
+    "text": "Mapas astrológicos precisos, com posições conferidas com o NASA JPL Horizons. Na web, o mapa natal e tudo sobre ele é grátis; trânsitos, progressões, direções, revoluções, sinastria e mapas triplos abrem por uma semana com uma chave de acesso. Roda inteiramente no seu aparelho: sem servidor, sem conta, nada sai do seu celular. A versão para Android está em teste fechado; a versão para iPhone está sendo preparada.",
+    "from": "58d0f76f1c"
+  },
+  "sec.dev": {
+    "text": "Em desenvolvimento",
+    "from": "f6146d719b"
+  },
+  "sec.devNote": {
+    "text": "Ferramentas de trabalho, mais do que produtos. Listadas para você ver no que eu realmente passo os meus dias.",
+    "from": "85666b217e"
+  },
+  "common.openFull": {
+    "text": "Abrir em tamanho real",
+    "from": "ff0512de3d"
+  },
+  "scoreweaver.shot1": {
+    "text": "A biblioteca do ScoreWeaver: 1.950 faixas analisadas numa tabela com o clima detectado, leituras alternativas com porcentagens de confiança, tonalidade, código Camelot, BPM e duração",
+    "from": "c422398c7e"
+  },
+  "status.private": {
+    "text": "Ferramenta pessoal",
+    "from": "774549a511"
+  },
+  "scoreweaver.desc": {
+    "text": "Um pipeline local para o meu trabalho de trilha em vídeos narrados. Hoje ele transforma o roteiro e a narração em legendas conferidas; combinar a música com a emoção da história ainda está em pesquisa. Python, rodando inteiramente na minha própria máquina.",
+    "from": "3169d94deb"
+  },
+  "localdeck.shot1": {
+    "text": "Busca numa biblioteca de efeitos sonoros no LocalDeck descrevendo o som: a frase broken glass, close retorna arquivos correspondentes entre 7.953 indexados, agrupados por categoria",
+    "from": "38b5276588"
+  },
+  "localdeck.shot2": {
+    "text": "LocalDeck: um modelo local carregado com o uso de memória à vista e modos predefinidos para arquivo de som, sound design, música, raciocínio e pesquisa",
+    "from": "52812e9bdb"
+  },
+  "localdeck.desc": {
+    "text": "Busca semântica e marcação automática para uma biblioteca de efeitos sonoros: mais de 4.500 arquivos marcados até agora, sem mexer no áudio. Além de um painel de controle para modelos de IA locais no Mac. Python e FastAPI, nada vai para a nuvem.",
+    "from": "c874e6b83d"
+  },
+  "myday.desc": {
+    "text": "Para onde vão de fato as minhas horas de trabalho: horas por minuto de vídeo finalizado, por projeto, contra uma meta semanal, preenchidas sozinhas pelo Citrus Timer. Também um leitor de notícias e um plano do dia. TypeScript, com os dados no próprio aparelho.",
+    "from": "a9316483b8"
+  },
+  "archivist.shot1": {
+    "text": "Archivist num terminal: uma lista de discos catalogados com contagem de arquivos e tamanhos, e um relatório por disco que separa o conteúdo entre o que guardar e o que pode ser refeito",
+    "from": "8797eba624"
+  },
+  "archivist.desc": {
+    "text": "Um catálogo para uma prateleira de discos de arquivo, conectados um de cada vez, para eu achar o que há num disco sem montá-lo.",
+    "from": "73615f53e5"
+  },
+  "sec.support": {
+    "text": "Apoio e contato",
+    "from": "d4c0522d0d"
+  },
+  "support.kofi": {
+    "text": "Apoiar no Ko-fi",
+    "from": "eeb0398b30"
+  },
+  "support.copied": {
+    "text": "Copiado",
+    "from": "8e3df45a49"
+  },
+  "support.copyPrompt": {
+    "text": "Copie o endereço USDT (TRC20):",
+    "from": "64380717a6"
+  },
+  "footer.made": {
+    "text": "Feito com 🧡 para a experiência humana.",
+    "from": "d097826c8f"
+  }
+}
