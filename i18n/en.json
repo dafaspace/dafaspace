@@ -1,0 +1,230 @@
+{
+  "meta.description": {
+    "text": "Daniel Fainberg, indie developer and visual artist. Building small, focused apps under dafaspace.",
+    "hash": "89f89e80b0"
+  },
+  "meta.title": {
+    "text": "dafaspace - Daniel Fainberg",
+    "hash": "32a492a149"
+  },
+  "meta.ogDescription": {
+    "text": "Small, focused apps by one indie developer. Cinema, music theory, astrology, and tools for musicians.",
+    "hash": "767da0aad1"
+  },
+  "lang.label": {
+    "text": "Language",
+    "hash": "89b86ab0e6"
+  },
+  "offer.text": {
+    "text": "Open this page in English?",
+    "hash": "4cf287dc9a"
+  },
+  "offer.yes": {
+    "text": "Open",
+    "hash": "cf9b77061f"
+  },
+  "offer.close": {
+    "text": "Close",
+    "hash": "bbfa773e5a"
+  },
+  "tagline": {
+    "text": "I build small, focused apps for the things I love: cinema, music, everyday life.",
+    "hash": "228e6236e7"
+  },
+  "bio.more": {
+    "text": "More about me",
+    "hash": "2a8a76d547"
+  },
+  "bio.less": {
+    "text": "Less",
+    "hash": "526cb7425a"
+  },
+  "bio.background": {
+    "text": "I come from a visual background - photography, videography, video art for theatre productions. I've spent years curiously observing how images, sound and rhythm carry human experience, emotion and feeling.",
+    "hash": "537acf7157"
+  },
+  "bio.youtube": {
+    "text": "For five years I've been the sound designer and music editor of a YouTube channel that has grown to 27 million subscribers.",
+    "hash": "7bd26d6ebf"
+  },
+  "bio.study": {
+    "text": "Currently studying <strong>MA Professional Media Composition</strong> at Arts University Bournemouth, where I'm learning to write music for film.",
+    "hash": "38d491a5ce"
+  },
+  "bio.dafaspace": {
+    "text": "Under <strong>dafaspace</strong> I make apps that I'd want to use myself, and I really do use them every day. I'm genuinely happy when I see my apps make someone's life a little easier or more joyful. I believe in people and in meaningful human connection - so nothing makes me happier than when like-minded people find each other and that small miracle of real interaction happens.",
+    "hash": "e3966ef00b"
+  },
+  "bio.contact": {
+    "text": "Questions about the apps, or an idea for working together? Write to <a href=\"mailto:hello@dafaspace.com\">hello@dafaspace.com</a>. I read every message.",
+    "hash": "82d8f099b1"
+  },
+  "sec.projects": {
+    "text": "Projects",
+    "hash": "53e890d5f0"
+  },
+  "cinemail.shot1": {
+    "text": "Searching Cinemail for Hildur: people results led by the composer Hildur Gudnadottir, followed by matching films and series",
+    "hash": "f485fa0a00"
+  },
+  "cinemail.shot2": {
+    "text": "A film page in Cinemail showing the poster, rating, synopsis, director, cinematographer and composers, with links to the soundtrack on Spotify, Apple Music and YouTube Music",
+    "hash": "998eb6bf17"
+  },
+  "cinemail.shot3": {
+    "text": "A Cinemail viewing profile: films watched and still to watch, total watch time, and a ranking of the user's most-seen composers",
+    "hash": "8a57e09dbf"
+  },
+  "status.live": {
+    "text": "Live",
+    "hash": "65c821a596"
+  },
+  "badge.fresh": {
+    "text": "Updated this week",
+    "hash": "353b094569"
+  },
+  "cinemail.desc": {
+    "text": "Your personal cinema companion. Track films, get picks from a few words, share lists with friends. Eight languages, public film pages, IMDb import. On the web now; the iPhone app is in private testing.",
+    "hash": "5eb6875682"
+  },
+  "underpicture.shot1": {
+    "text": "The Underpicture start screen: drop one video and two or more music tracks at once to make a link for the client",
+    "hash": "966e2d2b77"
+  },
+  "status.beta": {
+    "text": "Beta",
+    "hash": "f03b60f7e5"
+  },
+  "underpicture.desc": {
+    "text": "Send your client one link. They hear every music option under the picture, switch tracks while the video keeps playing, and rate each one Cold, Warm or Hot. The pick lands in your inbox. For editors, composers and videographers; works on any phone, in eleven languages.",
+    "hash": "fbdd8090ed"
+  },
+  "underpicture.note": {
+    "text": "Closed beta: to make links, ask for a tester code at hello@underpicture.com.",
+    "hash": "e386d760dd"
+  },
+  "tunemail.shot1": {
+    "text": "Tunemail on a phone: a pasted Spotify link filled in as Radiohead, Creep, with buttons to open the same song in Spotify, Apple Music, Deezer and Tidal.",
+    "hash": "d2b2e7144d"
+  },
+  "tunemail.desc": {
+    "text": "Send a song to anyone: one link that opens it in whatever app they use. On the web now as a public beta; the iPhone app is in development.",
+    "hash": "dae5e8a959"
+  },
+  "tunemail.note": {
+    "text": "Try it without an account: choose Just browse, open Search, then paste a song link.",
+    "hash": "f67a8c6eef"
+  },
+  "fifths.shot1": {
+    "text": "The Another Circle Of Fifths interface in modal view: a coloured wheel of keys, the seven modes of G, and the scale, diatonic chords and secondary dominants for G Ionian",
+    "hash": "1b5094cee5"
+  },
+  "fifths.desc": {
+    "text": "An interactive circle of fifths. Explore keys, modes and chords, hear how they relate, and test yourself with a quiz. Free, no account, works offline.",
+    "hash": "76a9d306f5"
+  },
+  "citrus.shot1": {
+    "text": "Citrus Timer in Focus mode: an orange slice filling clockwise, 27 minutes 45 seconds remaining",
+    "hash": "59e327127f"
+  },
+  "citrus.shot2": {
+    "text": "Citrus Timer on a short break: the fruit has turned into a green lime, 4 minutes 37 seconds remaining",
+    "hash": "0fd5790264"
+  },
+  "status.notReleased": {
+    "text": "Not released yet",
+    "hash": "932738d341"
+  },
+  "citrus.desc": {
+    "text": "A Pomodoro timer for the Mac, shaped like an orange: a window, or a small widget on the desktop. The fruit assembles while you focus. In daily use; a signed download is the next step.",
+    "hash": "f0369f1903"
+  },
+  "hum.shot1": {
+    "text": "The Hum library: captured musical ideas as cards, each tagged audio, text, idea or dream, with detected tempo and key such as 74 bpm in E major, grouped into projects",
+    "hash": "e6a3deeac0"
+  },
+  "status.frozen": {
+    "text": "Frozen",
+    "hash": "939f868537"
+  },
+  "hum.desc": {
+    "text": "Sing or hum an idea and keep it. A personal creative archive for musicians that turns a hummed melody into MIDI you can edit, with pitch detection running in the browser.",
+    "hash": "20a2a2ecdb"
+  },
+  "astrotrip.shot1": {
+    "text": "A natal chart cast in Astrovarium using the Placidus house system, showing the zodiac ring, house cusps, planetary positions and aspect lines",
+    "hash": "81a7c2a07d"
+  },
+  "astrotrip.desc": {
+    "text": "Precise astrological charts, with positions checked against NASA JPL Horizons. On the web a natal chart and everything about it is free; transits, progressions, directions, returns, synastry and tri-wheels open for a week with an access key. Runs entirely on your device: no server, no account, nothing leaves your phone. The Android version is in private testing; the iPhone version is being prepared.",
+    "hash": "58d0f76f1c"
+  },
+  "sec.dev": {
+    "text": "In development",
+    "hash": "f6146d719b"
+  },
+  "sec.devNote": {
+    "text": "Working tools rather than products. Listed so you can see what I actually spend my days on.",
+    "hash": "85666b217e"
+  },
+  "common.openFull": {
+    "text": "Open full size",
+    "hash": "ff0512de3d"
+  },
+  "scoreweaver.shot1": {
+    "text": "The ScoreWeaver library: 1,950 analysed tracks in a table with detected mood, alternative mood readings with confidence percentages, key, Camelot code, BPM and length",
+    "hash": "c422398c7e"
+  },
+  "status.private": {
+    "text": "Private tool",
+    "hash": "774549a511"
+  },
+  "scoreweaver.desc": {
+    "text": "A local pipeline for my scoring work on narrated video. Today it turns the script and the voiceover into checked subtitles; matching music to the emotion of the story is still in research. Python, running entirely on my own machine.",
+    "hash": "3169d94deb"
+  },
+  "localdeck.shot1": {
+    "text": "Searching a sound effects library in LocalDeck by describing the sound: the phrase broken glass, close returns matching files from 7,953 indexed, grouped by category",
+    "hash": "38b5276588"
+  },
+  "localdeck.shot2": {
+    "text": "LocalDeck: a local model loaded with memory use shown, and preset modes for sound archive, sound design, music, reasoning and research",
+    "hash": "52812e9bdb"
+  },
+  "localdeck.desc": {
+    "text": "Semantic search and automatic tagging for a sound effects library: over 4,500 files tagged so far, the audio itself untouched. Plus a control panel for local AI models on a Mac. Python and FastAPI, nothing sent to the cloud.",
+    "hash": "c874e6b83d"
+  },
+  "myday.desc": {
+    "text": "Where my working hours actually go: hours per minute of finished video, per project, against a weekly norm, filled in by Citrus Timer on its own. Also a news reader and a day plan. TypeScript, local-first.",
+    "hash": "a9316483b8"
+  },
+  "archivist.shot1": {
+    "text": "Archivist in a terminal: a list of catalogued drives with file counts and sizes, and a per-drive report splitting the contents into what to keep and what is rebuildable",
+    "hash": "8797eba624"
+  },
+  "archivist.desc": {
+    "text": "A catalogue for a shelf of archive drives, plugged in one at a time, so I can find what is on a disk without mounting it.",
+    "hash": "73615f53e5"
+  },
+  "sec.support": {
+    "text": "Support &amp; Connect",
+    "hash": "d4c0522d0d"
+  },
+  "support.kofi": {
+    "text": "Support on Ko-fi",
+    "hash": "eeb0398b30"
+  },
+  "support.copied": {
+    "text": "Copied",
+    "hash": "8e3df45a49"
+  },
+  "support.copyPrompt": {
+    "text": "Copy USDT (TRC20) address:",
+    "hash": "64380717a6"
+  },
+  "footer.made": {
+    "text": "Made with 🧡 for the human experience.",
+    "hash": "d097826c8f"
+  }
+}

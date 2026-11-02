@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Daniel Fainberg, indie developer and visual artist. Building small, focused apps under dafaspace.">
-  <meta property="og:title" content="dafaspace - Daniel Fainberg">
-  <meta property="og:description" content="Small, focused apps by one indie developer. Cinema, music theory, astrology, and tools for musicians.">
+  <meta name="description" data-t-attr="content:meta.description" content="Daniel Fainberg, indie developer and visual artist. Building small, focused apps under dafaspace.">
+  <meta property="og:title" data-t-attr="content:meta.title" content="dafaspace - Daniel Fainberg">
+  <meta property="og:description" data-t-attr="content:meta.ogDescription" content="Small, focused apps by one indie developer. Cinema, music theory, astrology, and tools for musicians.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dafaspace.com">
   <meta name="theme-color" content="#0d0d1a">
-  <title>dafaspace - Daniel Fainberg</title>
+  <title data-t="meta.title">dafaspace - Daniel Fainberg</title>
   <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,6 +69,40 @@
       background: var(--accent);
       display: inline-block;
     }
+
+
+    /* Header row: the logo, and the language pill when the site has more than one language.
+       The pill is Underpicture's (app/index.html, .lang-slot / select.lang), lifted whole:
+       a native select, so a phone opens its own picker, with the chevron drawn here because
+       the browser's own arrow cannot be placed. */
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 40px; }
+    .top .logo { margin-bottom: 0; }
+    .lang-slot { position: relative; display: inline-flex; }
+    .lang-slot[hidden] { display: none; }
+    .lang-slot::after { content: ""; position: absolute; inset-inline-end: 12px; top: 50%; width: 12px; height: 12px;
+      transform: translateY(-50%); pointer-events: none; background: var(--muted);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+              mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+    select.lang { font: inherit; font-size: 13px; color: var(--muted); background: transparent; border: 1px solid var(--border);
+      border-radius: 999px; padding-block: .5em; padding-inline: .9em 2.2em; min-height: 44px; max-width: 12em; cursor: pointer;
+      -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; }
+    select.lang:hover { color: var(--text); }
+    select.lang option { color: #0d0d1a; }
+
+    /* The language offer, on "/" only: a quiet line in the reader's own language, never a redirect */
+    .lang-offer { display: flex; align-items: center; gap: 12px; margin: -20px 0 28px;
+      font-size: 14px; color: var(--muted); line-height: 1.4; }
+    .lang-offer-text { flex: 0 1 auto; min-width: 0; }
+    .lang-offer[hidden] { display: none; }
+    .lang-offer button {
+      display: inline-flex; align-items: center; justify-content: center;
+      font: inherit; line-height: 1; min-height: 44px; padding: 0 .6em;
+      background: none; border: 0; color: var(--text); cursor: pointer;
+      -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent;
+      text-box: trim-both cap alphabetic;
+    }
+    .lang-offer .lang-offer-go { flex: none; border-bottom: 1px solid var(--border); min-height: 0; padding: 4px 0; }
+    .lang-offer .lang-offer-close { flex: none; color: var(--muted); min-width: 44px; margin-inline-start: auto; }
 
     /* Hero */
     .hero {
@@ -166,8 +200,9 @@
     }
     .project-head {
       display: flex;
+      flex-wrap: wrap;                  /* a translated badge can be twice as long as the English */
       align-items: center;
-      gap: 12px;
+      gap: 8px 12px;
       margin-bottom: 10px;
     }
     .project-logo {
@@ -177,6 +212,7 @@
     }
     .project-logo, .project-logo span { color: var(--text); }
     .project-status {
+      white-space: nowrap;
       font-size: 11px;
       color: var(--muted);
       padding: 3px 9px;
@@ -316,11 +352,16 @@
     /* Mobile */
     @media (max-width: 600px) {
       body { padding: 48px 20px 40px; }
-      .logo { margin-bottom: 44px; }
+      .top { margin-bottom: 44px; }
       .tagline { font-size: 16px; }
       section { margin-top: 44px; }
     }
   </style>
+
+  <!-- I18N:START - written by tools/i18n.mjs build. Do not hand-edit inside. -->
+  <link rel="canonical" href="https://dafaspace.com/">
+  <script>window.SITE_LANGS = [{"code":"en","name":"English","dir":"ltr","path":"/"}]</script>
+  <!-- I18N:END -->
 
   <!-- FRESH:START - written weekly by _portfolio/site-weekly.mjs. Do not hand-edit
        inside; edit the badge style above, or the script, instead. -->
@@ -335,176 +376,183 @@
 <body>
   <main>
 
-    <div class="logo"><span id="logo" aria-label="dafaspace"></span></div>
+    <div class="top">
+      <div class="logo"><span id="logo" aria-label="dafaspace"></span></div>
+      <span class="lang-slot" hidden data-label="Language" data-t-attr="data-label:lang.label"></span>
+    </div>
+    <div class="lang-offer" hidden>
+      <span class="lang-offer-text" data-t="offer.text">Open this page in English?</span>
+      <button type="button" class="lang-offer-go" data-t="offer.yes">Open</button>
+      <button type="button" class="lang-offer-close" aria-label="Close" data-t-attr="aria-label:offer.close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
 
     <div class="hero">
       <img class="avatar" src="photo.jpg" alt="Daniel Fainberg">
       <h1>Daniel Fainberg</h1>
     </div>
-    <p class="tagline">I build small, focused apps for the things I love: cinema, music, everyday life.</p>
+    <p class="tagline" data-t="tagline">I build small, focused apps for the things I love: cinema, music, everyday life.</p>
 
     <div class="bio">
       <details>
-        <summary><span class="more">More about me</span><span class="less">Less</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <p>I compose music, design sound and edit video, and I build the tools I use for that work.</p>
-      <p>I come from a visual background - photography, videography, video art for theatre productions. I've spent years curiously observing how images, sound and rhythm carry human experience, emotion and feeling.</p>
-      <p>For five years I've been the sound designer and music editor of a YouTube channel that has grown to 27 million subscribers.</p>
-      <p>Currently studying <strong>MA Professional Media Composition</strong> at Arts University Bournemouth, where I'm learning to write music for film.</p>
-      <p>Under <strong>dafaspace</strong> I make apps that I'd want to use myself, and I really do use them every day. I'm genuinely happy when I see my apps make someone's life a little easier or more joyful. I believe in people and in meaningful human connection - so nothing makes me happier than when like-minded people find each other and that small miracle of real interaction happens.</p>
-      <p>Questions about the apps, or an idea for working together? Write to <a href="mailto:hello@dafaspace.com">hello@dafaspace.com</a>. I read every message.</p>
+        <summary><span class="more" data-t="bio.more">More about me</span><span class="less" data-t="bio.less">Less</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <p data-t="bio.background">I come from a visual background - photography, videography, video art for theatre productions. I've spent years curiously observing how images, sound and rhythm carry human experience, emotion and feeling.</p>
+      <p data-t="bio.youtube">For five years I've been the sound designer and music editor of a YouTube channel that has grown to 27 million subscribers.</p>
+      <p data-t="bio.study">Currently studying <strong>MA Professional Media Composition</strong> at Arts University Bournemouth, where I'm learning to write music for film.</p>
+      <p data-t="bio.dafaspace">Under <strong>dafaspace</strong> I make apps that I'd want to use myself, and I really do use them every day. I'm genuinely happy when I see my apps make someone's life a little easier or more joyful. I believe in people and in meaningful human connection - so nothing makes me happier than when like-minded people find each other and that small miracle of real interaction happens.</p>
+      <p data-t="bio.contact">Questions about the apps, or an idea for working together? Write to <a href="mailto:hello@dafaspace.com">hello@dafaspace.com</a>. I read every message.</p>
       </details>
     </div>
 
     <section>
-      <h2>Projects</h2>
+      <h2 data-t="sec.projects">Projects</h2>
 
       <a id="p-cinemail" class="project" href="https://cinemail.app" target="_blank" rel="noopener">
         <div class="project-shots">
-          <img class="project-shot" src="shots/cinemail1.jpg" alt="Searching Cinemail for Hildur: people results led by the composer Hildur Gudnadottir, followed by matching films and series" loading="lazy" width="1080" height="1835">
-          <img class="project-shot" src="shots/cinemail.jpg" alt="A film page in Cinemail showing the poster, rating, synopsis, director, cinematographer and composers, with links to the soundtrack on Spotify, Apple Music and YouTube Music" loading="lazy" width="608" height="1200">
-          <img class="project-shot" src="shots/cinemail2.jpg" alt="A Cinemail viewing profile: films watched and still to watch, total watch time, and a ranking of the user's most-seen composers" loading="lazy" width="765" height="1200">
+          <img class="project-shot" data-t-attr="alt:cinemail.shot1" src="shots/cinemail1.jpg" alt="Searching Cinemail for Hildur: people results led by the composer Hildur Gudnadottir, followed by matching films and series" loading="lazy" width="1080" height="1835">
+          <img class="project-shot" data-t-attr="alt:cinemail.shot2" src="shots/cinemail.jpg" alt="A film page in Cinemail showing the poster, rating, synopsis, director, cinematographer and composers, with links to the soundtrack on Spotify, Apple Music and YouTube Music" loading="lazy" width="608" height="1200">
+          <img class="project-shot" data-t-attr="alt:cinemail.shot3" src="shots/cinemail2.jpg" alt="A Cinemail viewing profile: films watched and still to watch, total watch time, and a ranking of the user's most-seen composers" loading="lazy" width="765" height="1200">
         </div>
         <div class="project-head">
           <div class="project-logo"><span>CINE</span>MAIL</div>
-          <div class="project-status">Live</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.live">Live</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">Your personal cinema companion. Track films, get picks from a few words, share lists with friends. Eight languages, public film pages, IMDb import. On the web now; the iPhone app is in private testing.</div>
+        <div class="project-desc" data-t="cinemail.desc">Your personal cinema companion. Track films, get picks from a few words, share lists with friends. Eight languages, public film pages, IMDb import. On the web now; the iPhone app is in private testing.</div>
       </a>
 
       <a id="p-underpicture" class="project" href="https://underpicture.com" target="_blank" rel="noopener">
-        <img class="project-shot" src="shots/underpicture.jpg" alt="The Underpicture start screen: drop one video and two or more music tracks at once to make a link for the client" loading="lazy" width="1040" height="800">
+        <img class="project-shot" data-t-attr="alt:underpicture.shot1" src="shots/underpicture.jpg" alt="The Underpicture start screen: drop one video and two or more music tracks at once to make a link for the client" loading="lazy" width="1040" height="800">
         <div class="project-head">
           <div class="project-logo"><span>UNDER</span>PICTURE</div>
-          <div class="project-status">Beta</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.beta">Beta</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">Send your client one link. They hear every music option under the picture, switch tracks while the video keeps playing, and rate each one Cold, Warm or Hot. The pick lands in your inbox. For editors, composers and videographers; works on any phone, in eleven languages.</div>
-        <div class="project-note">Closed beta: to make links, ask for a tester code at hello@underpicture.com.</div>
+        <div class="project-desc" data-t="underpicture.desc">Send your client one link. They hear every music option under the picture, switch tracks while the video keeps playing, and rate each one Cold, Warm or Hot. The pick lands in your inbox. For editors, composers and videographers; works on any phone, in eleven languages.</div>
+        <div class="project-note" data-t="underpicture.note">Closed beta: to make links, ask for a tester code at hello@underpicture.com.</div>
       </a>
 
       <a id="p-tunemail" class="project" href="https://tunemail.app" target="_blank" rel="noopener">
-        <img class="project-shot" src="shots/tunemail.jpg" alt="Tunemail on a phone: a pasted Spotify link filled in as Radiohead, Creep, with buttons to open the same song in Spotify, Apple Music, Deezer and Tidal." loading="lazy" width="780" height="1688">
+        <img class="project-shot" data-t-attr="alt:tunemail.shot1" src="shots/tunemail.jpg" alt="Tunemail on a phone: a pasted Spotify link filled in as Radiohead, Creep, with buttons to open the same song in Spotify, Apple Music, Deezer and Tidal." loading="lazy" width="780" height="1688">
         <div class="project-head">
           <div class="project-logo"><span>TUNE</span>MAIL</div>
-          <div class="project-status">Beta</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.beta">Beta</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">Send a song to anyone: one link that opens it in whatever app they use. On the web now as a public beta; the iPhone app is in development.</div>
-        <div class="project-note">Try it without an account: choose Just browse, open Search, then paste a song link.</div>
+        <div class="project-desc" data-t="tunemail.desc">Send a song to anyone: one link that opens it in whatever app they use. On the web now as a public beta; the iPhone app is in development.</div>
+        <div class="project-note" data-t="tunemail.note">Try it without an account: choose Just browse, open Search, then paste a song link.</div>
       </a>
 
       <a id="p-fifths" class="project" href="https://dafaspace.github.io/fifths/" target="_blank" rel="noopener">
-        <img class="project-shot" src="shots/fifths.png" alt="The Another Circle Of Fifths interface in modal view: a coloured wheel of keys, the seven modes of G, and the scale, diatonic chords and secondary dominants for G Ionian" loading="lazy" width="538" height="981">
+        <img class="project-shot" data-t-attr="alt:fifths.shot1" src="shots/fifths.png" alt="The Another Circle Of Fifths interface in modal view: a coloured wheel of keys, the seven modes of G, and the scale, diatonic chords and secondary dominants for G Ionian" loading="lazy" width="538" height="981">
         <div class="project-head">
           <div class="project-logo"><span>CIRCLE</span> OF FIFTHS</div>
-          <div class="project-status">Live</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.live">Live</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">An interactive circle of fifths. Explore keys, modes and chords, hear how they relate, and test yourself with a quiz. Free, no account, works offline.</div>
+        <div class="project-desc" data-t="fifths.desc">An interactive circle of fifths. Explore keys, modes and chords, hear how they relate, and test yourself with a quiz. Free, no account, works offline.</div>
       </a>
 
       <div id="p-citrus" class="project project--static">
         <div class="project-shots">
-          <img class="project-shot" src="shots/citrus-focus.jpg" alt="Citrus Timer in Focus mode: an orange slice filling clockwise, 27 minutes 45 seconds remaining" loading="lazy" width="597" height="900">
-          <img class="project-shot" src="shots/citrus-break.jpg" alt="Citrus Timer on a short break: the fruit has turned into a green lime, 4 minutes 37 seconds remaining" loading="lazy" width="597" height="900">
+          <img class="project-shot" data-t-attr="alt:citrus.shot1" src="shots/citrus-focus.jpg" alt="Citrus Timer in Focus mode: an orange slice filling clockwise, 27 minutes 45 seconds remaining" loading="lazy" width="597" height="900">
+          <img class="project-shot" data-t-attr="alt:citrus.shot2" src="shots/citrus-break.jpg" alt="Citrus Timer on a short break: the fruit has turned into a green lime, 4 minutes 37 seconds remaining" loading="lazy" width="597" height="900">
         </div>
         <div class="project-head">
           <div class="project-logo"><span>CITRUS</span> TIMER</div>
-          <div class="project-status">Not released yet</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.notReleased">Not released yet</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">A Pomodoro timer for the Mac, shaped like an orange: a window, or a small widget on the desktop. The fruit assembles while you focus. In daily use; a signed download is the next step.</div>
+        <div class="project-desc" data-t="citrus.desc">A Pomodoro timer for the Mac, shaped like an orange: a window, or a small widget on the desktop. The fruit assembles while you focus. In daily use; a signed download is the next step.</div>
       </div>
 
       <a id="p-hum" class="project" href="https://dafaspace.github.io/hum/" target="_blank" rel="noopener">
-        <img class="project-shot" src="shots/hum.jpg" alt="The Hum library: captured musical ideas as cards, each tagged audio, text, idea or dream, with detected tempo and key such as 74 bpm in E major, grouped into projects" loading="lazy" width="1400" height="900">
+        <img class="project-shot" data-t-attr="alt:hum.shot1" src="shots/hum.jpg" alt="The Hum library: captured musical ideas as cards, each tagged audio, text, idea or dream, with detected tempo and key such as 74 bpm in E major, grouped into projects" loading="lazy" width="1400" height="900">
         <div class="project-head">
           <div class="project-logo"><span>HUM</span></div>
-          <div class="project-status">Frozen</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.frozen">Frozen</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">Sing or hum an idea and keep it. A personal creative archive for musicians that turns a hummed melody into MIDI you can edit, with pitch detection running in the browser.</div>
+        <div class="project-desc" data-t="hum.desc">Sing or hum an idea and keep it. A personal creative archive for musicians that turns a hummed melody into MIDI you can edit, with pitch detection running in the browser.</div>
       </a>
 
       <a id="p-astrotrip" class="project" href="https://dafaspace.github.io/astrotrip/" target="_blank" rel="noopener">
-        <img class="project-shot" src="shots/astrotrip.png" alt="A natal chart cast in Astrovarium using the Placidus house system, showing the zodiac ring, house cusps, planetary positions and aspect lines" loading="lazy" width="900" height="1010">
+        <img class="project-shot" data-t-attr="alt:astrotrip.shot1" src="shots/astrotrip.png" alt="A natal chart cast in Astrovarium using the Placidus house system, showing the zodiac ring, house cusps, planetary positions and aspect lines" loading="lazy" width="900" height="1010">
         <div class="project-head">
           <div class="project-logo"><span>ASTRO</span>VARIUM</div>
-          <div class="project-status">Beta</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.beta">Beta</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">Precise astrological charts, with positions checked against NASA JPL Horizons. On the web a natal chart and everything about it is free; transits, progressions, directions, returns, synastry and tri-wheels open for a week with an access key. Runs entirely on your device: no server, no account, nothing leaves your phone. The Android version is in private testing; the iPhone version is being prepared.</div>
+        <div class="project-desc" data-t="astrotrip.desc">Precise astrological charts, with positions checked against NASA JPL Horizons. On the web a natal chart and everything about it is free; transits, progressions, directions, returns, synastry and tri-wheels open for a week with an access key. Runs entirely on your device: no server, no account, nothing leaves your phone. The Android version is in private testing; the iPhone version is being prepared.</div>
       </a>
 
     </section>
 
     <section>
-      <h2>In development</h2>
-      <p class="section-note">Working tools rather than products. Listed so you can see what I actually spend my days on.</p>
+      <h2 data-t="sec.dev">In development</h2>
+      <p class="section-note" data-t="sec.devNote">Working tools rather than products. Listed so you can see what I actually spend my days on.</p>
 
       <div id="p-scoreweaver" class="project project--static">
-        <a href="shots/scoreweaver.png" target="_blank" rel="noopener" title="Open full size">
-          <img class="project-shot" src="shots/scoreweaver.png" alt="The ScoreWeaver library: 1,950 analysed tracks in a table with detected mood, alternative mood readings with confidence percentages, key, Camelot code, BPM and length" loading="lazy" width="1200" height="850">
+        <a href="shots/scoreweaver.png" target="_blank" rel="noopener" title="Open full size" data-t-attr="title:common.openFull">
+          <img class="project-shot" data-t-attr="alt:scoreweaver.shot1" src="shots/scoreweaver.png" alt="The ScoreWeaver library: 1,950 analysed tracks in a table with detected mood, alternative mood readings with confidence percentages, key, Camelot code, BPM and length" loading="lazy" width="1200" height="850">
         </a>
         <div class="project-head">
           <div class="project-logo"><span>SCORE</span>WEAVER</div>
-          <div class="project-status">Private tool</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.private">Private tool</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">A local pipeline for my scoring work on narrated video. Today it turns the script and the voiceover into checked subtitles; matching music to the emotion of the story is still in research. Python, running entirely on my own machine.</div>
+        <div class="project-desc" data-t="scoreweaver.desc">A local pipeline for my scoring work on narrated video. Today it turns the script and the voiceover into checked subtitles; matching music to the emotion of the story is still in research. Python, running entirely on my own machine.</div>
       </div>
 
       <div id="p-localdeck" class="project project--static">
         <div class="project-shots project-shots--stack">
-          <a href="shots/localdeck2.jpg" target="_blank" rel="noopener" title="Open full size">
-            <img class="project-shot" src="shots/localdeck2.jpg" alt="Searching a sound effects library in LocalDeck by describing the sound: the phrase broken glass, close returns matching files from 7,953 indexed, grouped by category" loading="lazy" width="1200" height="827">
+          <a href="shots/localdeck2.jpg" target="_blank" rel="noopener" title="Open full size" data-t-attr="title:common.openFull">
+            <img class="project-shot" data-t-attr="alt:localdeck.shot1" src="shots/localdeck2.jpg" alt="Searching a sound effects library in LocalDeck by describing the sound: the phrase broken glass, close returns matching files from 7,953 indexed, grouped by category" loading="lazy" width="1200" height="827">
           </a>
-          <a href="shots/localdeck.png" target="_blank" rel="noopener" title="Open full size">
-            <img class="project-shot" src="shots/localdeck.png" alt="LocalDeck: a local model loaded with memory use shown, and preset modes for sound archive, sound design, music, reasoning and research" loading="lazy" width="1200" height="1050">
+          <a href="shots/localdeck.png" target="_blank" rel="noopener" title="Open full size" data-t-attr="title:common.openFull">
+            <img class="project-shot" data-t-attr="alt:localdeck.shot2" src="shots/localdeck.png" alt="LocalDeck: a local model loaded with memory use shown, and preset modes for sound archive, sound design, music, reasoning and research" loading="lazy" width="1200" height="1050">
           </a>
         </div>
         <div class="project-head">
           <div class="project-logo"><span>LOCAL</span>DECK</div>
-          <div class="project-status">Private tool</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.private">Private tool</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">Semantic search and automatic tagging for a sound effects library: over 4,500 files tagged so far, the audio itself untouched. Plus a control panel for local AI models on a Mac. Python and FastAPI, nothing sent to the cloud.</div>
+        <div class="project-desc" data-t="localdeck.desc">Semantic search and automatic tagging for a sound effects library: over 4,500 files tagged so far, the audio itself untouched. Plus a control panel for local AI models on a Mac. Python and FastAPI, nothing sent to the cloud.</div>
       </div>
 
       <div id="p-myday" class="project project--static">
         <div class="project-head">
           <div class="project-logo"><span>MY</span> DAY</div>
-          <div class="project-status">Private tool</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.private">Private tool</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">Where my working hours actually go: hours per minute of finished video, per project, against a weekly norm, filled in by Citrus Timer on its own. Also a news reader and a day plan. TypeScript, local-first.</div>
+        <div class="project-desc" data-t="myday.desc">Where my working hours actually go: hours per minute of finished video, per project, against a weekly norm, filled in by Citrus Timer on its own. Also a news reader and a day plan. TypeScript, local-first.</div>
       </div>
 
       <div id="p-archivist" class="project project--static">
-        <a href="shots/archivist.png" target="_blank" rel="noopener" title="Open full size">
-          <img class="project-shot" src="shots/archivist.png" alt="Archivist in a terminal: a list of catalogued drives with file counts and sizes, and a per-drive report splitting the contents into what to keep and what is rebuildable" loading="lazy" width="1200" height="643">
+        <a href="shots/archivist.png" target="_blank" rel="noopener" title="Open full size" data-t-attr="title:common.openFull">
+          <img class="project-shot" data-t-attr="alt:archivist.shot1" src="shots/archivist.png" alt="Archivist in a terminal: a list of catalogued drives with file counts and sizes, and a per-drive report splitting the contents into what to keep and what is rebuildable" loading="lazy" width="1200" height="643">
         </a>
         <div class="project-head">
           <div class="project-logo"><span>ARCHIV</span>IST</div>
-          <div class="project-status">Private tool</div>
-          <div class="fresh">Updated this week</div>
+          <div class="project-status" data-t="status.private">Private tool</div>
+          <div class="fresh" data-t="badge.fresh">Updated this week</div>
         </div>
-        <div class="project-desc">A catalogue for a shelf of archive drives, plugged in one at a time, so I can find what is on a disk without mounting it.</div>
+        <div class="project-desc" data-t="archivist.desc">A catalogue for a shelf of archive drives, plugged in one at a time, so I can find what is on a disk without mounting it.</div>
       </div>
     </section>
 
     <section>
-      <h2>Support &amp; Connect</h2>
+      <h2 data-t="sec.support">Support &amp; Connect</h2>
       <div class="links">
         <a href="https://ko-fi.com/dafaspace" target="_blank" rel="noopener">
           <span class="label">
             <span class="label-icon">☕</span>
-            Support on Ko-fi
+            <span data-t="support.kofi">Support on Ko-fi</span>
           </span>
           <span class="arrow">→</span>
         </a>
-        <a href="#" onclick="copyUSDT(event)" id="usdt-link">
+        <a href="#" onclick="copyUSDT(event)" id="usdt-link" data-copied="Copied" data-prompt="Copy USDT (TRC20) address:" data-t-attr="data-copied:support.copied,data-prompt:support.copyPrompt">
           <span class="label">
             <span class="label-icon">◈</span>
             <span id="usdt-label">USDT (TRC20)</span>
@@ -522,7 +570,7 @@
     </section>
 
     <footer>
-      © <span id="year">2026</span> dafaspace. Made with 🧡 for the human experience.
+      © <span id="year">2026</span> dafaspace. <span data-t="footer.made">Made with 🧡 for the human experience.</span>
     </footer>
 
   </main>
@@ -534,15 +582,65 @@
 
     function copyUSDT(e) {
       e.preventDefault();
+      const link = e.currentTarget;
       navigator.clipboard.writeText(USDT_ADDRESS).then(() => {
         const lbl = document.getElementById('usdt-label');
         const orig = lbl.textContent;
-        lbl.textContent = "Copied ✓ " + USDT_ADDRESS.slice(0, 6) + "…" + USDT_ADDRESS.slice(-4);
+        lbl.textContent = link.dataset.copied + " ✓ " + USDT_ADDRESS.slice(0, 6) + "…" + USDT_ADDRESS.slice(-4);
         setTimeout(() => { lbl.textContent = orig; }, 2500);
       }).catch(() => {
-        prompt("Copy USDT (TRC20) address:", USDT_ADDRESS);
+        prompt(link.dataset.prompt, USDT_ADDRESS);
       });
     }
+  </script>
+  <script>
+    // Languages (see CLAUDE.md, Languages). SITE_LANGS is written by tools/i18n.mjs into the
+    // I18N block above: every language that has a page, with its name, path and offer words.
+    (function () {
+      const L = window.SITE_LANGS || [], here = document.documentElement.lang;
+      if (L.length < 2) return;
+      const slot = document.querySelector('.lang-slot');
+      const sel = document.createElement('select');
+      sel.className = 'lang';
+      sel.setAttribute('aria-label', slot.dataset.label);
+      sel.innerHTML = L.map(l => `<option value="${l.code}" lang="${l.code}" dir="${l.dir}">${l.name}</option>`).join('');
+      sel.value = here;
+      sel.addEventListener('change', () => {
+        try { localStorage.setItem('dafaspace:lang', sel.value); } catch {}
+        location.href = L.find(l => l.code === sel.value).path;
+      });
+      slot.appendChild(sel);
+      slot.hidden = false;
+
+      // "/" is always English. A reader whose language we have gets one quiet offer, in that
+      // language; a choice made in the pill, English included, is remembered and respected.
+      if (here !== 'en') return;
+      let saved = null, dismissed = null;
+      try { saved = localStorage.getItem('dafaspace:lang'); dismissed = localStorage.getItem('dafaspace:offer-dismissed'); } catch {}
+      if (saved === 'en') return;
+      const find = code => L.find(l => l.code === code);
+      let pick = saved && find(saved);
+      if (!pick) for (const raw of navigator.languages || [navigator.language || 'en']) {
+        const l = raw.toLowerCase();
+        pick = find(l.startsWith('pt') ? 'pt-BR' : l.startsWith('iw') ? 'he' : l.slice(0, 2));
+        if (pick) break;
+      }
+      if (!pick || pick.code === 'en' || dismissed === pick.code || !pick.offer) return;
+      const bar = document.querySelector('.lang-offer');
+      bar.lang = pick.code; bar.dir = pick.dir;
+      bar.querySelector('.lang-offer-text').textContent = pick.offer.text;
+      bar.querySelector('.lang-offer-go').textContent = pick.offer.yes;
+      bar.querySelector('.lang-offer-close').setAttribute('aria-label', pick.offer.close);
+      bar.querySelector('.lang-offer-go').addEventListener('click', () => {
+        try { localStorage.setItem('dafaspace:lang', pick.code); } catch {}
+        location.href = pick.path;
+      });
+      bar.querySelector('.lang-offer-close').addEventListener('click', () => {
+        try { localStorage.setItem('dafaspace:offer-dismissed', pick.code); } catch {}
+        bar.hidden = true;
+      });
+      bar.hidden = false;
+    })();
   </script>
   <script src="logo-anim.js"></script>
   <script>dafaspaceLogo(document.getElementById('logo'), { height: 31, word: 'logo-word.svg' })</script>

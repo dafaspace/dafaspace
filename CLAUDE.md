@@ -52,6 +52,31 @@ leave the rest unstaged and untouched.
     committed. This is a deliberate exception to "no build step": one file is edited by hand, not
     twelve.
 
+### How it works (built 3 Nov 2026, English only so far)
+
+- `index.html` stays the one page edited by hand, in English. Each translatable text carries a
+  key: `data-t="key"` for an element's inner HTML, `data-t-attr="alt:key,title:key"` for
+  attributes. A new text without a key stays English on every page, so **give every new text a
+  key**. The same key used twice must have the same English (statuses, badges).
+- `i18n/languages.json` is the list of the site's languages, with each one's own name and
+  direction. `i18n/en.json` is generated: every key, its English, and a hash.
+- A translation is `i18n/<code>.json`, shaped `{ "key": { "text": "...", "from": "<hash from en.json>" } }`.
+  `offer.text` names the reader's own language ("Open this page in Russian?", written in Russian).
+  App names stay untranslated.
+- `node tools/i18n.mjs build` regenerates `en.json`, the `I18N` block in `index.html` (canonical,
+  hreflang, `SITE_LANGS`), and `<code>/index.html` for every language with a translation file.
+  **Run it after every edit of `index.html`** and commit its output with the edit.
+- `node tools/i18n.mjs check` reports, in one line:
+  - texts whose English changed since translation (stale) and keys with no translation (missing);
+  - generated pages older than `index.html`, which also happens after the weekly FRESH script;
+  - a language an app has that the site lacks;
+  - an app whose language list cannot be read;
+  - languages not translated yet.
+  It exits 1 when there is anything. `checkSiteLanguages()` in the same file returns `{ ok, line }`
+  for the nightly `_portfolio/check-sites.mjs`.
+- The switcher is Underpicture's language pill (a native select), hidden while English is the only
+  language. `/` offers the reader's language once, in that language, and never redirects.
+
 ## Look
 
 - The accent is `#D96512`. App names on cards all use `var(--text)`.
