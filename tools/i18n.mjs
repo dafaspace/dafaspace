@@ -33,7 +33,7 @@ const between = (s, a, b) => { const i = s.indexOf(a); if (i < 0) return ''; con
 const APP_SOURCES = [
   { app: 'Cinemail', file: 'Cinemail/app/index.html', codes: s => [...s.matchAll(/class="lang-btn[^"]*" data-lang="([a-zA-Z-]+)"/g)].map(m => m[1]) },
   { app: 'Astrovarium', file: 'AstroVarium/index.html', codes: s => [...between(s, 'const LANGS=', ';').matchAll(/\['([a-zA-Z-]+)'/g)].map(m => m[1]) },
-  { app: 'Note Catcher', file: 'Note Catcher/note-catcher/web/i18n.js', codes: s => keysOf(between(s, 'const LANGS=', '}')) },
+  { app: 'Spotanote', file: 'Spotanote/spotanote/web/i18n.js', codes: s => keysOf(between(s, 'const LANGS=', '}')) },
   { app: 'Underpicture', file: 'Underpicture/app/index.html', codes: s => keysOf(between(s, 'const LANGS = {', '};')) },
 ];
 
