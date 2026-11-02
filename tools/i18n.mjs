@@ -8,6 +8,7 @@
 //
 //   node tools/i18n.mjs build   writes i18n/en.json, the I18N block in index.html, and <code>/index.html
 //                               for every language that has a translation file
+//   node tools/i18n.mjs gate    the pre-commit hook's test: exits 1 only when a translation or a page is behind
 //   node tools/i18n.mjs check   reports stale and missing texts, out-of-date pages, and languages an
 //                               app has but the site lacks; exits 1 when anything needs doing
 //
@@ -105,9 +106,11 @@ function render(source, lang, live, en) {
   return setBlock(html, block(lang.code, live, en));
 }
 
+const enJson = en => JSON.stringify(Object.fromEntries(Object.entries(en).map(([k, v]) => [k, { text: v, hash: hash(v) }])), null, 2) + '\n';
+
 export function build() {
   const source = read('index.html'), en = english(source), live = [LANGS[0], ...translations()];
-  fs.writeFileSync(path.join(ROOT, 'i18n/en.json'), JSON.stringify(Object.fromEntries(Object.entries(en).map(([k, v]) => [k, { text: v, hash: hash(v) }])), null, 2) + '\n');
+  fs.writeFileSync(path.join(ROOT, 'i18n/en.json'), enJson(en));
   fs.writeFileSync(path.join(ROOT, 'index.html'), render(source, { ...LANGS[0] }, live, en));
   for (const l of live.slice(1)) {
     fs.mkdirSync(path.join(ROOT, l.code), { recursive: true });
@@ -129,7 +132,7 @@ export function checkSiteLanguages() {
     const file = path.join(ROOT, l.code, 'index.html');
     if (!fs.existsSync(file) || fs.readFileSync(file, 'utf8') !== render(source, l, live, en)) r.outdated.push(l.code);
   }
-  if (render(source, { ...LANGS[0] }, live, en) !== source) r.outdated.unshift('en');
+  if (render(source, { ...LANGS[0] }, live, en) !== source || !fs.existsSync(path.join(ROOT, 'i18n/en.json')) || read('i18n/en.json') !== enJson(en)) r.outdated.unshift('en');
   r.untranslated = LANGS.slice(1).filter(l => !have.some(h => h.code === l.code)).map(l => l.code);
   const site = new Set(LANGS.map(l => l.code));
   for (const s of APP_SOURCES) {
@@ -146,13 +149,27 @@ export function checkSiteLanguages() {
   if (r.unreadable.length) parts.push(`cannot read the language list of ${r.unreadable.join(', ')}`);
   if (r.untranslated.length) parts.push(`${r.untranslated.length} of ${LANGS.length} languages not translated yet`);
   r.ok = !parts.length;
+  // What stops a commit (tools/hooks/pre-commit): a translation behind its English, or a page behind
+  // index.html. Languages not translated yet, and the apps' lists, are reported but never block.
+  r.blocking = Object.keys(r.stale).length + Object.keys(r.missing).length + r.outdated.length > 0;
   r.line = 'dafaspace languages: ' + (r.ok ? `OK, ${LANGS.length} of ${LANGS.length}` : parts.join('; '));
   return r;
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+// Real paths on both sides: macOS temp folders sit behind a symlink (/var -> /private/var), and a
+// mismatch here would make the pre-commit hook pass silently.
+if (process.argv[1] && fileURLToPath(import.meta.url) === fs.realpathSync(process.argv[1])) {
   const cmd = process.argv[2];
   if (cmd === 'build') console.log('built:', build().join(' '));
   else if (cmd === 'check') { const r = checkSiteLanguages(); console.log(r.line); for (const k of ['stale', 'missing']) for (const [c, keys] of Object.entries(r[k])) console.log(`  ${c} ${k}: ${keys.join(', ')}`); process.exit(r.ok ? 0 : 1); }
-  else { console.log('usage: node tools/i18n.mjs build | check'); process.exit(2); }
+  else if (cmd === 'gate') {
+    const r = checkSiteLanguages();
+    if (!r.blocking) process.exit(0);
+    console.error('dafaspace: commit stopped, the translations are behind the English.');
+    for (const k of ['stale', 'missing']) for (const [c, keys] of Object.entries(r[k])) console.error(`  ${c} ${k}: ${keys.join(', ')}`);
+    if (r.outdated.length) console.error(`  pages to rebuild: ${r.outdated.join(', ')}`);
+    console.error('Translate the changed keys into every language (i18n/<code>.json, "from" = the hash in i18n/en.json),\nrun node tools/i18n.mjs build, stage the results, and commit again. See CLAUDE.md, Languages.');
+    process.exit(1);
+  }
+  else { console.log('usage: node tools/i18n.mjs build | check | gate'); process.exit(2); }
 }

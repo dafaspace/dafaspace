@@ -74,6 +74,14 @@ leave the rest unstaged and untouched.
   - languages not translated yet.
   It exits 1 when there is anything. `checkSiteLanguages()` in the same file returns `{ ok, line }`
   for the nightly `_portfolio/check-sites.mjs`.
+- **Translations are automatic in one sense: nobody has to remember them** (Dafa, 3 Nov: no API).
+  - The session that edits English translates the changed keys into every language, in the same
+    commit, by itself.
+  - `tools/hooks/pre-commit` (installed with `git config core.hooksPath tools/hooks`, already set
+    in this checkout) runs `node tools/i18n.mjs gate` on the staged files. The commit stops when a
+    translation is stale or missing, or a page is behind `index.html`. It prints what to do.
+  - Languages not translated yet never block, and neither do the apps' language lists.
+  - Never commit with `--no-verify` to get past it.
 - The switcher is Underpicture's language pill (a native select), hidden while English is the only
   language. `/` offers the reader's language once, in that language, and never redirects.
 
