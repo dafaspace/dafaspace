@@ -139,17 +139,9 @@
     "text": "Mac için portakal şeklinde bir Pomodoro zamanlayıcısı: bir pencere ya da masaüstünde küçük bir widget. Siz odaklanırken meyve bir araya gelir. Her gün kullanıyorum; sıradaki adım imzalı bir indirme.",
     "from": "f0369f1903"
   },
-  "hum.shot1": {
-    "text": "Hum kitaplığı: kart olarak kaydedilmiş müzikal fikirler, her biri ses, metin, fikir ya da rüya olarak etiketli, 74 bpm Mi majör gibi algılanan tempo ve tonla, projelere göre gruplanmış",
-    "from": "e6a3deeac0"
-  },
   "status.frozen": {
     "text": "Beklemede",
     "from": "939f868537"
-  },
-  "hum.desc": {
-    "text": "Bir fikri söyleyin ya da mırıldanın ve saklayın. Mırıldanılan bir melodiyi düzenlenebilir MIDI'ye dönüştüren, perde algılaması doğrudan tarayıcıda çalışan, müzisyenler için kişisel bir yaratıcı arşiv.",
-    "from": "20a2a2ecdb"
   },
   "astrotrip.shot1": {
     "text": "Astrovarium'da Placidus ev sistemiyle çıkarılmış bir doğum haritası: zodyak halkası, ev başlangıçları, gezegen konumları ve açı çizgileri",

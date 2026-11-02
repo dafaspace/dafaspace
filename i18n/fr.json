@@ -139,17 +139,9 @@
     "text": "Un minuteur Pomodoro pour Mac en forme d'orange : une fenêtre, ou un petit widget sur le bureau. Le fruit se construit peu à peu pendant que vous vous concentrez. Je m'en sers chaque jour ; la prochaine étape est un téléchargement signé.",
     "from": "f0369f1903"
   },
-  "hum.shot1": {
-    "text": "La bibliothèque de Hum : des idées musicales enregistrées sous forme de cartes, chacune marquée audio, texte, idée ou rêve, avec le tempo et la tonalité détectés, par exemple 74 bpm en mi majeur, regroupées par projets",
-    "from": "e6a3deeac0"
-  },
   "status.frozen": {
     "text": "En pause",
     "from": "939f868537"
-  },
-  "hum.desc": {
-    "text": "Chantez ou fredonnez une idée et gardez-la. Une archive créative personnelle pour musiciens qui transforme une mélodie fredonnée en MIDI modifiable, avec la détection de hauteur qui tourne dans le navigateur.",
-    "from": "20a2a2ecdb"
   },
   "astrotrip.shot1": {
     "text": "Un thème natal dans Astrovarium avec le système de maisons Placidus : la roue du zodiaque, les cuspides des maisons, les positions des planètes et les lignes d'aspects",

@@ -90,6 +90,8 @@ leave the rest unstaged and untouched.
 - A frozen project's card moves to the bottom of the Projects section, with the status "Frozen".
 - The same day, ask Dafa whether to hide it from the site altogether. Do not hide it without his
   answer.
+- Hidden so far: Hum (3 Nov 2026, Dafa: "Hide Hum"). `shots/hum.jpg` stays in the repo. The
+  translations keep `status.frozen` for the next frozen card.
 
 ## Look
 

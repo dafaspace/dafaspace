@@ -139,17 +139,9 @@
     "text": "Un temporizador Pomodoro para Mac con forma de naranja: una ventana o un pequeño widget en el escritorio. La fruta se va completando mientras te concentras. Lo uso a diario; el siguiente paso es una descarga firmada.",
     "from": "f0369f1903"
   },
-  "hum.shot1": {
-    "text": "La biblioteca de Hum: ideas musicales capturadas como tarjetas, cada una etiquetada como audio, texto, idea o sueño, con el tempo y la tonalidad detectados, como 74 bpm en mi mayor, agrupadas en proyectos",
-    "from": "e6a3deeac0"
-  },
   "status.frozen": {
     "text": "En pausa",
     "from": "939f868537"
-  },
-  "hum.desc": {
-    "text": "Canta o tararea una idea y guárdala. Un archivo creativo personal para músicos que convierte una melodía tarareada en MIDI editable, con la detección de notas funcionando en el navegador.",
-    "from": "20a2a2ecdb"
   },
   "astrotrip.shot1": {
     "text": "Una carta natal en Astrovarium con el sistema de casas Placidus: el anillo zodiacal, las cúspides de las casas, las posiciones planetarias y las líneas de aspectos",

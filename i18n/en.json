@@ -147,18 +147,6 @@
     "text": "Precise astrological charts, with positions checked against NASA JPL Horizons. On the web a natal chart and everything about it is free; transits, progressions, directions, returns, synastry and tri-wheels open for a week with an access key. Runs entirely on your device: no server, no account, nothing leaves your phone. The Android version is in private testing; the iPhone version is being prepared.",
     "hash": "58d0f76f1c"
   },
-  "hum.shot1": {
-    "text": "The Hum library: captured musical ideas as cards, each tagged audio, text, idea or dream, with detected tempo and key such as 74 bpm in E major, grouped into projects",
-    "hash": "e6a3deeac0"
-  },
-  "status.frozen": {
-    "text": "Frozen",
-    "hash": "939f868537"
-  },
-  "hum.desc": {
-    "text": "Sing or hum an idea and keep it. A personal creative archive for musicians that turns a hummed melody into MIDI you can edit, with pitch detection running in the browser.",
-    "hash": "20a2a2ecdb"
-  },
   "sec.dev": {
     "text": "In development",
     "hash": "f6146d719b"
