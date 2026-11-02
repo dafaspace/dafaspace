@@ -98,9 +98,10 @@ const fillAt = (t, t0) => clamp((t - t0 - (T.sweep + T.fly) * T.lead) / T.settle
   const LIFE = (T.sweep + T.fly) * T.lead + T.settle;
   function life(t, t0) {
     const p = clamp((t - t0) / LIFE);
-    const scale = 1 - FX.scale + FX.scale * ease.out(p) + FX.scale * 1.2 * Math.sin(Math.PI * p) * (1 - p);
+    const q = clamp((t - t0) / (LIFE * .82));                                       // glow and scale run a little quicker (Dafa, 2 Nov)
+    const scale = 1 - FX.scale + FX.scale * ease.out(q) + FX.scale * 1.2 * Math.sin(Math.PI * q) * (1 - q);
     const turn = FX.turn * Math.PI / 180 * Math.exp(-2.6 * p) * Math.sin(2 * Math.PI * 1.15 * p) * (1 - p);   // exactly 0 at the end
-    const glow = FX.glow * Math.sin(Math.PI * p) ** 2;
+    const glow = FX.glow * Math.sin(Math.PI * q) ** 2;
     return { scale, turn, glow, done: p >= 1 };
   }
   const mix = (a, b, k) => '#' + [1, 3, 5].map(i => Math.round(parseInt(a.slice(i, i + 2), 16) * (1 - k) + parseInt(b.slice(i, i + 2), 16) * k).toString(16).padStart(2, '0')).join('');
@@ -286,26 +287,38 @@ const fillAt = (t, t0) => clamp((t - t0 - (T.sweep + T.fly) * T.lead) / T.settle
   for (let k = 0; k < 50; k++) { const mm = (lo + hi) / 2; (END * warp(mm) < D_END ? lo = mm : hi = mm); }
   const R0 = END * lo, TOTAL = INTRO + END - R0;
 
-  // load builds the word; each hover (a tap on touch) toggles; a running animation ignores triggers
-  let atWord = false, busy = false;
-  const done = () => { busy = false; };
+  // load builds the word; each hover (a tap on touch) toggles; a running animation ignores triggers.
+  // Dafa, 2 Nov: on a phone only every second tap worked. Two causes: a tap made while the last
+  // letters were still settling was thrown away, and Safari treats an element with a hover listener
+  // as 'hover first, tap second'. So hover is listened to only where a real hover exists, a tap uses
+  // click, and a tap in the last quarter of a move is kept and played when the move ends.
+  let atWord = false, busy = false, queued = false, progress = 0;
+  const done = () => { busy = false; if (queued) { queued = false; toggle(); } };
   const frame = now => {
     if (t0 === null) t0 = now;
     const tau = (now - t0) * speed;
+    progress = tau / TOTAL;
     draw(cv, tau < INTRO ? T.hold + T.morph * (tau / INTRO) : END * warp(clamp((R0 + tau - INTRO) / END)));
     if (tau < TOTAL) raf = requestAnimationFrame(frame); else done();
   };
   const frameBack = now => {
     if (t0 === null) t0 = now;
     const x = clamp((now - t0) * speed / ENDR);
+    progress = x;
     drawBack(cv, ENDR * warp(x));
     if (x < 1) raf = requestAnimationFrame(frameBack); else done();
   };
-  const play = () => { cancelAnimationFrame(raf); t0 = null; simulate(); atWord = true; busy = true; if (reduced) { draw(cv, END); done(); return; } raf = requestAnimationFrame(frame); };
-  const playBack = () => { cancelAnimationFrame(raf); t0 = null; simulate(); ENDR = endBack(); atWord = false; busy = true; if (reduced) { draw(cv, 0); done(); return; } raf = requestAnimationFrame(frameBack); };
-  const toggle = () => { if (busy) return; atWord ? playBack() : play(); };
-  cv.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') toggle(); });
-  cv.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse') toggle(); });
+  const play = () => { cancelAnimationFrame(raf); t0 = null; simulate(); atWord = true; busy = true; progress = 0; if (reduced) { draw(cv, END); done(); return; } raf = requestAnimationFrame(frame); };
+  const playBack = () => { cancelAnimationFrame(raf); t0 = null; simulate(); ENDR = endBack(); atWord = false; busy = true; progress = 0; if (reduced) { draw(cv, 0); done(); return; } raf = requestAnimationFrame(frameBack); };
+  const toggle = () => { if (busy) return; progress = 0; atWord ? playBack() : play(); };
+  const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (canHover) cv.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') toggle(); });
+  cv.addEventListener('click', () => {
+    if (canHover) return;                                                              // a mouse already toggled on hover
+    if (busy) { if (progress > .75) queued = true; return; }
+    toggle();
+  });
+  if (opts.debug) window.__logo = { get busy() { return busy; }, get atWord() { return atWord; }, get progress() { return progress; }, get queued() { return queued; } };
   play();
 });
 };
