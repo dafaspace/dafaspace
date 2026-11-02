@@ -1,6 +1,6 @@
 {
   "meta.description": {
-    "text": "Daniel Fainberg, développeur indépendant et artiste visuel. De petites apps ciblées sous le nom dafaspace.",
+    "text": "Daniel Fainberg, développeur indépendant et artiste visuel. De petites apps simples, chacune centrée sur une seule chose, sous le nom dafaspace.",
     "from": "89f89e80b0"
   },
   "meta.title": {
@@ -8,7 +8,7 @@
     "from": "32a492a149"
   },
   "meta.ogDescription": {
-    "text": "De petites apps ciblées, par un développeur indépendant. Cinéma, théorie musicale, astrologie et outils pour musiciens.",
+    "text": "De petites apps simples, par un développeur indépendant. Cinéma, théorie musicale, astrologie et outils pour musiciens.",
     "from": "767da0aad1"
   },
   "lang.label": {
@@ -28,7 +28,7 @@
     "from": "bbfa773e5a"
   },
   "tagline": {
-    "text": "Je crée de petites apps ciblées pour ce que j'aime : le cinéma, la musique, la vie de tous les jours.",
+    "text": "Je crée de petites apps simples pour ce que j'aime : le cinéma, la musique, la vie de tous les jours.",
     "from": "228e6236e7"
   },
   "bio.more": {
@@ -48,11 +48,11 @@
     "from": "7bd26d6ebf"
   },
   "bio.study": {
-    "text": "J'étudie actuellement en <strong>MA Professional Media Composition</strong> à l'Arts University Bournemouth, où j'apprends à écrire de la musique pour le cinéma.",
+    "text": "Je prépare actuellement le <strong>MA Professional Media Composition</strong> à l'Arts University Bournemouth, où j'apprends à écrire de la musique pour le cinéma.",
     "from": "38d491a5ce"
   },
   "bio.dafaspace": {
-    "text": "Sous le nom <strong>dafaspace</strong>, je fais des apps que j'aimerais utiliser moi-même, et je m'en sers vraiment chaque jour. Je suis sincèrement heureux quand je vois mes apps rendre la vie de quelqu'un un peu plus simple ou plus joyeuse. Je crois aux gens et aux vrais liens humains, alors rien ne me rend plus heureux que de voir des personnes qui se ressemblent se trouver et ce petit miracle d'une vraie rencontre se produire.",
+    "text": "Sous le nom <strong>dafaspace</strong>, je fais des apps que j'aimerais utiliser moi-même, et je m'en sers vraiment chaque jour. Cela me touche sincèrement de voir mes apps rendre la vie de quelqu'un un peu plus simple ou plus joyeuse. Je crois aux gens et aux vrais liens humains, alors rien ne me rend plus heureux que de voir des personnes qui partagent les mêmes passions se trouver, et ce petit miracle d'une vraie rencontre se produire.",
     "from": "e3966ef00b"
   },
   "bio.contact": {
@@ -72,7 +72,7 @@
     "from": "998eb6bf17"
   },
   "cinemail.shot3": {
-    "text": "Un profil de visionnage dans Cinemail : films vus et à voir, temps de visionnage total et classement des compositeurs que l'utilisateur a le plus entendus",
+    "text": "Un profil de visionnage dans Cinemail : films vus et à voir, temps de visionnage total et classement des compositeurs que l'utilisateur a le plus écoutés",
     "from": "8a57e09dbf"
   },
   "status.live": {
@@ -96,7 +96,7 @@
     "from": "f03b60f7e5"
   },
   "underpicture.desc": {
-    "text": "Envoyez un seul lien à votre client. Il écoute chaque option musicale sous l'image, change de piste pendant que la vidéo continue, et note chacune Froid, Tiède ou Chaud. Son choix arrive dans votre boîte mail. Pour les monteurs, les compositeurs et les vidéastes ; fonctionne sur n'importe quel téléphone, en onze langues.",
+    "text": "Envoyez un seul lien à votre client. Il écoute chaque option musicale sous l'image, change de piste pendant que la vidéo continue, et note chacune « Froid », « Tiède » ou « Chaud ». Son choix arrive dans votre boîte mail. Pour les monteurs, les compositeurs et les vidéastes ; fonctionne sur n'importe quel téléphone, en onze langues.",
     "from": "fbdd8090ed"
   },
   "underpicture.note": {
@@ -104,8 +104,8 @@
     "from": "e386d760dd"
   },
   "tunemail.shot1": {
-    "text": "Tunemail sur un téléphone : un lien Spotify collé est reconnu comme Radiohead, Creep, avec des boutons pour ouvrir le même morceau dans Spotify, Apple Music, Deezer et Tidal.",
-    "from": "d2b2e7144d"
+    "text": "Tunemail sur un téléphone : un lien Spotify collé est reconnu comme Radiohead, Creep, avec des boutons pour ouvrir le même morceau dans Spotify, Apple Music, Deezer et Tidal",
+    "from": "9067f3ae7f"
   },
   "tunemail.desc": {
     "text": "Envoyez un morceau à n'importe qui : un seul lien qui l'ouvre dans l'app que la personne utilise. Déjà sur le web en bêta publique ; l'app iPhone est en développement.",
@@ -116,7 +116,7 @@
     "from": "f67a8c6eef"
   },
   "fifths.shot1": {
-    "text": "L'interface d'Another Circle Of Fifths en vue modale : une roue colorée des tonalités, les sept modes de G, ainsi que la gamme, les accords diatoniques et les dominantes secondaires de G ionien",
+    "text": "L'interface d'Another Circle Of Fifths en vue des modes : une roue colorée des tonalités, les sept modes de sol, ainsi que la gamme, les accords diatoniques et les dominantes secondaires de sol ionien",
     "from": "1b5094cee5"
   },
   "fifths.desc": {
@@ -136,7 +136,7 @@
     "from": "932738d341"
   },
   "citrus.desc": {
-    "text": "Un minuteur Pomodoro pour Mac en forme d'orange : une fenêtre, ou un petit widget sur le bureau. Le fruit se reconstitue pendant que vous vous concentrez. Je m'en sers chaque jour ; la prochaine étape est un téléchargement signé.",
+    "text": "Un minuteur Pomodoro pour Mac en forme d'orange : une fenêtre, ou un petit widget sur le bureau. Le fruit se construit peu à peu pendant que vous vous concentrez. Je m'en sers chaque jour ; la prochaine étape est un téléchargement signé.",
     "from": "f0369f1903"
   },
   "hum.shot1": {
@@ -156,7 +156,7 @@
     "from": "81a7c2a07d"
   },
   "astrotrip.desc": {
-    "text": "Des thèmes astrologiques précis, avec des positions vérifiées par rapport à NASA JPL Horizons. Sur le web, le thème natal et tout ce qui s'y rapporte est gratuit ; transits, progressions, directions, révolutions, synastrie et triples roues s'ouvrent pour une semaine avec une clé d'accès. Tout tourne sur votre appareil : pas de serveur, pas de compte, rien ne quitte votre téléphone. La version Android est en test privé ; la version iPhone est en préparation.",
+    "text": "Des thèmes astrologiques précis, avec des positions vérifiées avec JPL Horizons de la NASA. Sur le web, le thème natal et tout ce qui s'y rapporte sont gratuits ; transits, progressions, directions, révolutions, synastrie et triples roues se débloquent pour une semaine avec une clé d'accès. Tout tourne sur votre appareil : pas de serveur, pas de compte, rien ne quitte votre téléphone. La version Android est en test privé ; la version iPhone est en préparation.",
     "from": "58d0f76f1c"
   },
   "sec.dev": {
@@ -180,7 +180,7 @@
     "from": "774549a511"
   },
   "scoreweaver.desc": {
-    "text": "Une chaîne locale pour mon travail de musique sur des vidéos narrées. Aujourd'hui, elle transforme le script et la voix off en sous-titres vérifiés ; accorder la musique à l'émotion de l'histoire est encore à l'étude. Python, entièrement sur ma propre machine.",
+    "text": "Une chaîne de traitement locale pour mon travail de musique sur des vidéos narrées. Aujourd'hui, elle transforme le script et la voix off en sous-titres vérifiés ; accorder la musique à l'émotion de l'histoire est encore à l'étude. En Python, et tout tourne sur ma propre machine.",
     "from": "3169d94deb"
   },
   "localdeck.shot1": {
@@ -196,7 +196,7 @@
     "from": "c874e6b83d"
   },
   "myday.desc": {
-    "text": "Où passent vraiment mes heures de travail : heures par minute de vidéo finie, par projet, face à une norme hebdomadaire, remplies toutes seules par Citrus Timer. Aussi un lecteur d'actualités et un plan de la journée. TypeScript, les données restent en local.",
+    "text": "Où passent vraiment mes heures de travail : heures par minute de vidéo finie, par projet, par rapport à un objectif hebdomadaire, remplies toutes seules par Citrus Timer. Aussi un lecteur d'actualités et un plan de la journée. TypeScript, les données restent en local.",
     "from": "a9316483b8"
   },
   "archivist.shot1": {
@@ -224,7 +224,7 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "Fait avec 🧡 pour l'expérience humaine.",
+    "text": "Fait avec 🧡 pour les gens.",
     "from": "d097826c8f"
   }
 }

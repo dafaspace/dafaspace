@@ -1,6 +1,6 @@
 {
   "meta.description": {
-    "text": "Daniel Fainberg, unabhängiger Entwickler und bildender Künstler. Kleine, fokussierte Apps unter dem Namen dafaspace.",
+    "text": "Daniel Fainberg, unabhängiger Entwickler und Medienkünstler. Kleine Apps mit klarem Fokus unter dem Namen dafaspace.",
     "from": "89f89e80b0"
   },
   "meta.title": {
@@ -8,7 +8,7 @@
     "from": "32a492a149"
   },
   "meta.ogDescription": {
-    "text": "Kleine, fokussierte Apps von einem unabhängigen Entwickler. Kino, Musiktheorie, Astrologie und Werkzeuge für Musiker.",
+    "text": "Kleine Apps mit klarem Fokus von einem unabhängigen Entwickler. Kino, Musiktheorie, Astrologie und Werkzeuge für Musiker.",
     "from": "767da0aad1"
   },
   "lang.label": {
@@ -28,7 +28,7 @@
     "from": "bbfa773e5a"
   },
   "tagline": {
-    "text": "Ich baue kleine, fokussierte Apps für die Dinge, die ich liebe: Kino, Musik und den Alltag.",
+    "text": "Ich baue kleine Apps mit klarem Fokus für die Dinge, die ich liebe: Kino, Musik und den Alltag.",
     "from": "228e6236e7"
   },
   "bio.more": {
@@ -40,19 +40,19 @@
     "from": "526cb7425a"
   },
   "bio.background": {
-    "text": "Ich komme aus dem Visuellen: Fotografie, Videografie, Videokunst für Theaterproduktionen. Seit Jahren beobachte ich neugierig, wie Bild, Klang und Rhythmus menschliche Erfahrung, Emotion und Gefühl tragen.",
+    "text": "Ich komme vom Bild her: Fotografie, Videografie, Videokunst für Theaterproduktionen. Seit Jahren beobachte ich neugierig, wie Bild, Klang und Rhythmus menschliches Erleben und Gefühle tragen.",
     "from": "537acf7157"
   },
   "bio.youtube": {
-    "text": "Seit fünf Jahren bin ich Sounddesigner und Musikeditor eines YouTube-Kanals, der auf 27 Millionen Abonnenten gewachsen ist.",
+    "text": "Seit fünf Jahren bin ich Sounddesigner und Music Editor eines YouTube-Kanals, der auf 27 Millionen Abonnenten gewachsen ist.",
     "from": "7bd26d6ebf"
   },
   "bio.study": {
-    "text": "Derzeit studiere ich <strong>MA Professional Media Composition</strong> an der Arts University Bournemouth und lerne dort, Musik für Filme zu schreiben.",
+    "text": "Derzeit studiere ich im Master <strong>MA Professional Media Composition</strong> an der Arts University Bournemouth und lerne, Musik für Filme zu schreiben.",
     "from": "38d491a5ce"
   },
   "bio.dafaspace": {
-    "text": "Unter dem Namen <strong>dafaspace</strong> mache ich Apps, die ich selbst benutzen möchte, und ich benutze sie wirklich jeden Tag. Es macht mich ehrlich froh, wenn ich sehe, dass meine Apps jemandem das Leben ein wenig leichter oder fröhlicher machen. Ich glaube an Menschen und an echte menschliche Verbindung, deshalb freut mich nichts mehr, als wenn Gleichgesinnte einander finden und dieses kleine Wunder echter Begegnung geschieht.",
+    "text": "Unter dem Namen <strong>dafaspace</strong> mache ich Apps, die ich selbst benutzen möchte, und ich benutze sie wirklich jeden Tag. Es freut mich aufrichtig, wenn ich sehe, dass meine Apps jemandem das Leben ein wenig leichter oder fröhlicher machen. Ich glaube an Menschen und an echte Begegnungen zwischen ihnen, deshalb freut mich nichts mehr, als wenn Gleichgesinnte einander finden und dieses kleine Wunder echter Begegnung geschieht.",
     "from": "e3966ef00b"
   },
   "bio.contact": {
@@ -72,7 +72,7 @@
     "from": "998eb6bf17"
   },
   "cinemail.shot3": {
-    "text": "Ein Seh-Profil in Cinemail: gesehene und noch offene Filme, die gesamte Sehzeit und eine Rangliste der Komponisten, die der Nutzer am häufigsten gehört hat",
+    "text": "Ein Filmprofil in Cinemail: gesehene und vorgemerkte Filme, die gesamte Sehzeit und eine Rangliste der Komponisten, die der Nutzer am häufigsten gehört hat",
     "from": "8a57e09dbf"
   },
   "status.live": {
@@ -84,7 +84,7 @@
     "from": "353b094569"
   },
   "cinemail.desc": {
-    "text": "Dein persönlicher Kinobegleiter. Filme festhalten, Vorschläge aus wenigen Worten bekommen, Listen mit Freunden teilen. Acht Sprachen, öffentliche Filmseiten, Import aus IMDb. Schon im Web; die iPhone-App ist im privaten Test.",
+    "text": "Dein persönlicher Kinobegleiter. Gesehene Filme notieren, Empfehlungen anhand weniger Stichworte bekommen, Listen mit Freunden teilen. Acht Sprachen, öffentliche Filmseiten, Import aus IMDb. Schon im Web; die iPhone-App ist im privaten Test.",
     "from": "5eb6875682"
   },
   "underpicture.shot1": {
@@ -96,23 +96,23 @@
     "from": "f03b60f7e5"
   },
   "underpicture.desc": {
-    "text": "Schick deinem Kunden einen einzigen Link. Er hört jede Musikoption unter dem Bild, wechselt die Stücke, während das Video weiterläuft, und bewertet jedes mit Kalt, Warm oder Heiß. Die Wahl landet in deinem Posteingang. Für Editoren, Komponisten und Videografen; läuft auf jedem Handy, in elf Sprachen.",
+    "text": "Schick deinem Kunden einen einzigen Link. Dort hört er jede Musikoption unter dem Bild, wechselt die Stücke, während das Video weiterläuft, und bewertet jedes mit Kalt, Warm oder Heiß. Die Wahl landet in deinem Posteingang. Für Cutter, Komponisten und Videografen; läuft auf jedem Handy, in elf Sprachen.",
     "from": "fbdd8090ed"
   },
   "underpicture.note": {
-    "text": "Geschlossene Beta: Um Links zu erstellen, bitte unter hello@underpicture.com um einen Tester-Code.",
+    "text": "Geschlossene Beta: Um Links zu erstellen, frag unter hello@underpicture.com nach einem Tester-Code.",
     "from": "e386d760dd"
   },
   "tunemail.shot1": {
-    "text": "Tunemail auf einem Handy: ein eingefügter Spotify-Link wird als Radiohead, Creep erkannt, mit Buttons, die denselben Song in Spotify, Apple Music, Deezer und Tidal öffnen.",
-    "from": "d2b2e7144d"
+    "text": "Tunemail auf einem Handy: ein eingefügter Spotify-Link wird als Radiohead, Creep erkannt, mit Buttons, die denselben Song in Spotify, Apple Music, Deezer und Tidal öffnen",
+    "from": "9067f3ae7f"
   },
   "tunemail.desc": {
     "text": "Schick jedem einen Song: ein Link, der ihn in der App öffnet, die der andere nutzt. Schon im Web als öffentliche Beta; die iPhone-App ist in Entwicklung.",
     "from": "dae5e8a959"
   },
   "tunemail.note": {
-    "text": "Ohne Konto ausprobieren: Just browse wählen, Search öffnen, dann einen Song-Link einfügen.",
+    "text": "Probier es ohne Konto: wähle Just browse, öffne Search und füge einen Song-Link ein.",
     "from": "f67a8c6eef"
   },
   "fifths.shot1": {
@@ -156,7 +156,7 @@
     "from": "81a7c2a07d"
   },
   "astrotrip.desc": {
-    "text": "Präzise astrologische Horoskope, die Positionen geprüft gegen NASA JPL Horizons. Im Web sind das Geburtshoroskop und alles dazu kostenlos; Transite, Progressionen, Direktionen, Revolutionen, Synastrie und Dreifachräder öffnen sich mit einem Zugangsschlüssel für eine Woche. Läuft vollständig auf deinem Gerät: kein Server, kein Konto, nichts verlässt dein Handy. Die Android-Version ist im privaten Test; die iPhone-Version wird vorbereitet.",
+    "text": "Präzise Horoskope, deren Positionen mit NASA JPL Horizons abgeglichen sind. Im Web sind das Geburtshoroskop und alles dazu kostenlos; Transite, Progressionen, Direktionen, Solare, Synastrie und Dreifachhoroskope lassen sich mit einem Zugangsschlüssel eine Woche lang freischalten. Läuft vollständig auf deinem Gerät: kein Server, kein Konto, nichts verlässt dein Handy. Die Android-Version ist im privaten Test; die iPhone-Version wird vorbereitet.",
     "from": "58d0f76f1c"
   },
   "sec.dev": {
@@ -180,11 +180,11 @@
     "from": "774549a511"
   },
   "scoreweaver.desc": {
-    "text": "Eine lokale Pipeline für meine Musikarbeit an Videos mit Sprecher. Heute macht sie aus Skript und Sprachaufnahme geprüfte Untertitel; Musik passend zur Emotion der Geschichte auszuwählen ist noch in der Forschung. Python, vollständig auf meinem eigenen Rechner.",
+    "text": "Eine lokale Pipeline für meine Musikarbeit an Videos mit Sprecher. Heute macht sie aus Skript und Sprachaufnahme geprüfte Untertitel; Musik passend zur Emotion der Geschichte auszuwählen befindet sich noch im Forschungsstadium. Python, vollständig auf meinem eigenen Rechner.",
     "from": "3169d94deb"
   },
   "localdeck.shot1": {
-    "text": "Suche in einer Soundeffekt-Bibliothek in LocalDeck per Beschreibung des Klangs: die Phrase broken glass, close liefert passende Dateien aus 7.953 indexierten, nach Kategorie gruppiert",
+    "text": "Suche in einer Soundeffekt-Bibliothek in LocalDeck per Beschreibung des Klangs: die Phrase broken glass, close liefert passende Dateien aus 7.953 indexierten Dateien, nach Kategorie gruppiert",
     "from": "38b5276588"
   },
   "localdeck.shot2": {
@@ -196,11 +196,11 @@
     "from": "c874e6b83d"
   },
   "myday.desc": {
-    "text": "Wohin meine Arbeitsstunden wirklich gehen: Stunden pro Minute fertiges Video, je Projekt, gegen eine Wochennorm, von Citrus Timer selbst eingetragen. Dazu ein Newsreader und ein Tagesplan. TypeScript, die Daten bleiben lokal.",
+    "text": "Wohin meine Arbeitsstunden wirklich gehen: Stunden pro Minute fertigen Videos, je Projekt, gemessen an einem Wochenziel, von Citrus Timer selbst eingetragen. Dazu ein Newsreader und ein Tagesplan. TypeScript, die Daten bleiben lokal.",
     "from": "a9316483b8"
   },
   "archivist.shot1": {
-    "text": "Archivist im Terminal: eine Liste katalogisierter Laufwerke mit Dateianzahl und Größe und ein Bericht je Laufwerk, der den Inhalt in Aufzubewahrendes und Wiederherstellbares trennt",
+    "text": "Archivist im Terminal: eine Liste katalogisierter Laufwerke mit Dateianzahl und Größe und ein Bericht je Laufwerk, der den Inhalt trennt in das, was aufbewahrt werden muss, und das, was sich neu erzeugen lässt",
     "from": "8797eba624"
   },
   "archivist.desc": {
@@ -224,7 +224,7 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "Mit 🧡 gemacht für die menschliche Erfahrung.",
+    "text": "Mit 🧡 gemacht, für Menschen.",
     "from": "d097826c8f"
   }
 }

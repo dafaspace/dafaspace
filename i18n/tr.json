@@ -40,7 +40,7 @@
     "from": "526cb7425a"
   },
   "bio.background": {
-    "text": "Görsel bir geçmişten geliyorum: fotoğraf, video çekimi, tiyatro yapımları için video sanatı. Yıllardır görüntünün, sesin ve ritmin insan deneyimini, duyguyu ve hissi nasıl taşıdığını merakla gözlemliyorum.",
+    "text": "Görsel bir geçmişten geliyorum: fotoğraf, video çekimi, tiyatro yapımları için video sanatı. Yıllardır görüntünün, sesin ve ritmin insan deneyimini ve duyguları nasıl taşıdığını merakla gözlemliyorum.",
     "from": "537acf7157"
   },
   "bio.youtube": {
@@ -48,11 +48,11 @@
     "from": "7bd26d6ebf"
   },
   "bio.study": {
-    "text": "Şu anda Arts University Bournemouth'ta <strong>MA Professional Media Composition</strong> okuyorum ve film için müzik yazmayı öğreniyorum.",
+    "text": "Şu anda Arts University Bournemouth'ta <strong>MA Professional Media Composition</strong> yüksek lisans programında okuyor, film için müzik yazmayı öğreniyorum.",
     "from": "38d491a5ce"
   },
   "bio.dafaspace": {
-    "text": "<strong>dafaspace</strong> adıyla kendimin de kullanmak isteyeceği uygulamalar yapıyorum ve gerçekten her gün kullanıyorum. Uygulamalarımın birinin hayatını biraz kolaylaştırdığını ya da neşelendirdiğini görmek beni içtenlikle mutlu ediyor. İnsanlara ve anlamlı insan bağına inanıyorum; bu yüzden beni hiçbir şey, benzer ruhlu insanların birbirini bulması ve gerçek bir etkileşimin o küçük mucizesinin gerçekleşmesi kadar mutlu etmiyor.",
+    "text": "<strong>dafaspace</strong> adıyla benim de kullanmak isteyeceğim uygulamalar yapıyorum ve gerçekten her gün kullanıyorum. Uygulamalarımın birinin hayatını biraz kolaylaştırdığını ya da neşelendirdiğini görmek beni içtenlikle mutlu ediyor. İnsanlara ve anlamlı insan bağına inanıyorum; bu yüzden beni hiçbir şey, kafa dengi insanların birbirini bulması ve gerçek bir karşılaşmanın o küçük mucizesinin gerçekleşmesi kadar mutlu etmiyor.",
     "from": "e3966ef00b"
   },
   "bio.contact": {
@@ -84,7 +84,7 @@
     "from": "353b094569"
   },
   "cinemail.desc": {
-    "text": "Kişisel sinema yol arkadaşınız. Filmlerinizi takip edin, birkaç kelimeden öneriler alın, listeleri arkadaşlarınızla paylaşın. Sekiz dil, herkese açık film sayfaları, IMDb'den içe aktarma. Şimdi web'de; iPhone uygulaması kapalı testte.",
+    "text": "Kişisel sinema arkadaşınız. Filmlerinizi takip edin, birkaç kelimeyle öneri alın, listeleri arkadaşlarınızla paylaşın. Sekiz dil, herkese açık film sayfaları, IMDb'den içe aktarma. Şimdi web'de; iPhone uygulaması kapalı testte.",
     "from": "5eb6875682"
   },
   "underpicture.shot1": {
@@ -96,7 +96,7 @@
     "from": "f03b60f7e5"
   },
   "underpicture.desc": {
-    "text": "Müşterinize tek bir bağlantı gönderin. Görüntünün altındaki her müzik seçeneğini dinler, video oynarken parçalar arasında geçiş yapar ve her birini Soğuk, Ilık ya da Sıcak olarak puanlar. Seçim gelen kutunuza düşer. Kurgucular, besteciler ve video çekenler için; her telefonda, on bir dilde çalışır.",
+    "text": "Müşterinize tek bir bağlantı gönderin. Müşteriniz görüntü üzerinde her müzik seçeneğini dinler, video oynarken parçalar arasında geçiş yapar ve her birini Soğuk, Ilık ya da Sıcak olarak puanlar. Seçim gelen kutunuza düşer. Kurgucular, besteciler ve video yapımcıları için; her telefonda, on bir dilde çalışır.",
     "from": "fbdd8090ed"
   },
   "underpicture.note": {
@@ -104,8 +104,8 @@
     "from": "e386d760dd"
   },
   "tunemail.shot1": {
-    "text": "Telefonda Tunemail: yapıştırılan bir Spotify bağlantısı Radiohead, Creep olarak tanınmış, aynı şarkıyı Spotify, Apple Music, Deezer ve Tidal'da açan düğmelerle.",
-    "from": "d2b2e7144d"
+    "text": "Telefonda Tunemail: yapıştırılan bir Spotify bağlantısı Radiohead, Creep olarak tanınmış, aynı şarkıyı Spotify, Apple Music, Deezer ve Tidal'da açan düğmelerle",
+    "from": "9067f3ae7f"
   },
   "tunemail.desc": {
     "text": "Herkese şarkı gönderin: şarkıyı karşı tarafın kullandığı uygulamada açan tek bir bağlantı. Şimdi web'de herkese açık beta olarak; iPhone uygulaması geliştiriliyor.",
@@ -116,11 +116,11 @@
     "from": "f67a8c6eef"
   },
   "fifths.shot1": {
-    "text": "Another Circle Of Fifths arayüzü mod görünümünde: renkli bir ton çarkı, G'nin yedi modu ve G İyonyen için dizi, diyatonik akorlar ve ikincil dominantlar",
+    "text": "Another Circle Of Fifths arayüzü mod görünümünde: renkli bir ton çarkı, Sol'ün yedi modu ve Sol İyonyen için dizi, diyatonik akorlar ve ikincil dominantlar",
     "from": "1b5094cee5"
   },
   "fifths.desc": {
-    "text": "Etkileşimli bir beşli çemberi. Tonları, modları ve akorları keşfedin, birbirleriyle nasıl ilişkili olduklarını dinleyin ve bir testle kendinizi sınayın. Ücretsiz, hesap gerektirmez, çevrimdışı çalışır.",
+    "text": "Etkileşimli bir beşliler çemberi. Tonları, modları ve akorları keşfedin, birbirleriyle nasıl ilişkili olduklarını dinleyin ve bir testle kendinizi sınayın. Ücretsiz, hesap gerektirmez, çevrimdışı çalışır.",
     "from": "76a9d306f5"
   },
   "citrus.shot1": {
@@ -144,7 +144,7 @@
     "from": "e6a3deeac0"
   },
   "status.frozen": {
-    "text": "Donduruldu",
+    "text": "Beklemede",
     "from": "939f868537"
   },
   "hum.desc": {
@@ -156,7 +156,7 @@
     "from": "81a7c2a07d"
   },
   "astrotrip.desc": {
-    "text": "Konumları NASA JPL Horizons ile doğrulanmış hassas astroloji haritaları. Web'de doğum haritası ve onunla ilgili her şey ücretsiz; transitler, progresyonlar, direksiyonlar, dönüşler, sinastri ve üçlü haritalar bir erişim anahtarıyla bir haftalığına açılır. Tamamen cihazınızda çalışır: sunucu yok, hesap yok, telefonunuzdan hiçbir şey çıkmaz. Android sürümü kapalı testte; iPhone sürümü hazırlanıyor.",
+    "text": "Konumları NASA JPL Horizons ile doğrulanmış hassas astroloji haritaları. Web'de doğum haritası ve onunla ilgili her şey ücretsiz; transitler, progresyonlar, direksiyonlar, Güneş dönüşleri, sinastri ve üçlü haritalar bir erişim anahtarıyla bir haftalığına açılır. Tamamen cihazınızda çalışır: sunucu yok, hesap yok, telefonunuzdan hiçbir şey çıkmaz. Android sürümü kapalı testte; iPhone sürümü hazırlanıyor.",
     "from": "58d0f76f1c"
   },
   "sec.dev": {
@@ -196,7 +196,7 @@
     "from": "c874e6b83d"
   },
   "myday.desc": {
-    "text": "Çalışma saatlerim gerçekte nereye gidiyor: proje başına, bitmiş videonun dakikası başına saat, haftalık bir norma karşı; bunları Citrus Timer kendisi dolduruyor. Ayrıca bir haber okuyucu ve günlük plan. TypeScript, veriler yerelde.",
+    "text": "Çalışma saatlerim gerçekte nereye gidiyor: proje başına, bitmiş videonun dakikası başına saat, haftalık hedefe göre; Citrus Timer bunları otomatik kaydediyor. Ayrıca bir haber okuyucu ve günlük plan. TypeScript, veriler yerelde.",
     "from": "a9316483b8"
   },
   "archivist.shot1": {
@@ -212,7 +212,7 @@
     "from": "d4c0522d0d"
   },
   "support.kofi": {
-    "text": "Ko-fi'de destekle",
+    "text": "Ko-fi ile destek olun",
     "from": "eeb0398b30"
   },
   "support.copied": {
@@ -224,7 +224,7 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "İnsan deneyimi için 🧡 ile yapıldı.",
+    "text": "İnsanlar için 🧡 ile yapıldı.",
     "from": "d097826c8f"
   }
 }

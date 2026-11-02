@@ -1,6 +1,6 @@
 {
   "meta.description": {
-    "text": "Daniel Fainberg, desarrollador independiente y artista visual. Apps pequeñas y enfocadas bajo el nombre dafaspace.",
+    "text": "Daniel Fainberg, desarrollador independiente y artista visual. Apps pequeñas y con un propósito claro bajo el nombre dafaspace.",
     "from": "89f89e80b0"
   },
   "meta.title": {
@@ -8,7 +8,7 @@
     "from": "32a492a149"
   },
   "meta.ogDescription": {
-    "text": "Apps pequeñas y enfocadas de un desarrollador independiente. Cine, teoría musical, astrología y herramientas para músicos.",
+    "text": "Apps pequeñas y con un propósito claro, de un desarrollador independiente. Cine, teoría musical, astrología y herramientas para músicos.",
     "from": "767da0aad1"
   },
   "lang.label": {
@@ -28,7 +28,7 @@
     "from": "bbfa773e5a"
   },
   "tagline": {
-    "text": "Creo apps pequeñas y enfocadas para lo que me apasiona: el cine, la música y la vida diaria.",
+    "text": "Creo apps pequeñas, cada una centrada en algo que me apasiona: el cine, la música y el día a día.",
     "from": "228e6236e7"
   },
   "bio.more": {
@@ -40,7 +40,7 @@
     "from": "526cb7425a"
   },
   "bio.background": {
-    "text": "Vengo del mundo visual: fotografía, videografía, videoarte para producciones teatrales. Llevo años observando con curiosidad cómo la imagen, el sonido y el ritmo transmiten la experiencia humana, la emoción y el sentimiento.",
+    "text": "Vengo del mundo visual: fotografía, videografía, videoarte para producciones teatrales. Llevo años observando con curiosidad cómo la imagen, el sonido y el ritmo transmiten la experiencia humana y las emociones.",
     "from": "537acf7157"
   },
   "bio.youtube": {
@@ -52,7 +52,7 @@
     "from": "38d491a5ce"
   },
   "bio.dafaspace": {
-    "text": "Bajo el nombre <strong>dafaspace</strong> hago apps que yo mismo querría usar, y de verdad las uso cada día. Me hace genuinamente feliz ver que mis apps hacen la vida de alguien un poco más fácil o más alegre. Creo en las personas y en la conexión humana con sentido, así que nada me hace más feliz que ver cómo personas afines se encuentran y sucede ese pequeño milagro de la interacción real.",
+    "text": "Bajo el nombre <strong>dafaspace</strong> hago apps que yo mismo querría usar, y de verdad las uso cada día. Me alegra mucho ver que mis apps hacen la vida de alguien un poco más fácil o más alegre. Creo en las personas y en los vínculos humanos auténticos, así que nada me hace más feliz que ver cómo personas afines se encuentran y sucede ese pequeño milagro de la interacción real.",
     "from": "e3966ef00b"
   },
   "bio.contact": {
@@ -96,16 +96,16 @@
     "from": "f03b60f7e5"
   },
   "underpicture.desc": {
-    "text": "Envía a tu cliente un solo enlace. Escucha cada opción de música bajo la imagen, cambia de pista mientras el vídeo sigue sonando y valora cada una como Fría, Tibia o Caliente. La elegida llega a tu bandeja de entrada. Para editores, compositores y videógrafos; funciona en cualquier teléfono, en once idiomas.",
+    "text": "Envía a tu cliente un solo enlace. Tu cliente escucha cada opción de música bajo la imagen, cambia de pista mientras el vídeo sigue sonando y valora cada una como Fría, Tibia o Caliente. La elegida llega a tu bandeja de entrada. Para editores, compositores y videógrafos; funciona en cualquier teléfono, en once idiomas.",
     "from": "fbdd8090ed"
   },
   "underpicture.note": {
-    "text": "Beta cerrada: para crear enlaces, pide un código de tester en hello@underpicture.com.",
+    "text": "Beta cerrada: para crear enlaces, pide un código de acceso a la beta en hello@underpicture.com.",
     "from": "e386d760dd"
   },
   "tunemail.shot1": {
-    "text": "Tunemail en un teléfono: un enlace de Spotify pegado se reconoce como Radiohead, Creep, con botones para abrir la misma canción en Spotify, Apple Music, Deezer y Tidal.",
-    "from": "d2b2e7144d"
+    "text": "Tunemail en un teléfono: un enlace de Spotify pegado se reconoce como Radiohead, Creep, con botones para abrir la misma canción en Spotify, Apple Music, Deezer y Tidal",
+    "from": "9067f3ae7f"
   },
   "tunemail.desc": {
     "text": "Envía una canción a quien quieras: un enlace que la abre en la app que use cada uno. Ya en la web como beta pública; la app para iPhone está en desarrollo.",
@@ -116,7 +116,7 @@
     "from": "f67a8c6eef"
   },
   "fifths.shot1": {
-    "text": "La interfaz de Another Circle Of Fifths en vista modal: una rueda de tonalidades en color, los siete modos de G y la escala, los acordes diatónicos y las dominantes secundarias de G jónico",
+    "text": "La interfaz de Another Circle Of Fifths en la vista de modos: una rueda de tonalidades en color, los siete modos de sol y la escala, los acordes diatónicos y las dominantes secundarias de sol jónico",
     "from": "1b5094cee5"
   },
   "fifths.desc": {
@@ -136,7 +136,7 @@
     "from": "932738d341"
   },
   "citrus.desc": {
-    "text": "Un temporizador Pomodoro para Mac con forma de naranja: una ventana o un pequeño widget en el escritorio. La fruta se va armando mientras te concentras. Lo uso a diario; el siguiente paso es una descarga firmada.",
+    "text": "Un temporizador Pomodoro para Mac con forma de naranja: una ventana o un pequeño widget en el escritorio. La fruta se va completando mientras te concentras. Lo uso a diario; el siguiente paso es una descarga firmada.",
     "from": "f0369f1903"
   },
   "hum.shot1": {
@@ -148,7 +148,7 @@
     "from": "939f868537"
   },
   "hum.desc": {
-    "text": "Canta o tararea una idea y guárdala. Un archivo creativo personal para músicos que convierte una melodía tarareada en MIDI editable, con la detección de tono funcionando en el navegador.",
+    "text": "Canta o tararea una idea y guárdala. Un archivo creativo personal para músicos que convierte una melodía tarareada en MIDI editable, con la detección de notas funcionando en el navegador.",
     "from": "20a2a2ecdb"
   },
   "astrotrip.shot1": {
@@ -156,7 +156,7 @@
     "from": "81a7c2a07d"
   },
   "astrotrip.desc": {
-    "text": "Cartas astrológicas precisas, con posiciones verificadas con NASA JPL Horizons. En la web, la carta natal y todo lo relacionado con ella es gratis; tránsitos, progresiones, direcciones, revoluciones, sinastría y triples ruedas se abren durante una semana con una clave de acceso. Funciona por completo en tu dispositivo: sin servidor, sin cuenta, nada sale de tu teléfono. La versión para Android está en pruebas privadas; la versión para iPhone está en preparación.",
+    "text": "Cartas astrológicas precisas, con posiciones verificadas con NASA JPL Horizons. En la web, la carta natal y todo lo relacionado con ella son gratis; tránsitos, progresiones, direcciones, revoluciones, sinastría y cartas de triple rueda se desbloquean durante una semana con una clave de acceso. Funciona por completo en tu dispositivo: sin servidor, sin cuenta, nada sale de tu teléfono. La versión para Android está en pruebas privadas; la versión para iPhone está en preparación.",
     "from": "58d0f76f1c"
   },
   "sec.dev": {
@@ -180,7 +180,7 @@
     "from": "774549a511"
   },
   "scoreweaver.desc": {
-    "text": "Un pipeline local para mi trabajo musical en vídeos narrados. Hoy convierte el guion y la locución en subtítulos verificados; ajustar la música a la emoción de la historia sigue en fase de investigación. Python, funcionando por completo en mi propio ordenador.",
+    "text": "Una cadena de procesamiento local para mi trabajo musical en vídeos narrados. Hoy convierte el guion y la locución en subtítulos verificados; ajustar la música a la emoción de la historia sigue en fase de investigación. Python, funcionando por completo en mi propio ordenador.",
     "from": "3169d94deb"
   },
   "localdeck.shot1": {
@@ -196,7 +196,7 @@
     "from": "c874e6b83d"
   },
   "myday.desc": {
-    "text": "A dónde van de verdad mis horas de trabajo: horas por minuto de vídeo terminado, por proyecto, frente a una norma semanal, que Citrus Timer rellena por sí solo. También un lector de noticias y un plan del día. TypeScript, con los datos en local.",
+    "text": "A dónde van de verdad mis horas de trabajo: horas por minuto de vídeo terminado, por proyecto, frente a un objetivo semanal; las horas las registra Citrus Timer automáticamente. También un lector de noticias y un plan del día. TypeScript, con los datos en local.",
     "from": "a9316483b8"
   },
   "archivist.shot1": {
@@ -224,7 +224,7 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "Hecho con 🧡 para la experiencia humana.",
+    "text": "Hecho con 🧡, pensando en las personas.",
     "from": "d097826c8f"
   }
 }

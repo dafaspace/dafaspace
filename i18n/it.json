@@ -1,6 +1,6 @@
 {
   "meta.description": {
-    "text": "Daniel Fainberg, sviluppatore indipendente e artista visivo. Piccole app mirate con il nome dafaspace.",
+    "text": "Daniel Fainberg, sviluppatore indipendente e artista visivo. Piccole app essenziali, firmate dafaspace.",
     "from": "89f89e80b0"
   },
   "meta.title": {
@@ -8,7 +8,7 @@
     "from": "32a492a149"
   },
   "meta.ogDescription": {
-    "text": "Piccole app mirate di uno sviluppatore indipendente. Cinema, teoria musicale, astrologia e strumenti per musicisti.",
+    "text": "Piccole app essenziali di uno sviluppatore indipendente. Cinema, teoria musicale, astrologia e strumenti per musicisti.",
     "from": "767da0aad1"
   },
   "lang.label": {
@@ -28,7 +28,7 @@
     "from": "bbfa773e5a"
   },
   "tagline": {
-    "text": "Creo piccole app mirate per le cose che amo: il cinema, la musica, la vita di tutti i giorni.",
+    "text": "Creo piccole app essenziali per le cose che amo: il cinema, la musica, la vita di tutti i giorni.",
     "from": "228e6236e7"
   },
   "bio.more": {
@@ -40,7 +40,7 @@
     "from": "526cb7425a"
   },
   "bio.background": {
-    "text": "Vengo dal mondo visivo: fotografia, videografia, videoarte per produzioni teatrali. Da anni osservo con curiosità come immagini, suono e ritmo portano con sé l'esperienza umana, l'emozione e il sentimento.",
+    "text": "Vengo dal mondo dell'immagine: fotografia, videografia, videoarte per produzioni teatrali. Da anni osservo con curiosità come immagini, suono e ritmo portano con sé l'esperienza umana e le emozioni.",
     "from": "537acf7157"
   },
   "bio.youtube": {
@@ -48,11 +48,11 @@
     "from": "7bd26d6ebf"
   },
   "bio.study": {
-    "text": "Attualmente frequento il <strong>MA Professional Media Composition</strong> alla Arts University Bournemouth, dove imparo a scrivere musica per il cinema.",
+    "text": "Attualmente frequento il master (MA) in <strong>Professional Media Composition</strong> all'Arts University Bournemouth, dove imparo a scrivere musica per il cinema.",
     "from": "38d491a5ce"
   },
   "bio.dafaspace": {
-    "text": "Con il nome <strong>dafaspace</strong> faccio app che vorrei usare io stesso, e le uso davvero ogni giorno. Sono sinceramente felice quando vedo che le mie app rendono la vita di qualcuno un po' più facile o più gioiosa. Credo nelle persone e nei veri legami umani, quindi niente mi rende più felice di quando persone affini si trovano e accade quel piccolo miracolo dell'incontro reale.",
+    "text": "Con il marchio <strong>dafaspace</strong> creo app che vorrei usare io stesso, e le uso davvero ogni giorno. Mi fa davvero piacere vedere che le mie app rendono la vita di qualcuno un po' più facile o più gioiosa. Credo nelle persone e nei veri legami umani, quindi niente mi rende più felice di quando persone affini si trovano e accade quel piccolo miracolo dell'incontro reale.",
     "from": "e3966ef00b"
   },
   "bio.contact": {
@@ -84,7 +84,7 @@
     "from": "353b094569"
   },
   "cinemail.desc": {
-    "text": "Il tuo compagno personale di cinema. Tieni traccia dei film, ricevi suggerimenti da poche parole, condividi liste con gli amici. Otto lingue, pagine pubbliche dei film, importazione da IMDb. Già sul web; l'app per iPhone è in test privato.",
+    "text": "Il tuo diario di cinema personale. Tieni traccia dei film, ricevi consigli a partire da poche parole, condividi liste con gli amici. Otto lingue, pagine pubbliche dei film, importazione da IMDb. Già sul web; l'app per iPhone è in test privato.",
     "from": "5eb6875682"
   },
   "underpicture.shot1": {
@@ -96,7 +96,7 @@
     "from": "f03b60f7e5"
   },
   "underpicture.desc": {
-    "text": "Manda al tuo cliente un solo link. Ascolta ogni opzione musicale sotto le immagini, cambia brano mentre il video continua a scorrere e valuta ognuno come Freddo, Tiepido o Caldo. La scelta arriva nella tua casella di posta. Per montatori, compositori e videomaker; funziona su qualsiasi telefono, in undici lingue.",
+    "text": "Manda al tuo cliente un solo link. Il cliente ascolta ogni opzione musicale sulle immagini, cambia brano mentre il video scorre e valuta ciascuno come Freddo, Tiepido o Caldo. La scelta arriva nella tua casella di posta. Per montatori, compositori e videomaker; funziona su qualsiasi telefono, in undici lingue.",
     "from": "fbdd8090ed"
   },
   "underpicture.note": {
@@ -104,11 +104,11 @@
     "from": "e386d760dd"
   },
   "tunemail.shot1": {
-    "text": "Tunemail su un telefono: un link di Spotify incollato viene riconosciuto come Radiohead, Creep, con pulsanti per aprire lo stesso brano in Spotify, Apple Music, Deezer e Tidal.",
-    "from": "d2b2e7144d"
+    "text": "Tunemail su un telefono: un link di Spotify incollato viene riconosciuto come Radiohead, Creep, con pulsanti per aprire lo stesso brano in Spotify, Apple Music, Deezer e Tidal",
+    "from": "9067f3ae7f"
   },
   "tunemail.desc": {
-    "text": "Manda una canzone a chiunque: un link che la apre nell'app che usa. Già sul web come beta pubblica; l'app per iPhone è in sviluppo.",
+    "text": "Manda una canzone a chiunque: un link che la apre nell'app che usa chi lo riceve. Già sul web come beta pubblica; l'app per iPhone è in sviluppo.",
     "from": "dae5e8a959"
   },
   "tunemail.note": {
@@ -116,7 +116,7 @@
     "from": "f67a8c6eef"
   },
   "fifths.shot1": {
-    "text": "L'interfaccia di Another Circle Of Fifths nella vista modale: una ruota colorata delle tonalità, i sette modi di G, e la scala, gli accordi diatonici e le dominanti secondarie di G ionico",
+    "text": "L'interfaccia di Another Circle Of Fifths nella vista dei modi: una ruota colorata delle tonalità, i sette modi di Sol, e la scala, gli accordi diatonici e le dominanti secondarie di Sol ionico",
     "from": "1b5094cee5"
   },
   "fifths.desc": {
@@ -156,7 +156,7 @@
     "from": "81a7c2a07d"
   },
   "astrotrip.desc": {
-    "text": "Temi astrologici precisi, con posizioni verificate rispetto a NASA JPL Horizons. Sul web il tema natale e tutto ciò che lo riguarda è gratis; transiti, progressioni, direzioni, rivoluzioni, sinastria e tripla ruota si aprono per una settimana con una chiave di accesso. Funziona interamente sul tuo dispositivo: nessun server, nessun account, niente lascia il tuo telefono. La versione Android è in test privato; la versione iPhone è in preparazione.",
+    "text": "Temi astrologici precisi, con posizioni verificate rispetto a NASA JPL Horizons. Sul web il tema natale e tutto ciò che lo riguarda sono gratuiti; transiti, progressioni, direzioni, rivoluzioni, sinastria e temi tripli si sbloccano per una settimana con una chiave di accesso. Funziona interamente sul tuo dispositivo: nessun server, nessun account, niente lascia il tuo telefono. La versione Android è in test privato; la versione iPhone è in preparazione.",
     "from": "58d0f76f1c"
   },
   "sec.dev": {
@@ -168,11 +168,11 @@
     "from": "85666b217e"
   },
   "common.openFull": {
-    "text": "Apri a grandezza naturale",
+    "text": "Apri a dimensione intera",
     "from": "ff0512de3d"
   },
   "scoreweaver.shot1": {
-    "text": "La libreria di ScoreWeaver: 1.950 brani analizzati in una tabella con l'umore rilevato, letture alternative con percentuali di affidabilità, tonalità, codice Camelot, BPM e durata",
+    "text": "La libreria di ScoreWeaver: 1.950 brani analizzati in una tabella con il mood rilevato, valori alternativi con percentuali di affidabilità, tonalità, codice Camelot, BPM e durata",
     "from": "c422398c7e"
   },
   "status.private": {
@@ -184,11 +184,11 @@
     "from": "3169d94deb"
   },
   "localdeck.shot1": {
-    "text": "Ricerca in una libreria di effetti sonori in LocalDeck descrivendo il suono: la frase broken glass, close restituisce i file corrispondenti tra 7.953 indicizzati, raggruppati per categoria",
+    "text": "Ricerca in una libreria di effetti sonori in LocalDeck descrivendo il suono: la frase broken glass, close restituisce i file corrispondenti tra 7.953 file indicizzati, raggruppati per categoria",
     "from": "38b5276588"
   },
   "localdeck.shot2": {
-    "text": "LocalDeck: un modello locale caricato con l'uso della memoria in vista e modalità predefinite per archivio sonoro, sound design, musica, ragionamento e ricerca",
+    "text": "LocalDeck: un modello locale caricato con l'uso della memoria visualizzato e modalità predefinite per archivio sonoro, sound design, musica, ragionamento e ricerca",
     "from": "52812e9bdb"
   },
   "localdeck.desc": {
@@ -196,7 +196,7 @@
     "from": "c874e6b83d"
   },
   "myday.desc": {
-    "text": "Dove finiscono davvero le mie ore di lavoro: ore per minuto di video finito, per progetto, rispetto a una norma settimanale, compilate da sole da Citrus Timer. Anche un lettore di notizie e un piano della giornata. TypeScript, i dati restano in locale.",
+    "text": "Dove finiscono davvero le mie ore di lavoro: ore per minuto di video finito, per progetto, rispetto a un obiettivo settimanale, compilate automaticamente da Citrus Timer. Anche un lettore di notizie e un piano della giornata. TypeScript, i dati restano in locale.",
     "from": "a9316483b8"
   },
   "archivist.shot1": {
@@ -224,7 +224,7 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "Fatto con 🧡 per l'esperienza umana.",
+    "text": "Fatto con 🧡, per le persone.",
     "from": "d097826c8f"
   }
 }

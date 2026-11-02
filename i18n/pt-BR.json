@@ -40,7 +40,7 @@
     "from": "526cb7425a"
   },
   "bio.background": {
-    "text": "Venho do universo visual: fotografia, videografia, videoarte para produções teatrais. Passei anos observando com curiosidade como imagem, som e ritmo carregam a experiência humana, a emoção e o sentimento.",
+    "text": "Venho do universo visual: fotografia, videografia, videoarte para produções teatrais. Passei anos observando com curiosidade como imagem, som e ritmo transmitem a experiência humana e as emoções.",
     "from": "537acf7157"
   },
   "bio.youtube": {
@@ -52,7 +52,7 @@
     "from": "38d491a5ce"
   },
   "bio.dafaspace": {
-    "text": "Sob o nome <strong>dafaspace</strong> faço apps que eu mesmo gostaria de usar, e de fato uso todos os dias. Fico sinceramente feliz quando vejo meus apps deixarem a vida de alguém um pouco mais fácil ou mais alegre. Acredito nas pessoas e na conexão humana de verdade, por isso nada me deixa mais feliz do que ver pessoas com afinidade se encontrarem e acontecer esse pequeno milagre da interação real.",
+    "text": "Sob o nome <strong>dafaspace</strong> faço apps que eu mesmo gostaria de usar, e de fato uso todos os dias. Fico sinceramente contente quando vejo meus apps deixarem a vida de alguém um pouco mais fácil ou mais alegre. Acredito nas pessoas e na conexão humana de verdade, por isso nada me deixa mais feliz do que ver pessoas afins se encontrarem e esse pequeno milagre da interação real acontecer.",
     "from": "e3966ef00b"
   },
   "bio.contact": {
@@ -104,8 +104,8 @@
     "from": "e386d760dd"
   },
   "tunemail.shot1": {
-    "text": "Tunemail no celular: um link do Spotify colado é reconhecido como Radiohead, Creep, com botões para abrir a mesma música no Spotify, Apple Music, Deezer e Tidal.",
-    "from": "d2b2e7144d"
+    "text": "Tunemail no celular: um link do Spotify colado é reconhecido como Radiohead, Creep, com botões para abrir a mesma música no Spotify, Apple Music, Deezer e Tidal",
+    "from": "9067f3ae7f"
   },
   "tunemail.desc": {
     "text": "Envie uma música para qualquer pessoa: um link que a abre no app que ela usa. Já na web como beta público; o app para iPhone está em desenvolvimento.",
@@ -116,7 +116,7 @@
     "from": "f67a8c6eef"
   },
   "fifths.shot1": {
-    "text": "A interface do Another Circle Of Fifths na visão modal: uma roda colorida de tonalidades, os sete modos de G e a escala, os acordes diatônicos e as dominantes secundárias de G jônio",
+    "text": "A interface do Another Circle Of Fifths na visão de modos: uma roda colorida de tonalidades, os sete modos de sol e a escala, os acordes diatônicos e as dominantes secundárias de sol jônio",
     "from": "1b5094cee5"
   },
   "fifths.desc": {
@@ -148,7 +148,7 @@
     "from": "939f868537"
   },
   "hum.desc": {
-    "text": "Cante ou cantarole uma ideia e guarde. Um arquivo criativo pessoal para músicos que transforma uma melodia cantarolada em MIDI editável, com a detecção de altura funcionando no navegador.",
+    "text": "Cante ou cantarole uma ideia e salve. Um arquivo criativo pessoal para músicos que transforma uma melodia cantarolada em MIDI editável, com a detecção de altura funcionando no navegador.",
     "from": "20a2a2ecdb"
   },
   "astrotrip.shot1": {
@@ -156,7 +156,7 @@
     "from": "81a7c2a07d"
   },
   "astrotrip.desc": {
-    "text": "Mapas astrológicos precisos, com posições conferidas com o NASA JPL Horizons. Na web, o mapa natal e tudo sobre ele é grátis; trânsitos, progressões, direções, revoluções, sinastria e mapas triplos abrem por uma semana com uma chave de acesso. Roda inteiramente no seu aparelho: sem servidor, sem conta, nada sai do seu celular. A versão para Android está em teste fechado; a versão para iPhone está sendo preparada.",
+    "text": "Mapas astrológicos precisos, com posições conferidas com o NASA JPL Horizons. Na web, o mapa natal e tudo o que se relaciona a ele são grátis; trânsitos, progressões, direções, revoluções, sinastria e mapas triplos são liberados por uma semana com uma chave de acesso. Roda inteiramente no seu aparelho: sem servidor, sem conta, nada sai do seu celular. A versão para Android está em teste fechado; a versão para iPhone está sendo preparada.",
     "from": "58d0f76f1c"
   },
   "sec.dev": {
@@ -164,7 +164,7 @@
     "from": "f6146d719b"
   },
   "sec.devNote": {
-    "text": "Ferramentas de trabalho, mais do que produtos. Listadas para você ver no que eu realmente passo os meus dias.",
+    "text": "Ferramentas de trabalho, mais do que produtos. Estão aqui para você ver com o que eu realmente passo os meus dias.",
     "from": "85666b217e"
   },
   "common.openFull": {
@@ -192,11 +192,11 @@
     "from": "52812e9bdb"
   },
   "localdeck.desc": {
-    "text": "Busca semântica e marcação automática para uma biblioteca de efeitos sonoros: mais de 4.500 arquivos marcados até agora, sem mexer no áudio. Além de um painel de controle para modelos de IA locais no Mac. Python e FastAPI, nada vai para a nuvem.",
+    "text": "Busca semântica e marcação automática para uma biblioteca de efeitos sonoros: mais de 4.500 arquivos marcados até agora, sem mexer no áudio. Inclui também um painel de controle para modelos de IA locais no Mac. Python e FastAPI, nada vai para a nuvem.",
     "from": "c874e6b83d"
   },
   "myday.desc": {
-    "text": "Para onde vão de fato as minhas horas de trabalho: horas por minuto de vídeo finalizado, por projeto, contra uma meta semanal, preenchidas sozinhas pelo Citrus Timer. Também um leitor de notícias e um plano do dia. TypeScript, com os dados no próprio aparelho.",
+    "text": "Para onde vão de fato as minhas horas de trabalho: horas por minuto de vídeo finalizado, por projeto, em comparação com uma meta semanal, registradas automaticamente pelo Citrus Timer. Também um leitor de notícias e um plano do dia. TypeScript, com os dados no próprio aparelho.",
     "from": "a9316483b8"
   },
   "archivist.shot1": {
@@ -224,7 +224,7 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "Feito com 🧡 para a experiência humana.",
+    "text": "Feito com 🧡 para as pessoas.",
     "from": "d097826c8f"
   }
 }
