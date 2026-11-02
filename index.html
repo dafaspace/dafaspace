@@ -10,6 +10,7 @@
   <meta property="og:url" content="https://dafaspace.com">
   <meta name="theme-color" content="#0d0d1a">
   <title>dafaspace - Daniel Fainberg</title>
+  <link rel="icon" href="logo-mark.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
       --bg: #0d0d1a;
       --text: #e8e8ee;
       --muted: #8a8a96;
-      --accent: #f5c518;
+      --accent: #D96512;
       --border: rgba(255,255,255,0.08);
       --card: rgba(255,255,255,0.025);
       --card-hover: rgba(255,255,255,0.045);
@@ -85,7 +86,7 @@
       flex-shrink: 0;
     }
     h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 700;
       letter-spacing: -0.4px;
       line-height: 1.2;
@@ -154,7 +155,7 @@
       font-weight: 700;
       letter-spacing: 0.3px;
     }
-    .project-logo span { color: var(--accent); }
+    .project-logo, .project-logo span { color: var(--text); }
     .project-status {
       font-size: 11px;
       color: var(--muted);
@@ -236,9 +237,9 @@
       display: none;
       font-size: 11px;
       font-weight: 500;
-      color: var(--accent);
+      color: var(--muted);
       padding: 3px 9px;
-      border: 1px solid rgba(245,197,24,0.35);
+      border: 1px solid var(--border);
       border-radius: 100px;
       white-space: nowrap;
     }
@@ -296,7 +297,6 @@
     @media (max-width: 600px) {
       body { padding: 48px 20px 40px; }
       .logo { margin-bottom: 44px; }
-      h1 { font-size: 28px; }
       .tagline { font-size: 16px; }
       section { margin-top: 44px; }
     }
@@ -315,10 +315,7 @@
 <body>
   <main>
 
-    <div class="logo">
-      <span class="logo-dot"></span>
-      dafaspace
-    </div>
+    <div class="logo"><span id="logo" aria-label="dafaspace"></span></div>
 
     <div class="hero">
       <img class="avatar" src="photo.jpg" alt="Daniel Fainberg">
@@ -524,5 +521,7 @@
       });
     }
   </script>
+  <script src="logo-anim.js"></script>
+  <script>dafaspaceLogo(document.getElementById('logo'), { height: 31, word: 'logo-word.svg' })</script>
 </body>
 </html>
