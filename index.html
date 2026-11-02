@@ -113,6 +113,26 @@
       transition: border-color 0.15s ease;
     }
     .bio a:hover { border-color: var(--accent); }
+    /* The rest of the bio folds away, so the first projects fit on a phone screen */
+    .bio details { margin-top: 4px; }
+    .bio summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 44px;
+      font-size: 14px;
+      color: var(--muted);
+      cursor: pointer;
+      list-style: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .bio summary::-webkit-details-marker { display: none; }
+    .bio summary:hover { color: var(--text); }
+    .bio summary svg { transition: transform 0.2s ease; }
+    .bio details[open] summary svg { transform: rotate(180deg); }
+    .bio details[open] summary { margin-bottom: 8px; }
+    .bio summary .less, .bio details[open] summary .more { display: none; }
+    .bio details[open] summary .less { display: inline; }
 
     /* Section */
     section { margin-top: 44px; }
@@ -325,11 +345,14 @@
 
     <div class="bio">
       <p>I compose music, design sound and edit video, and I build the tools I use for that work.</p>
+      <details>
+        <summary><span class="more">More about me</span><span class="less">Less</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
       <p>I come from a visual background - photography, videography, video art for theatre productions. I've spent years curiously observing how images, sound and rhythm carry human experience, emotion and feeling.</p>
       <p>For five years I've been the sound designer and music editor of a YouTube channel that has grown to 27 million subscribers.</p>
       <p>Currently studying <strong>MA Professional Media Composition</strong> at Arts University Bournemouth, where I'm learning to write music for film.</p>
       <p>Under <strong>dafaspace</strong> I make apps that I'd want to use myself, and I really do use them every day. I'm genuinely happy when I see my apps make someone's life a little easier or more joyful. I believe in people and in meaningful human connection - so nothing makes me happier than when like-minded people find each other and that small miracle of real interaction happens.</p>
       <p>Questions about the apps, or an idea for working together? Write to <a href="mailto:hello@dafaspace.com">hello@dafaspace.com</a>. I read every message.</p>
+      </details>
     </div>
 
     <section>
