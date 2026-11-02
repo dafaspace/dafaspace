@@ -32,8 +32,10 @@ leave the rest unstaged and untouched.
 - **When any app adds a language, the site adds it too.**
 - Translation starts once the English text has settled. Before the first translation ships:
   all texts in one keyed file, each translation storing a hash of the English it came from; a
-  nightly check that flags stale translations on the Sites line; status badges as a small fixed
-  set of phrases.
+  nightly check that flags stale translations on the Sites line, and that also compares the
+  union of the apps' language lists (the places in the language table of
+  `_HQ/PROJECTS-2026-11.md`) with the site's languages; status badges as a small fixed set of
+  phrases.
 - Every English edit updates all languages in the same commit. The nightly check is a safety net,
   not the plan.
 - Review: Dafa reads ru and uk; a native reader checks ka; the rest get a back-translation check.
