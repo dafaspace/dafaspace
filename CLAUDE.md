@@ -100,3 +100,8 @@ leave the rest unstaged and untouched.
 - `h1` is 24px everywhere.
 - The bio folds under "More about me" so the first project card fits on a phone screen. Keep it
   that way.
+- Fonts: DM Sans for Latin from Google Fonts; the script partners are self-hosted in `fonts/`
+  (Tastebook, Dafa 3 Nov 2026, the same in Cinemail and Tunemail): Geist for Cyrillic, Noto Sans
+  Georgian, IBM Plex Sans Hebrew, Noto Sans JP. Each `@font-face` keeps its unicode-range, so the
+  English page downloads none of them. Noto Sans JP lives in `fonts/ja.css`, loaded only for the
+  Japanese page or a Japanese browser. `h2` in ka, he and ja is 700; Georgian also `font-stretch: 62.5%`.
