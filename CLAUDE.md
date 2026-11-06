@@ -102,6 +102,7 @@ leave the rest unstaged and untouched.
   that way.
 - Fonts: DM Sans for Latin from Google Fonts; the script partners are self-hosted in `fonts/`
   (Tastebook, Dafa 3 Nov 2026, the same in Cinemail and Tunemail): Geist for Cyrillic, Noto Sans
-  Georgian, IBM Plex Sans Hebrew, Noto Sans JP. Each `@font-face` keeps its unicode-range, so the
+  Georgian, IBM Plex Sans Hebrew, Noto Sans Arabic (static 400 and 700, approved 6 Nov 2026), Noto Sans JP. Each `@font-face` keeps its unicode-range, so the
   English page downloads none of them. Noto Sans JP lives in `fonts/ja.css`, loaded only for the
-  Japanese page or a Japanese browser. `h2` in ka, he and ja is 700; Georgian also `font-stretch: 62.5%`.
+  Japanese page or a Japanese browser. `h2` in ka, he and ja is 700; Georgian also `font-stretch: 62.5%`. Arabic `h2` is 700 with `letter-spacing: 0` and no uppercase: tracking breaks
+  the joins. Arabic stays at letter-spacing 0 in any new rule.
