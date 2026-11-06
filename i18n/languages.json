@@ -10,5 +10,6 @@
   { "code": "it", "name": "Italiano", "dir": "ltr" },
   { "code": "tr", "name": "Türkçe", "dir": "ltr" },
   { "code": "ja", "name": "日本語", "dir": "ltr" },
-  { "code": "he", "name": "עברית", "dir": "rtl" }
+  { "code": "he", "name": "עברית", "dir": "rtl" },
+  { "code": "ar", "name": "العربية", "dir": "rtl" }
 ]
