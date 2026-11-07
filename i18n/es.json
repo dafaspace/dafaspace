@@ -218,5 +218,9 @@
   "footer.made": {
     "text": "Hecho con 🧡, pensando en las personas.",
     "from": "d097826c8f"
+  },
+  "astrotrip.shot2": {
+    "text": "La cuadrícula de aspectos de la misma carta: todos los aspectos entre planetas, nodos, Lilith, la Parte de la Fortuna y los ángulos, con el orbe a un toque.",
+    "from": "70557d2517"
   }
 }

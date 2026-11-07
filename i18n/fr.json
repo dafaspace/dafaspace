@@ -218,5 +218,9 @@
   "footer.made": {
     "text": "Fait avec 🧡 pour les gens.",
     "from": "d097826c8f"
+  },
+  "astrotrip.shot2": {
+    "text": "La grille des aspects du même thème : tous les aspects entre les planètes, les nœuds, Lilith, la Part de Fortune et les angles, l'orbe s'affichant d'un toucher.",
+    "from": "70557d2517"
   }
 }

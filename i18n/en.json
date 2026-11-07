@@ -143,6 +143,10 @@
     "text": "A natal chart cast in Astrovarium using the Placidus house system, showing the zodiac ring, house cusps, planetary positions and aspect lines",
     "hash": "81a7c2a07d"
   },
+  "astrotrip.shot2": {
+    "text": "The aspect grid of the same chart: every aspect between planets, nodes, Lilith, the Part of Fortune and the angles, with the orb a tap away.",
+    "hash": "70557d2517"
+  },
   "astrotrip.desc": {
     "text": "Precise astrological charts, with positions checked against NASA JPL Horizons. On the web a natal chart and everything about it is free; transits, progressions, directions, returns, synastry and tri-wheels open for a week with an access key. Runs entirely on your device: no server, no account, nothing leaves your phone. The Android version is in private testing; the iPhone version is being prepared.",
     "hash": "58d0f76f1c"
