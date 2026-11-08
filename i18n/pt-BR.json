@@ -216,8 +216,8 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "Feito com 🧡 para as pessoas.",
-    "from": "d097826c8f"
+    "text": "Feito com <i class=\"heart\" aria-hidden=\"true\"></i> para as pessoas.",
+    "from": "8f749e07cb"
   },
   "astrotrip.shot2": {
     "text": "A grade de aspectos do mesmo mapa: todos os aspectos entre planetas, nodos, Lilith, a Parte da Fortuna e os ângulos, com o orbe a um toque.",

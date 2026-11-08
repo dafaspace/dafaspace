@@ -116,7 +116,7 @@
     "from": "b955c76c20"
   },
   "fifths.shot1": {
-    "text": "Another Circle Of Fifths arayüzü mod görünümünde: renkli bir ton çarkı, Sol'ün yedi modu ve Sol İyonyen için dizi, diyatonik akorlar ve ikincil dominantlar",
+    "text": "Another Circle Of Fifths arayüzü mod görünümünde: renkli bir ton çarkı, Sol'un yedi modu ve Sol İyonyen için dizi, diyatonik akorlar ve ikincil dominantlar",
     "from": "1b5094cee5"
   },
   "fifths.desc": {
@@ -148,7 +148,7 @@
     "from": "81a7c2a07d"
   },
   "astrotrip.desc": {
-    "text": "Konumları NASA JPL Horizons ile doğrulanmış hassas astroloji haritaları. Web'de doğum haritası ve onunla ilgili her şey ücretsiz; transitler, progresyonlar, direksiyonlar, Güneş dönüşleri, sinastri ve üçlü haritalar bir erişim anahtarıyla bir haftalığına açılır. Tamamen cihazınızda çalışır: sunucu yok, hesap yok, telefonunuzdan hiçbir şey çıkmaz. Android sürümü kapalı testte; iPhone sürümü hazırlanıyor.",
+    "text": "Konumları NASA JPL Horizons ile doğrulanmış hassas astroloji haritaları. Web'de doğum haritası ve onunla ilgili her şey ücretsiz; transitler, progresyonlar, direksiyonlar, Güneş ve Ay dönüşleri, sinastri ve üçlü haritalar bir erişim anahtarıyla bir haftalığına açılır. Tamamen cihazınızda çalışır: sunucu yok, hesap yok, telefonunuzdan hiçbir şey çıkmaz. Android sürümü kapalı testte; iPhone sürümü hazırlanıyor.",
     "from": "58d0f76f1c"
   },
   "sec.dev": {
@@ -216,8 +216,8 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "İnsanlar için 🧡 ile yapıldı.",
-    "from": "d097826c8f"
+    "text": "İnsanlar için <i class=\"heart\" aria-hidden=\"true\"></i> ile yapıldı.",
+    "from": "8f749e07cb"
   },
   "astrotrip.shot2": {
     "text": "Aynı haritanın açı tablosu: gezegenler, ay düğümleri, Lilith, Şans Noktası ve köşe noktaları arasındaki tüm açılar; orb değeri bir dokunuşla açılır.",

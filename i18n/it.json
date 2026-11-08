@@ -48,7 +48,7 @@
     "from": "7bd26d6ebf"
   },
   "bio.study": {
-    "text": "Attualmente frequento il master (MA) in <strong>Professional Media Composition</strong> all'Arts University Bournemouth, dove imparo a scrivere musica per il cinema.",
+    "text": "Attualmente frequento il master <strong>MA Professional Media Composition</strong> all'Arts University Bournemouth, dove imparo a scrivere musica per il cinema.",
     "from": "38d491a5ce"
   },
   "bio.dafaspace": {
@@ -84,7 +84,7 @@
     "from": "353b094569"
   },
   "cinemail.desc": {
-    "text": "Il tuo diario di cinema personale. Tieni traccia dei film, ricevi consigli a partire da poche parole, condividi liste con gli amici. Otto lingue, pagine pubbliche dei film, importazione da IMDb. Già sul web; l'app per iPhone è in test privato.",
+    "text": "Il tuo compagno di cinema personale. Tieni traccia dei film, ricevi consigli a partire da poche parole, condividi liste con gli amici. Otto lingue, pagine pubbliche dei film, importazione da IMDb. Già sul web; l'app per iPhone è in test privato.",
     "from": "5eb6875682"
   },
   "underpicture.shot1": {
@@ -216,11 +216,11 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "Fatto con 🧡, per le persone.",
-    "from": "d097826c8f"
+    "text": "Fatto con <i class=\"heart\" aria-hidden=\"true\"></i>, per le persone.",
+    "from": "8f749e07cb"
   },
   "astrotrip.shot2": {
-    "text": "La griglia degli aspetti dello stesso tema: tutti gli aspetti tra pianeti, nodi, Lilith, Parte di Fortuna e angoli, con l'orbita a un tocco.",
+    "text": "La griglia degli aspetti dello stesso tema: tutti gli aspetti tra pianeti, nodi, Lilith, Parte di Fortuna e angoli, con l'orbe a un tocco.",
     "from": "70557d2517"
   }
 }

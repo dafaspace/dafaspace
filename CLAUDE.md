@@ -98,8 +98,10 @@ leave the rest unstaged and untouched.
 - The accent is `#D96512`. App names on cards all use `var(--text)`.
 - Status and "Updated this week" badges use the muted style.
 - `h1` is 24px everywhere.
-- The bio folds under "More about me" so the first project card fits on a phone screen. Keep it
-  that way.
+- The bio folds under "More about me" so the first project card's name and pictures are on screen
+  on a phone (Dafa, 9 Nov 2026: the head and the picture row, not the whole card). Keep it that way.
+- No emoji or text symbols as icons: Lucide paths from Cinemail's `ICONS` map, inline, `aria-hidden`.
+  Arrows flip under `dir="rtl"`.
 - Fonts: DM Sans for Latin from Google Fonts; the script partners are self-hosted in `fonts/`
   (Tastebook, Dafa 3 Nov 2026, the same in Cinemail and Tunemail): Geist for Cyrillic, Noto Sans
   Georgian, IBM Plex Sans Hebrew, Noto Sans Arabic (static 400 and 700, approved 6 Nov 2026), Noto Sans JP. Each `@font-face` keeps its unicode-range, so the

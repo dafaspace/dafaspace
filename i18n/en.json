@@ -216,7 +216,7 @@
     "hash": "64380717a6"
   },
   "footer.made": {
-    "text": "Made with 🧡 for the human experience.",
-    "hash": "d097826c8f"
+    "text": "Made with <i class=\"heart\" aria-hidden=\"true\"></i> for the human experience.",
+    "hash": "8f749e07cb"
   }
 }

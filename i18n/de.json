@@ -84,7 +84,7 @@
     "from": "353b094569"
   },
   "cinemail.desc": {
-    "text": "Dein persönlicher Kinobegleiter. Gesehene Filme notieren, Empfehlungen anhand weniger Stichworte bekommen, Listen mit Freunden teilen. Acht Sprachen, öffentliche Filmseiten, Import aus IMDb. Schon im Web; die iPhone-App ist im privaten Test.",
+    "text": "Dein persönlicher Kinobegleiter. Filme festhalten, Empfehlungen anhand weniger Stichworte bekommen, Listen mit Freunden teilen. Acht Sprachen, öffentliche Filmseiten, Import aus IMDb. Schon im Web; die iPhone-App ist im privaten Test.",
     "from": "5eb6875682"
   },
   "underpicture.shot1": {
@@ -148,7 +148,7 @@
     "from": "81a7c2a07d"
   },
   "astrotrip.desc": {
-    "text": "Präzise Horoskope, deren Positionen mit NASA JPL Horizons abgeglichen sind. Im Web sind das Geburtshoroskop und alles dazu kostenlos; Transite, Progressionen, Direktionen, Solare, Synastrie und Dreifachhoroskope lassen sich mit einem Zugangsschlüssel eine Woche lang freischalten. Läuft vollständig auf deinem Gerät: kein Server, kein Konto, nichts verlässt dein Handy. Die Android-Version ist im privaten Test; die iPhone-Version wird vorbereitet.",
+    "text": "Präzise Horoskope, deren Positionen mit NASA JPL Horizons abgeglichen sind. Im Web sind das Geburtshoroskop und alles dazu kostenlos; Transite, Progressionen, Direktionen, Solare und Lunare, Synastrie und Dreifachhoroskope lassen sich mit einem Zugangsschlüssel eine Woche lang freischalten. Läuft vollständig auf deinem Gerät: kein Server, kein Konto, nichts verlässt dein Handy. Die Android-Version ist im privaten Test; die iPhone-Version wird vorbereitet.",
     "from": "58d0f76f1c"
   },
   "sec.dev": {
@@ -216,8 +216,8 @@
     "from": "64380717a6"
   },
   "footer.made": {
-    "text": "Mit 🧡 gemacht, für Menschen.",
-    "from": "d097826c8f"
+    "text": "Mit <i class=\"heart\" aria-hidden=\"true\"></i> gemacht, für Menschen.",
+    "from": "8f749e07cb"
   },
   "astrotrip.shot2": {
     "text": "Das Aspektgitter desselben Horoskops: alle Aspekte zwischen Planeten, Mondknoten, Lilith, Glückspunkt und Achsen, der Orbis mit einem Tippen.",

@@ -37,10 +37,14 @@ const APP_SOURCES = [
   { app: 'Underpicture', file: 'Underpicture/app/index.html', codes: s => keysOf(between(s, 'const LANGS = {', '};')) },
 ];
 
-// Every keyed text in the page, in document order: { key, start, end } spans into the html.
+// Every keyed text in the page, in document order: { key, start, end, attr } spans into the html.
+// Tags are matched with their quoted attributes, so a ">" inside a value does not end the tag. Tags
+// inside <script> or a comment are not keys. Spans may not overlap: a key inside another key's text
+// would be written twice, so it stops the build instead of shipping a broken page.
 function spans(html) {
-  const out = [];
-  for (const m of html.matchAll(/<([a-zA-Z][a-zA-Z0-9]*)\b[^>]*\sdata-t(?:-attr)?="[^>]*>/g)) {
+  const out = [], skip = [...html.matchAll(/<script\b[\s\S]*?<\/script>|<!--[\s\S]*?-->/g)].map(m => [m.index, m.index + m[0].length]);
+  for (const m of html.matchAll(/<([a-zA-Z][a-zA-Z0-9]*)\b(?:[^>"']|"[^"]*"|'[^']*')*>/g)) {
+    if (!/\sdata-t(?:-attr)?="/.test(m[0]) || skip.some(([a, b]) => m.index > a && m.index < b)) continue;
     const [tag, name] = m, open = m.index;
     const attrs = /\sdata-t-attr="([^"]*)"/.exec(tag), own = /\sdata-t="([^"]*)"/.exec(tag);
     for (const pair of attrs ? attrs[1].split(',') : []) {
@@ -48,7 +52,7 @@ function spans(html) {
       const a = new RegExp(`\\s${attr}="([^"]*)"`).exec(tag);
       if (!a) throw new Error(`${key}: no ${attr}="" on ${tag}`);
       const start = open + a.index + a[0].length - a[1].length - 1;
-      out.push({ key, start, end: start + a[1].length });
+      out.push({ key, start, end: start + a[1].length, attr: true });
     }
     if (!own) continue;
     // the element's inner HTML runs to its own closing tag, counting nested ones of the same name
@@ -59,7 +63,9 @@ function spans(html) {
     if (!close) throw new Error(`${own[1]}: no closing </${name}>`);
     out.push({ key: own[1], start: open + tag.length, end: close.index });
   }
-  return out.sort((a, b) => a.start - b.start);
+  out.sort((a, b) => a.start - b.start);
+  for (let i = 1; i < out.length; i++) if (out[i].start < out[i - 1].end) throw new Error(`key ${out[i].key} sits inside key ${out[i - 1].key}`);
+  return out;
 }
 
 function english(html) {
@@ -96,11 +102,12 @@ function render(source, lang, live, en) {
   if (lang.dict) {
     for (const s of spans(source).reverse()) {
       const t = lang.dict[s.key];
-      if (t?.text != null) html = html.slice(0, s.start) + t.text + html.slice(s.end);
+      // an attribute value ends at the first quote, so a quote in a translation is written as &quot;
+      if (t?.text != null) html = html.slice(0, s.start) + (s.attr ? t.text.replace(/"/g, '&quot;') : t.text) + html.slice(s.end);
     }
     html = html.replace('<html lang="en">', `<html lang="${lang.code}"${lang.dir === 'rtl' ? ' dir="rtl"' : ''}>`)
                .replace('<meta charset="UTF-8">', '<meta charset="UTF-8">\n  <base href="../">')
-               .replace(`<meta property="og:url" content="${SITE}">`, `<meta property="og:url" content="${SITE}${pathOf(lang.code)}">`)
+               .replace(`<meta property="og:url" content="${SITE}/">`, `<meta property="og:url" content="${SITE}${pathOf(lang.code)}">`)
                .replace('<!-- I18N:START', `<!-- Generated from index.html by tools/i18n.mjs. Edit index.html and i18n/${lang.code}.json, not this file. -->\n  <!-- I18N:START`);
   }
   return setBlock(html, block(lang.code, live, en));
