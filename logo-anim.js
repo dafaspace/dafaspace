@@ -7,7 +7,9 @@
          <script>dafaspaceLogo(document.getElementById('logo'), { height: 31, word: 'logo-word.svg' })</script>
 
    On load the letter builds the word. Each hover (or tap on a touch screen) toggles word and letter;
-   while it moves, it ignores triggers. With prefers-reduced-motion it shows the end state at once. */
+   while it moves, it ignores triggers. With prefers-reduced-motion it shows the end state at once.
+   Under dir=rtl (or { rtl: true }) the leaf keeps its right edge and grows leftwards. If the word file
+   fails to load, logo-static.svg beside it is shown instead ({ fallback: url } to point elsewhere). */
 (function () {
 window.dafaspaceLogo = function (host, opts = {}) {
 // Word leaf W1 in the word file's units: ink x 115-627.5, y 328-439; pads 28 top and bottom, 50 sides.
@@ -22,6 +24,10 @@ let SHAPE = 1;                                                                  
 const EDGE = { anticip: 9, over: 15, s: 2.25, lag: 0 };                                       // right edge: draw-back and run-past in leaf units (of 167), S per speed
 let SWIRL = 5 * Math.PI / 180;                                                    // how far each particle turns clockwise on its way in
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Right to left (dafaspace /he/ and /ar/, 9 Nov 2026): the leaf's right edge stays put at the slot's
+// inline-start and the d travels left as the word grows. The word itself is never mirrored. With the
+// right edge still, its tip has no motion to trail, and the d's lean answers its own travel instead.
+let RTL = false;
 
 // The leaf outline, as tools/leafshape.py draws it: with SHAPE > 0 the right edge has the slight S
 // of the logo (a sharper top right tip, a graceful sag, a tucked bottom right belly), turned clockwise
@@ -48,7 +54,7 @@ function leafPath(ctx, w, bend = 0, sh = SHAPE) {
   ctx.arc(r, r, r, Math.PI, Math.PI * 1.5); ctx.closePath();
 }
 
-fetch(opts.word || 'logo-word.svg').then(r => r.text()).then(svg => {
+fetch(opts.word || 'logo-word.svg').then(r => { if (!r.ok) throw new Error(r.status); return r.text(); }).then(svg => {
   const letters = [...svg.matchAll(/<path transform="translate\((-?[\d.]+) 0\)" d="([^"]+)"/g)].map(([, tx, d]) => {
     const nums = [...d.matchAll(/(-?\d+\.?\d*)[ ,](-?\d+\.?\d*)/g)].map(m => [+m[1] + +tx - X0 + PX, +m[2] - TOP + PT]);
     const xs = nums.map(p => p[0]), ys = nums.map(p => p[1]);
@@ -154,12 +160,13 @@ const fillAt = (t, t0) => clamp((t - t0 - (T.sweep + T.fly) * T.lead) / T.settle
     ctx.setTransform(dpr * s, 0, 0, dpr * s, dpr * cv._m, dpr * cv._m);
     // background width: follows the letters, each widening eased
     const w = edge(t), raw = EDGE.s * (edge(t + 90) - edge(t - 90)) / 180 * 60;    // leans with the edge's speed over 180ms
-    const BMAX = 0.035 * H, bend = -BMAX * Math.tanh(raw / BMAX);                    // the tip trails the motion (inertia), at most 3.5% of the height
+    const BMAX = 0.035 * H, bend = RTL ? 0 : -BMAX * Math.tanh(raw / BMAX);          // the tip trails the motion (inertia), at most 3.5% of the height
+    if (RTL) ctx.translate(widths[widths.length - 1] - w, 0);
     ctx.fillStyle = BG; leafPath(ctx, w, bend); ctx.fill();
     ctx.save(); leafPath(ctx, w, bend); ctx.clip(); ctx.fillStyle = FG;
     // the d keeps its size and place: it no longer grows into the mark's proportions and back
     // (Dafa, 2 Nov: the swell at the end of the way back and the shrink before the word looked odd)
-    ctx.save(); dSpring(ctx, t, T_GROW - 120, 1); ctx.fill(first.path); ctx.restore();
+    ctx.save(); dSpring(ctx, t, T_GROW - 120, RTL ? -1 : 1); ctx.fill(first.path); ctx.restore();
     for (let i = 1; i < letters.length; i++) {
       const L = letters[i], t0 = start(i);
       if (t < t0) break;
@@ -221,7 +228,8 @@ const fillAt = (t, t0) => clamp((t - t0 - (T.sweep + T.fly) * T.lead) / T.settle
     ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, cv.width, cv.height);
     ctx.setTransform(dpr * s, 0, 0, dpr * s, dpr * cv._m, dpr * cv._m);
     const w = edgeBack(t), raw = EDGE.s * (edgeBack(t + 90) - edgeBack(t - 90)) / 180 * 60;
-    const BMAX = 0.035 * H, bend = -BMAX * Math.tanh(raw / BMAX);
+    const BMAX = 0.035 * H, bend = RTL ? 0 : -BMAX * Math.tanh(raw / BMAX);
+    if (RTL) ctx.translate(widths[widths.length - 1] - w, 0);
     ctx.fillStyle = BG; leafPath(ctx, w, bend); ctx.fill();
     ctx.save(); leafPath(ctx, w, bend); ctx.clip();
     // the d takes the grain in: a small swell and glow while it arrives, then back to the mark's size
@@ -232,7 +240,7 @@ const fillAt = (t, t0) => clamp((t - t0 - (T.sweep + T.fly) * T.lead) / T.settle
     // it, the d is nudged away from the word - its top swings left first - then sways a little and settles.
     // Dafa, 2 Nov: the main push came a little early. It now peaks as the folding leaf reaches the d
     // (when the edge runs past the d's width, about 0.12s later than before), with a softer start (attack .3, 1400ms).
-    ctx.save(); dSpring(ctx, t, D_HOME, 1, false, D.dur + 400, .4); ctx.fill(first.path); ctx.restore();
+    ctx.save(); dSpring(ctx, t, D_HOME, RTL ? -1 : 1, false, D.dur + 400, .4); ctx.fill(first.path); ctx.restore();
     // the letters' fill gives way
     ctx.fillStyle = FG;
     for (let i = 1; i < letters.length; i++) {
@@ -274,6 +282,7 @@ const fillAt = (t, t0) => clamp((t - t0 - (T.sweep + T.fly) * T.lead) / T.settle
   host.style.webkitTapHighlightColor = 'transparent';
   cv.width = Math.ceil(wpx * dpr); cv.height = Math.ceil(hp * dpr); cv._s = hpx / H; cv._m = m;
   cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', 'dafaspace');
+  RTL = opts.rtl ?? getComputedStyle(host).direction === 'rtl';
   host.replaceChildren(cv);
   host.style.display = 'inline-block'; host.style.width = (wpx - 2 * m) + 'px'; host.style.height = hpx + 'px';
 
@@ -313,13 +322,23 @@ const fillAt = (t, t0) => clamp((t - t0 - (T.sweep + T.fly) * T.lead) / T.settle
   const toggle = () => { if (busy) return; progress = 0; atWord ? playBack() : play(); };
   const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
   if (canHover) cv.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') toggle(); });
+  // a finger or pen on a hover-capable screen (a touchscreen laptop) gets no mouse hover, so its tap counts
+  let pointer = 'mouse';
+  cv.addEventListener('pointerdown', e => { pointer = e.pointerType; });
   cv.addEventListener('click', () => {
-    if (canHover) return;                                                              // a mouse already toggled on hover
+    if (canHover && pointer === 'mouse') return;                                       // a mouse already toggled on hover
     if (busy) { if (progress > .75) queued = true; return; }
     toggle();
   });
   if (opts.debug) window.__logo = { get busy() { return busy; }, get atWord() { return atWord; }, get progress() { return progress; }, get queued() { return queued; } };
   play();
+}).catch(() => {
+  // the word file did not load (offline, a 404) or could not be read: the still word leaf instead,
+  // so the header is never left without a logo
+  const img = new Image();
+  img.src = opts.fallback || (opts.word || 'logo-word.svg').replace(/logo-word\.svg$/, 'logo-static.svg');
+  img.alt = 'dafaspace'; img.height = opts.height || 31; img.style.display = 'block';
+  host.replaceChildren(img);
 });
 };
 })();

@@ -81,6 +81,9 @@ function english(html) {
 const translations = () => LANGS.filter(l => l.code !== 'en' && fs.existsSync(path.join(ROOT, 'i18n', `${l.code}.json`)))
   .map(l => ({ ...l, dict: JSON.parse(read(`i18n/${l.code}.json`)) }));
 
+// og:locale wants language_TERRITORY; Facebook names Arabic ar_AR
+const OG_LOCALE = { en: 'en_US', ru: 'ru_RU', uk: 'uk_UA', ka: 'ka_GE', es: 'es_ES', 'pt-BR': 'pt_BR', fr: 'fr_FR', de: 'de_DE',
+  it: 'it_IT', tr: 'tr_TR', ja: 'ja_JP', he: 'he_IL', ar: 'ar_AR' };
 const pathOf = code => code === 'en' ? '/' : `/${code}/`;
 
 function block(code, live, en) {
@@ -108,6 +111,7 @@ function render(source, lang, live, en) {
     html = html.replace('<html lang="en">', `<html lang="${lang.code}"${lang.dir === 'rtl' ? ' dir="rtl"' : ''}>`)
                .replace('<meta charset="UTF-8">', '<meta charset="UTF-8">\n  <base href="../">')
                .replace(`<meta property="og:url" content="${SITE}/">`, `<meta property="og:url" content="${SITE}${pathOf(lang.code)}">`)
+               .replace('<meta property="og:locale" content="en_US">', `<meta property="og:locale" content="${OG_LOCALE[lang.code]}">`)
                .replace('<!-- I18N:START', `<!-- Generated from index.html by tools/i18n.mjs. Edit index.html and i18n/${lang.code}.json, not this file. -->\n  <!-- I18N:START`);
   }
   return setBlock(html, block(lang.code, live, en));
