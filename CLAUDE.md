@@ -3,8 +3,9 @@
 Project specifics that win over the portfolio rules in `My Apps/CLAUDE.md` where they differ.
 
 Personal site of Daniel Fainberg: who he is, and a card for each dafaspace project. One
-`index.html`, no build step, on GitHub Pages behind Cloudflare (SSL mode "Full", see
-`_HQ/DOMAINS.md`). A push to `main` is a release; Pages deploys in about a minute.
+`index.html`, no build step, on GitHub Pages with Namecheap DNS and no Cloudflare in front (checked
+9 Nov 2026: `server: GitHub.com`, NS registrar-servers.com; see `_HQ/DOMAINS.md`). So caching is
+GitHub's fixed `max-age=600` and cannot be tuned here. A push to `main` is a release; Pages deploys in about a minute.
 
 ## Where the facts come from
 
